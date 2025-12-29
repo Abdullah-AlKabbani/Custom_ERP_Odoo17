@@ -1,0 +1,15 @@
+<odoo>
+
+    <!-- Groups -->
+    <record id="group_attendance_analysis_user" model="res.groups">
+        <field name="name">Attendance Analysis User</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+    <record id="group_attendance_analysis_manager" model="res.groups">
+        <field name="name">Attendance Analysis Manager</field>
+        <field name="implied_ids" eval="[(4, ref('time_attendance_analysis.group_attendance_analysis_user'))]"/>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+</odoo>

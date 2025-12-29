@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ================================
+         Device per Branch Tree View
+         ================================ -->
+    <record id="view_ts_device_branch_tree" model="ir.ui.view">
+        <field name="name">ts.device.branch.tree</field>
+        <field name="model">ts.device.branch</field>
+        <field name="arch" type="xml">
+            <tree string="Devices per Branch" editable="bottom" create="false">
+                <field name="branch_id" readonly="1"/>
+                <field name="device_id" readonly="1"/>
+                <field name="category_id" readonly="1"/>
+                <field name="current_qty" readonly="1"/>
+                <field name="last_move_date" readonly="1"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ================================
+         Device per Branch Search View
+         ================================ -->
+    <record id="view_ts_device_branch_search" model="ir.ui.view">
+        <field name="name">ts.device.branch.search</field>
+        <field name="model">ts.device.branch</field>
+        <field name="arch" type="xml">
+            <search string="Search Devices per Branch">
+
+                <!-- 🔍 Search Fields -->
+                <field name="branch_id"/>
+                <field name="device_id"/>
+                <field name="category_id"/>
+
+                <!-- 🔹 Basic Filters -->
+                <filter name="active_true"
+                        string="Active"
+                        domain="[('active','=',True)]"/>
+
+                <filter name="active_false"
+                        string="Inactive"
+                        domain="[('active','=',False)]"/>
+
+                <!-- 🔹 Group By -->
+                <group expand="0" string="Group By">
+                    <filter name="group_branch"
+                            string="Branch"
+                            context="{'group_by':'branch_id'}"/>
+
+                    <filter name="group_category"
+                            string="Category"
+                            context="{'group_by':'category_id'}"/>
+
+                    <filter name="group_device"
+                            string="Device"
+                            context="{'group_by':'device_id'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+</odoo>

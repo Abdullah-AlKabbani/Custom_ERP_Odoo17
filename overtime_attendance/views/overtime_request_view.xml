@@ -1,0 +1,55 @@
+<odoo>
+    <!-- Action -->
+    <record id="action_overtime_request" model="ir.actions.act_window">
+        <field name="name">Overtime Requests</field>
+        <field name="res_model">overtime.request</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_overtime_request_root" name="Overtime Requests" sequence="10"/>
+    <menuitem id="menu_overtime_request" parent="menu_overtime_request_root" name="Manage Overtime"
+              action="action_overtime_request"/>
+
+    <!-- Form View -->
+    <record id="view_overtime_request_form" model="ir.ui.view">
+        <field name="name">overtime.request.form</field>
+        <field name="model">overtime.request</field>
+        <field name="arch" type="xml">
+            <form string="Overtime Request">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="department_id"/>
+                        <field name="employee_ids" widget="many2many_tags"/>
+                        <field name="description"/>
+                        <field name="hours"/>
+                        <field name="state" readonly="1"/>
+
+                    </group>
+                    <button name="action_approve" type="object" string="Approve" class="btn-primary"
+                            modifiers="{'invisible': [('state', '!=', 'requested')]}" groups="base.group_system"/>
+                    <button name="action_refuse" type="object" string="Refuse" class="btn-danger"
+                            modifiers="{'invisible': [('state', '!=', 'requested')]}" groups="base.group_system"/>
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree View -->
+    <record id="view_overtime_request_tree" model="ir.ui.view">
+        <field name="name">overtime.request.tree</field>
+        <field name="model">overtime.request</field>
+        <field name="arch" type="xml">
+            <tree string="Overtime Requests" decoration-success="state == 'approved'"
+                  decoration-danger="state == 'refused'"
+                  decoration-warning="state == 'requested'">
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="hours"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

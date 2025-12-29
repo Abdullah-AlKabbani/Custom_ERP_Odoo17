@@ -1,0 +1,104 @@
+<odoo>
+    <record id="mission_report" model="ir.actions.report">
+        <field name="name">Mission Report</field>
+        <field name="model">mission.management</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="binding_model_id" ref="mission_management.model_mission_management"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">mission_management.mission_report_template</field>
+    </record>
+
+    <template id="mission_report_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div style="font-family: Arial, sans-serif; margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+                        <h1 style="text-align: center; color: black; border-bottom: 2px solid black; padding-bottom: 10px;">
+                            Mission Report
+                        </h1>
+
+                        <div style="margin-top: 20px;">
+                            <p>
+                                <strong>Reference of the Mission:</strong>
+                                <t t-set="employee" t-value="o.reference"/>
+                                <t t-if="employee">
+                                    <t t-esc="employee.name"/>
+                                </t>
+                            </p>
+
+                            <p>
+                                <strong>Type of the Mission:</strong>
+                                <t t-set="type" t-value="o.mission_type_id"/>
+                                <t t-if="type">
+                                    <t t-esc="type.name"/>
+                                </t>
+                            </p>
+
+                            <p>
+                                <strong>Objective of the Mission:</strong>
+                                <t t-set="objective" t-value="o.objective_id"/>
+                                <t t-if="objective">
+                                    <t t-esc="objective.name"/>
+                                </t>
+                            </p>
+
+                            <p>
+                                <strong>Employee:</strong>
+                                <t t-set="E_mployee" t-value="o.employee_id"/>
+                                <t t-if="E_mployee">
+                                    <t t-esc="E_mployee.name"/>
+                                </t>
+                            </p>
+
+                            <p>
+                                <strong>Start Date:</strong>
+                                <t t-esc="o.start_date"/> &#160;&#160;
+                                <strong>End Date:</strong>
+                                <t t-esc="o.end_date"/>
+                            </p>
+
+                            <p>
+                                <strong>Address:</strong>
+                                <t t-esc="o.address"/>
+                            </p>
+
+                            <p>
+                                <strong>Partner of the Mission:</strong>
+                                <t t-set="partner" t-value="o.partner_id"/>
+                                <t t-if="partner">
+                                    <t t-esc="partner.name"/>
+                                </t>
+                            </p>
+
+                            <p>
+                                <strong>Manager of the Partner:</strong>
+                                <t t-set="Manager" t-value="o.partner_manager_id"/>
+                                <t t-if="Manager">
+                                    <t t-esc="Manager.name"/>
+                                </t>
+                            </p>
+
+                            <p>
+                                <strong>Budget:</strong>
+                                <span style="color: #FF5722;">
+                                    <t t-esc="o.budget"/>
+                                </span>
+                            </p>
+
+                            <p>
+                                <strong>Status of the Mission:</strong>
+                                <t t-esc="o.mission_status"/>
+                            </p>
+                        </div>
+
+                        <h3 style="margin-top: 20px; color: #333;">Notes:</h3>
+                        <p style="background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+                            <t t-esc="o.notes"/>
+                        </p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

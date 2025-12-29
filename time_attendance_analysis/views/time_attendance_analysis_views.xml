@@ -1,0 +1,66 @@
+<odoo>
+
+    <!-- ============================
+         Parent Menu
+    ============================ -->
+    <menuitem id="menu_attendance_analysis_root"
+              name="Time and Attendance Analysis"
+              sequence="10"/>
+
+    <!-- ============================
+         Tree View: Not Attending Today
+    ============================ -->
+    <record id="view_not_attending_today_tree" model="ir.ui.view">
+        <field name="name">view.not.attending.today.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree string="Not Attending Today">
+                <field name="name"/>
+                <field name="work_email"/>
+                <field name="work_phone"/>
+                <field name="department_id"/>
+            </tree>
+        </field>
+    </record>
+
+<record id="action_not_attending_today" model="ir.actions.server">
+    <field name="name">Not Attending Today</field>
+    <field name="model_id" ref="hr.model_hr_employee"/>
+    <field name="state">code</field>
+    <field name="code">action = env['hr.employee'].action_not_attended_today()</field>
+</record>
+
+    <menuitem id="menu_not_attending_today"
+              name="Not Attending Today"
+              parent="menu_attendance_analysis_root"
+              action="action_not_attending_today"/>
+
+    <!-- ============================
+         Tree View: Monthly Lateness & Overtime
+    ============================ -->
+    <record id="view_lateness_overtime_tree" model="ir.ui.view">
+    <field name="name">view.lateness.overtime.tree</field>
+    <field name="model">hr.employee</field>
+    <field name="arch" type="xml">
+        <tree string="Monthly Lateness &amp; Overtime">
+            <field name="name"/>
+            <field name="department_id"/>
+            <field name="late_time_str"/>
+            <field name="extra_time_str"/>
+        </tree>
+    </field>
+</record>
+
+    <record id="action_lateness_overtime" model="ir.actions.act_window">
+        <field name="name">Monthly Lateness &amp; Overtime</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_lateness_overtime_tree"/>
+    </record>
+
+    <menuitem id="menu_lateness_overtime"
+              name="Monthly Lateness &amp; Overtime"
+              parent="menu_attendance_analysis_root"
+              action="action_lateness_overtime"/>
+
+</odoo>

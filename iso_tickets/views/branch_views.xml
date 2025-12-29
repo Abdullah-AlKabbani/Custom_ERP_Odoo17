@@ -1,0 +1,35 @@
+<odoo>
+  <record id="view_iso_branch_tree" model="ir.ui.view">
+    <field name="name">iso.branch.tree</field>
+    <field name="model">iso.branch</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="location"/>
+        <field name="manager_name"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_iso_branch_form" model="ir.ui.view">
+    <field name="name">iso.branch.form</field>
+    <field name="model">iso.branch</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="location"/>
+            <field name="manager_name"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_iso_branch" model="ir.actions.act_window">
+    <field name="name">Branches</field>
+    <field name="res_model">iso.branch</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>

@@ -1,0 +1,47 @@
+<odoo>
+  <!-- Each record searches by unique 'code'.
+       If a row already exists with that code, Odoo updates it and binds this xml-id to it.
+       If it doesn't exist, Odoo creates it. This avoids UniqueViolation on the 'code' field. -->
+
+  <record id="iso_section_supply" model="iso.section">
+    <field name="id" search="[('code', '=', 'supply')]"/>
+    <field name="name">Supply</field>
+    <field name="code">supply</field>
+  </record>
+
+  <record id="iso_section_quality" model="iso.section">
+    <field name="id" search="[('code', '=', 'quality')]"/>
+    <field name="name">Quality</field>
+    <field name="code">quality</field>
+  </record>
+
+  <record id="iso_section_maintenance" model="iso.section">
+    <field name="id" search="[('code', '=', 'maintenance')]"/>
+    <field name="name">Maintenance</field>
+    <field name="code">maintenance</field>
+  </record>
+
+  <record id="iso_section_sales" model="iso.section">
+    <field name="id" search="[('code', '=', 'sales')]"/>
+    <field name="name">Sales</field>
+    <field name="code">sales</field>
+  </record>
+
+  <record id="iso_section_tech" model="iso.section">
+    <field name="id" search="[('code', '=', 'tech')]"/>
+    <field name="name">Tech</field>
+    <field name="code">tech</field>
+  </record>
+
+  <record id="iso_section_hr" model="iso.section">
+    <field name="id" search="[('code', '=', 'hr')]"/>
+    <field name="name">HR</field>
+    <field name="code">hr</field>
+  </record>
+
+  <record id="iso_section_finance" model="iso.section">
+    <field name="id" search="[('code', '=', 'finance')]"/>
+    <field name="name">Finance</field>
+    <field name="code">finance</field>
+  </record>
+</odoo>

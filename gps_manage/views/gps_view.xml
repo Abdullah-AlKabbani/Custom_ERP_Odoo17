@@ -1,0 +1,104 @@
+<odoo>
+    <data>
+        <record id="gps_view_tree" model="ir.ui.view">
+            <field name="name">GPS tree</field>
+            <field name="model">gps</field>
+            <field name="arch" type="xml">
+                <tree create="1" edit="1" delete="1">
+                    <field name="license_plate_id"/>
+                    <field name="supervisor_id"/>
+                    <field name="driver_id"/>
+                    <field name="driver_position"/>
+                    <field name="violations_id" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="gps_view_form" model="ir.ui.view">
+            <field name="name">GPS form</field>
+            <field name="model">gps</field>
+            <field name="arch" type="xml">
+                <form create="1" edit="1" delete="1">
+                    <sheet>
+                        <group string="Drive's Information">
+                            <field name="license_plate_id"/>
+                            <field name="supervisor_id"/>
+                            <field name="driver_id"/>
+                            <field name="driver_position"/>
+                        </group>
+                        <sheet>
+                            <group string="Time Details">
+                                <field name="date_field"/>
+                                <field name="time_going_to_company" widget="datetime"/>
+                                <field name="time_access_company" widget="datetime"/>
+                                <field name="time_going_out_work" widget="datetime"/>
+                                <field name="time_enter_line" widget="datetime"/>
+                                <field name="time_exit_line" widget="datetime"/>
+                                <field name="full_working_time" readonly="1"/>
+                                <field name="working_hours_on_line" readonly="1"/>
+                                <field name="overnight_hours"/>
+                            </group>
+                            <group string="Additional Information">
+                                <field name="work_area"/>
+                                <field name="violations_id" widget="many2many_tags"/>
+                                <field name="violation_notes"/>
+                                <field name="accommodation_area"/>
+                                <field name="itinerary"/>
+                                <field name="kilometers_traveled"/>
+                                <field name="highest_speed"/>
+                                <field name="fuel_consumption"/>
+                                <field name="fuel_type"/>
+                                <field name="gps_jamming"/>
+                                <field name="sales_supervisor_note"/>
+
+                            </group>
+                        </sheet>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="gps_action" model="ir.actions.act_window">
+            <field name="name">GPS Management</field>
+            <field name="res_model">gps</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="gps_view_tree"/>
+        </record>
+
+
+        <record id="gps_view_search" model="ir.ui.view">
+            <field name="name">GPS Search</field>
+            <field name="model">gps</field>
+            <field name="arch" type="xml">
+                <search>
+                    <!-- Searchable Fields -->
+                    <field name="license_plate_id" string="License Plate"/>
+                    <field name="supervisor_id" string="Supervisor"/>
+                    <field name="driver_id" string="Driver"/>
+                    <field name="date_field" string="Date"/>
+                    <field name="work_area" string="Work Area"/>
+                    <field name="fuel_type" string="Fuel Type"/>
+
+                    <!-- Filters -->
+                    <filter name="filter_gps_jamming" string="GPS Jamming" domain="[('gps_jamming', '=', True)]"/>
+                    <filter name="filter_high_speed" string="High Speed" domain="[('highest_speed', '>=', 100)]"/>
+                    <filter name="filter_violation" string="With Violations" domain="[('violations_id', '!=', False)]"/>
+
+                    <!-- Group By Options -->
+                    <filter name="group_by_license_plate" string="License Plate"
+                            context="{'group_by': 'license_plate_id'}"/>
+                    <filter name="group_by_driver" string="Driver" context="{'group_by': 'driver_id'}"/>
+                    <filter name="group_by_supervisor" string="Supervisor" context="{'group_by': 'supervisor_id'}"/>
+                </search>
+
+            </field>
+        </record>
+
+
+        <menuitem
+                id="gps_menu_item"
+                name="Tickets"
+                parent="add_ticket_menu"
+                action="gps_action"/>
+    </data>
+</odoo>

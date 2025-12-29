@@ -1,0 +1,56 @@
+<odoo>
+    <!-- Tree view (لرؤية الصفوف) -->
+    <record id="view_supply_late_tree" model="ir.ui.view">
+        <field name="name">custom_supply.late_report.tree</field>
+        <field name="model">custom_supply.late_report</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kind"/>
+                <field name="label"/>
+                <field name="value"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Graph view generic (نستخدم field value كمقياس و label كسطر) -->
+    <record id="view_supply_late_graph_generic" model="ir.ui.view">
+        <field name="name">custom_supply.late_report.graph.generic</field>
+        <field name="model">custom_supply.late_report</field>
+        <field name="arch" type="xml">
+            <graph string="Late Report (Generic)" type="pie">
+                <!-- field 'value' هو المقياس (measure) -->
+                <field name="value" type="measure"/>
+                <!-- field 'label' هو محور الكابشن/قطعة الدائرة -->
+                <field name="label" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Action for Supply -->
+    <record id="action_supply_late_report" model="ir.actions.act_window">
+        <field name="name">Supply Delay Status</field>
+        <field name="res_model">custom_supply.late_report</field>
+        <field name="view_mode">graph,tree</field>
+        <!-- domain يفلتر على kind = supply -->
+        <field name="domain">[('kind','=','supply')]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Action for Warehouse -->
+    <record id="action_warehouse_late_report" model="ir.actions.act_window">
+        <field name="name">Warehouse Delay Status</field>
+        <field name="res_model">custom_supply.late_report</field>
+        <field name="view_mode">graph,tree</field>
+        <field name="domain">[('kind','=','warehouse')]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <!-- Action for Delivery -->
+    <record id="action_delivery_late_report" model="ir.actions.act_window">
+        <field name="name">Delivery Delay Status</field>
+        <field name="res_model">custom_supply.late_report</field>
+        <field name="view_mode">graph,tree</field>
+        <field name="domain">[('kind','=','delivery')]</field>
+        <field name="context">{}</field>
+    </record>
+</odoo>

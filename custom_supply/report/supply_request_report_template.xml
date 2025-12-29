@@ -1,0 +1,112 @@
+<odoo>
+  <template id="supply_request_report_document" name="Supply Request Report Document">
+    <t t-call="web.external_layout">
+
+      <!-- إزالة تفاصيل الشركة -->
+      <t t-set="company" t-value="None"/>
+
+      <!-- المستند -->
+      <t t-set="doc" t-value="docs[0]"/>
+
+      <!-- صفحة التقرير -->
+      <div class="page" style="direction: rtl; font-family: 'Arial';">
+
+        <!-- رأس الصفحة (اللوغو فقط) -->
+        <div class="header" style="text-align:center; margin-bottom:10px;">
+          <img src="/custom_supply/static/src/img/Logo.jpg" style="height:80px;"/>
+        </div>
+
+        <main>
+
+          <!-- عنوان التقرير -->
+          <h2 style="text-align:center; font-weight:bold;">
+            طلب استدراج مواد من المستودع الرئيسي للأفرع
+          </h2>
+          <br/>
+
+          <!-- معلومات عامة -->
+          <table width="100%" style="margin-bottom:10px;">
+            <tr>
+              <td style="padding-left:10px; text-align:left;">
+                <strong>الفرع:</strong> <span t-esc="doc.branch_id.name"/>
+              </td>
+              <td style="text-align:center;">
+                <strong>رقم الطلب:</strong> <span t-esc="doc.name"/>
+              </td>
+              <td style="padding-right:10px; text-align:right;">
+                <strong>تاريخ الإنشاء:</strong>
+                <span t-esc="doc.request_date and doc.request_date.strftime('%Y-%m-%d')"/>
+              </td>
+            </tr>
+          </table>
+
+          <!-- جدول التفاصيل -->
+          <table class="table table-sm" width="100%" border="1" cellspacing="0" cellpadding="4" style="direction: rtl; text-align:center;">
+            <thead>
+              <tr style="background-color:#f0f0f0; font-weight:bold; color:black;">
+                <th>اسم المنتج</th>
+                <th>الرصيد الحالي</th>
+                <th>الكمية المطلوبة</th>
+                <th>الكمية المُخرَّجة</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr t-foreach="doc.line_ids" t-as="l"
+                  t-if="not (l.current_qty == -1 and l.supply_qty == 0)">
+                <td t-esc="l.product_id.display_name"/>
+                <td t-esc="l.current_qty"/>
+                <td t-esc="l.supply_qty"/>
+                <td> </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <br/>
+
+          <!-- التوقيعات -->
+          <div style="width:100%; margin-top:30px;">
+            <div style="float:right; text-align:right; width:45%; font-weight:bold;">
+              مشرف الفرع
+              <br/>
+              <span style="font-weight:normal;">التوقيع والتاريخ: _____________</span>
+                <!--
+                <br/>
+              <span style="font-weight:normal;">التوقيع: _____________</span>
+               -->
+            </div>
+
+            <div style="float:left; text-align:right; width:45%; font-weight:bold;">
+              مسؤول التوريد
+              <br/>
+              <span style="font-weight:normal;">التوقيع والتاريخ: _____________</span>
+                <!--
+                <br/>
+              <span style="font-weight:normal;">التوقيع: _____________</span>
+              -->
+            </div>
+          </div>
+
+          <div style="clear:both;"></div>
+
+
+          <br/><br/>
+
+          <!--
+          <p style="text-align:right; margin-top:40px; line-height:1.8;">
+            نسخة إلى أمین المستودع<br/>
+            نسخة إلى مسؤول التورید
+          </p>
+          -->
+
+        </main>
+
+        <!-- تذييل الصفحة -->
+        <div class="footer" style="text-align:left; font-weight:bold; margin-top:30px;">
+          Ref.: PUWP001
+        </div>
+
+      </div>
+
+    </t>
+  </template>
+</odoo>

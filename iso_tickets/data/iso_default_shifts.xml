@@ -1,0 +1,12 @@
+<odoo>
+  <record id="shift_morning" model="iso.shift">
+    <field name="name">Morning</field>
+    <field name="start_hour">08:00</field>
+    <field name="end_hour">16:00</field>
+  </record>
+  <record id="shift_evening" model="iso.shift">
+    <field name="name">Evening</field>
+    <field name="start_hour">16:00</field>
+    <field name="end_hour">00:00</field>
+  </record>
+</odoo>

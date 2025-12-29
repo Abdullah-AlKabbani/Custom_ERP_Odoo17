@@ -1,0 +1,49 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+iso_branch_manager,iso.branch manager,model_iso_branch,iso_tickets.group_iso_manager,1,1,1,1
+iso_shift_manager,iso.shift manager,model_iso_shift,iso_tickets.group_iso_manager,1,1,1,1
+iso_section_manager,iso.section manager,model_iso_section,iso_tickets.group_iso_manager,1,1,1,1
+iso_statement_manager,iso.statement manager,model_iso_statement,iso_tickets.group_iso_manager,1,1,1,1
+iso_ticket_manager,iso.ticket manager,model_iso_ticket,iso_tickets.group_iso_manager,1,1,1,1
+iso_ticket_line_manager,iso.ticket.line manager,model_iso_ticket_line,iso_tickets.group_iso_manager,1,1,1,1
+iso_section_read_supply,iso.section read (supply),model_iso_section,iso_tickets.group_iso_supply,1,0,0,0
+iso_statement_read_supply,iso.statement read (supply),model_iso_statement,iso_tickets.group_iso_supply,1,0,0,0
+iso_branch_read_supply,iso.branch read (supply),model_iso_branch,iso_tickets.group_iso_supply,1,0,0,0
+iso_shift_read_supply,iso.shift read (supply),model_iso_shift,iso_tickets.group_iso_supply,1,0,0,0
+iso_section_read_quality,iso.section read (quality),model_iso_section,iso_tickets.group_iso_quality,1,0,0,0
+iso_statement_read_quality,iso.statement read (quality),model_iso_statement,iso_tickets.group_iso_quality,1,0,0,0
+iso_branch_read_quality,iso.branch read (quality),model_iso_branch,iso_tickets.group_iso_quality,1,0,0,0
+iso_shift_read_quality,iso.shift read (quality),model_iso_shift,iso_tickets.group_iso_quality,1,0,0,0
+iso_section_read_maintenance,iso.section read (maintenance),model_iso_section,iso_tickets.group_iso_maintenance,1,0,0,0
+iso_statement_read_maintenance,iso.statement read (maintenance),model_iso_statement,iso_tickets.group_iso_maintenance,1,0,0,0
+iso_branch_read_maintenance,iso.branch read (maintenance),model_iso_branch,iso_tickets.group_iso_maintenance,1,0,0,0
+iso_shift_read_maintenance,iso.shift read (maintenance),model_iso_shift,iso_tickets.group_iso_maintenance,1,0,0,0
+iso_section_read_sales,iso.section read (sales),model_iso_section,iso_tickets.group_iso_sales,1,0,0,0
+iso_statement_read_sales,iso.statement read (sales),model_iso_statement,iso_tickets.group_iso_sales,1,0,0,0
+iso_branch_read_sales,iso.branch read (sales),model_iso_branch,iso_tickets.group_iso_sales,1,0,0,0
+iso_shift_read_sales,iso.shift read (sales),model_iso_shift,iso_tickets.group_iso_sales,1,0,0,0
+iso_section_read_tech,iso.section read (tech),model_iso_section,iso_tickets.group_iso_tech,1,0,0,0
+iso_statement_read_tech,iso.statement read (tech),model_iso_statement,iso_tickets.group_iso_tech,1,0,0,0
+iso_branch_read_tech,iso.branch read (tech),model_iso_branch,iso_tickets.group_iso_tech,1,0,0,0
+iso_shift_read_tech,iso.shift read (tech),model_iso_shift,iso_tickets.group_iso_tech,1,0,0,0
+iso_section_read_hr,iso.section read (hr),model_iso_section,iso_tickets.group_iso_hr,1,0,0,0
+iso_statement_read_hr,iso.statement read (hr),model_iso_statement,iso_tickets.group_iso_hr,1,0,0,0
+iso_branch_read_hr,iso.branch read (hr),model_iso_branch,iso_tickets.group_iso_hr,1,0,0,0
+iso_shift_read_hr,iso.shift read (hr),model_iso_shift,iso_tickets.group_iso_hr,1,0,0,0
+iso_section_read_finance,iso.section read (finance),model_iso_section,iso_tickets.group_iso_finance,1,0,0,0
+iso_statement_read_finance,iso.statement read (finance),model_iso_statement,iso_tickets.group_iso_finance,1,0,0,0
+iso_branch_read_finance,iso.branch read (finance),model_iso_branch,iso_tickets.group_iso_finance,1,0,0,0
+iso_shift_read_finance,iso.shift read (finance),model_iso_shift,iso_tickets.group_iso_finance,1,0,0,0
+iso_ticket_section_supply,iso.ticket (supply),model_iso_ticket,iso_tickets.group_iso_supply,1,1,1,0
+iso_ticket_line_section_supply,iso.ticket.line (supply),model_iso_ticket_line,iso_tickets.group_iso_supply,1,1,1,0
+iso_ticket_section_quality,iso.ticket (quality),model_iso_ticket,iso_tickets.group_iso_quality,1,1,0,0
+iso_ticket_line_section_quality,iso.ticket.line (quality),model_iso_ticket_line,iso_tickets.group_iso_quality,1,1,0,0
+iso_ticket_section_maintenance,iso.ticket (maintenance),model_iso_ticket,iso_tickets.group_iso_maintenance,1,1,0,0
+iso_ticket_line_section_maintenance,iso.ticket.line (maintenance),model_iso_ticket_line,iso_tickets.group_iso_maintenance,1,1,0,0
+iso_ticket_section_sales,iso.ticket (sales),model_iso_ticket,iso_tickets.group_iso_sales,1,1,0,0
+iso_ticket_line_section_sales,iso.ticket.line (sales),model_iso_ticket_line,iso_tickets.group_iso_sales,1,1,0,0
+iso_ticket_section_tech,iso.ticket (tech),model_iso_ticket,iso_tickets.group_iso_tech,1,1,0,0
+iso_ticket_line_section_tech,iso.ticket.line (tech),model_iso_ticket_line,iso_tickets.group_iso_tech,1,1,0,0
+iso_ticket_section_hr,iso.ticket (hr),model_iso_ticket,iso_tickets.group_iso_hr,1,1,0,0
+iso_ticket_line_section_hr,iso.ticket.line (hr),model_iso_ticket_line,iso_tickets.group_iso_hr,1,1,0,0
+iso_ticket_section_finance,iso.ticket (finance),model_iso_ticket,iso_tickets.group_iso_finance,1,1,0,0
+iso_ticket_line_section_finance,iso.ticket.line (finance),model_iso_ticket_line,iso_tickets.group_iso_finance,1,1,0,0

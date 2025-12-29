@@ -1,0 +1,51 @@
+<odoo>
+
+    <!-- TREE VIEW -->
+    <record id="view_branch_report_type_tree" model="ir.ui.view">
+        <field name="name">branch.report.type.tree</field>
+        <field name="model">custom_supply.branch.report.type</field>
+        <field name="arch" type="xml">
+            <tree string="Branches by Type">
+                <field name="branch_type_id"/>
+                <field name="branch_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- BAR CHART -->
+    <record id="view_branch_report_type_graph_bar" model="ir.ui.view">
+        <field name="name">branch.report.type.graph.bar</field>
+        <field name="model">custom_supply.branch.report.type</field>
+        <field name="arch" type="xml">
+            <graph string="Branches by Type" type="bar">
+                <field name="branch_type_id" type="row"/>
+                <field name="branch_count" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- PIE CHART -->
+    <record id="view_branch_report_type_graph_pie" model="ir.ui.view">
+        <field name="name">branch.report.type.graph.pie</field>
+        <field name="model">custom_supply.branch.report.type</field>
+        <field name="arch" type="xml">
+            <graph string="Branch Distribution by Type" type="pie">
+                <field name="branch_type_id" type="row"/>
+                <field name="branch_count" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- PIVOT TABLE -->
+    <record id="view_branch_report_type_pivot" model="ir.ui.view">
+        <field name="name">branch.report.type.pivot</field>
+        <field name="model">custom_supply.branch.report.type</field>
+        <field name="arch" type="xml">
+            <pivot string="Branches by Type">
+                <field name="branch_type_id" type="row"/>
+                <field name="branch_count" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+</odoo>

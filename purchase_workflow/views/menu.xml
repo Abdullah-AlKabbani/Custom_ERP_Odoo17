@@ -1,0 +1,29 @@
+<odoo>
+    <!-- Action: Purchase Request -->
+    <record id="purchase_workflow.action_purchase_request" model="ir.actions.act_window">
+        <field name="name">Purchase Requests</field>
+        <field name="res_model">purchase.request</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Action: Purchase Offers -->
+    <record id="purchase_workflow.action_purchase_offer" model="ir.actions.act_window">
+        <field name="name">Vendor Offers</field>
+        <field name="res_model">purchase.offer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu Root -->
+    <menuitem id="menu_purchase_workflow_root" name="Purchase Workflow"/>
+
+    <!-- Submenus -->
+    <menuitem id="menu_purchase_request"
+              name="Purchase Requests"
+              parent="menu_purchase_workflow_root"
+              action="purchase_workflow.action_purchase_request"/>
+
+    <menuitem id="menu_purchase_offers"
+              name="Offers Configuration"
+              parent="menu_purchase_workflow_root"
+              action="purchase_workflow.action_purchase_offer"/>
+</odoo>

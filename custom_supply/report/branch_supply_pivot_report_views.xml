@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Detailed Pivot Table (Branch x Product x Month) -->
+        <record id="view_branch_product_monthly_pivot" model="ir.ui.view">
+            <field name="name">custom_supply.branch_product_monthly_report.pivot</field>
+            <field name="model">custom_supply.branch_product_monthly_report</field>
+            <field name="arch" type="xml">
+                <pivot string="Branch Product Monthly Quantities">
+                    <!-- Measures -->
+                    <field name="total_qty" type="measure"/>
+                    <field name="export_qty" type="measure"/>
+                    <field name="net_qty" type="measure"/>
+                    <field name="export_ratio" type="measure"/>
+
+                    <!-- Dimensions -->
+                    <field name="branch_id" type="row"/>
+                    <field name="month" type="col" interval="month"/>
+                    <field name="full_label" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_branch_product_monthly_search" model="ir.ui.view">
+            <field name="name">custom_supply.branch_product_monthly_report.search</field>
+            <field name="model">custom_supply.branch_product_monthly_report</field>
+            <field name="arch" type="xml">
+                <search string="Branch Product Monthly Report">
+                    <field name="branch_name"/>
+                    <field name="product_name"/>
+                    <field name="month"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_branch_product_monthly_report" model="ir.actions.act_window">
+            <field name="name">Branch Product Monthly Report</field>
+            <field name="res_model">custom_supply.branch_product_monthly_report</field>
+            <field name="view_mode">pivot</field>
+            <field name="search_view_id" ref="view_branch_product_monthly_search"/>
+        </record>
+
+        <!-- Summary Pivot Table (Branch x Month, Number of Requests) -->
+        <record id="view_branch_monthly_count_pivot" model="ir.ui.view">
+            <field name="name">custom_supply.branch_monthly_request_count.pivot</field>
+            <field name="model">custom_supply.branch_monthly_request_count</field>
+            <field name="arch" type="xml">
+                <pivot string="Branch Monthly Request Count">
+                    <field name="request_count" type="measure"/>
+                    <field name="branch_name" type="row"/>
+                    <field name="month" type="col"/>
+                </pivot>
+            </field>
+        </record>
+
+        <record id="view_branch_monthly_count_search" model="ir.ui.view">
+            <field name="name">custom_supply.branch_monthly_request_count.search</field>
+            <field name="model">custom_supply.branch_monthly_request_count</field>
+            <field name="arch" type="xml">
+                <search string="Branch Monthly Request Count">
+                    <field name="branch_name"/>
+                    <field name="month"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_branch_monthly_count_report" model="ir.actions.act_window">
+            <field name="name">Branch Monthly Request Count</field>
+            <field name="res_model">custom_supply.branch_monthly_request_count</field>
+            <field name="view_mode">pivot</field>
+            <field name="search_view_id" ref="view_branch_monthly_count_search"/>
+        </record>
+
+    </data>
+</odoo>

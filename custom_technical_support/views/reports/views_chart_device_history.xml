@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- =========================
+         Device History Chart
+         ========================= -->
+    <record id="view_chart_device_history" model="ir.ui.view">
+        <field name="name">chart.device.history</field>
+        <field name="model">chart.ts.device.history</field>
+        <field name="arch" type="xml">
+            <graph string="Device Quantity Over Time" type="line">
+                <field name="date" type="col"/>
+                <field name="qty" type="measure"/>
+                <field name="device_id" type="row"/>
+            </graph>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,39 @@
+<odoo>
+
+    <!-- TREE VIEW -->
+    <record id="view_branch_report_state_tree" model="ir.ui.view">
+        <field name="name">branch.report.state.tree</field>
+        <field name="model">custom_supply.branch.report.state</field>
+        <field name="arch" type="xml">
+            <tree string="Branches by State">
+                <field name="state"/>
+                <field name="branch_count"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- BAR CHART -->
+    <record id="view_branch_report_state_graph_bar" model="ir.ui.view">
+        <field name="name">branch.report.state.graph.bar</field>
+        <field name="model">custom_supply.branch.report.state</field>
+        <field name="arch" type="xml">
+            <graph string="Branches by State" type="bar">
+                <field name="state" type="row"/>
+                <field name="branch_count" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- PIE CHART -->
+    <record id="view_branch_report_state_graph_pie" model="ir.ui.view">
+        <field name="name">branch.report.state.graph.pie</field>
+        <field name="model">custom_supply.branch.report.state</field>
+        <field name="arch" type="xml">
+            <graph string="Branch State Distribution" type="pie">
+                <field name="state" type="row"/>
+                <field name="branch_count" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+</odoo>

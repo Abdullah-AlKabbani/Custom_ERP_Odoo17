@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="device_category_router" model="ts.device.category">
+        <field name="name">مصدر انترنت</field>
+    </record>
+
+    <record id="device_category_switch" model="ts.device.category">
+        <field name="name">أجهزة الربط</field>
+    </record>
+
+    <record id="device_category_cameras" model="ts.device.category">
+        <field name="name">أجهزة الكاميرات</field>
+    </record>
+
+    <record id="device_category_pos" model="ts.device.category">
+        <field name="name">نقطة البيع</field>
+    </record>
+
+    <record id="device_category_amp" model="ts.device.category">
+        <field name="name">آمبلي</field>
+    </record>
+
+    <record id="device_category_cash" model="ts.device.category">
+        <field name="name">كاش</field>
+    </record>
+
+    <record id="device_category_cabin" model="ts.device.category">
+        <field name="name">كبين</field>
+    </record>
+
+    <record id="device_category_attendance" model="ts.device.category">
+        <field name="name">جهاز الدوام</field>
+    </record>
+
+    <record id="device_category_electric" model="ts.device.category">
+        <field name="name">توصيلات كهربائية</field>
+    </record>
+
+    <record id="device_category_comm" model="ts.device.category">
+        <field name="name">جهاز اتصال</field>
+    </record>
+</odoo>

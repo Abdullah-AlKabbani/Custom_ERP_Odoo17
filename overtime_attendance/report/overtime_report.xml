@@ -1,0 +1,64 @@
+<odoo>
+    <record id="overtime_report" model="ir.actions.report">
+        <field name="name">Overtime Report</field>
+        <field name="model">overtime.request</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="binding_model_id" ref="model_overtime_request"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">overtime_attendance.overtime_report_template</field>
+    </record>
+
+    <template id="overtime_report_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div style="font-family: Arial, sans-serif; margin: 20px; padding: 20px; border: 1px solid #ccc; border-radius: 8px;">
+                        <h1 style="text-align: center; color: black; border-bottom: 2px solid black; padding-bottom: 10px;">
+                            Overtime Request
+                        </h1>
+
+                        <div style="margin-top: 20px;">
+                            <p>
+                                <strong>Request Name:</strong>
+                                <t t-esc="o.name"/>
+                            </p>
+
+                            <p>
+                                <strong>Department:</strong>
+                                <t t-if="o.department_id">
+                                    <t t-esc="o.department_id.name"/>
+                                </t>
+                            </p>
+
+                            <p>
+                                <strong>Employees:</strong>
+                                <ul>
+                                    <t t-foreach="o.employee_ids" t-as="employee">
+                                        <li>
+                                            <t t-esc="employee.name"/>
+                                        </li>
+                                    </t>
+                                </ul>
+                            </p>
+
+                            <p>
+                                <strong>Description:</strong>
+                                <t t-esc="o.description"/>
+                            </p>
+
+                            <p>
+                                <strong>Overtime Hours:</strong>
+                                <t t-esc="o.hours"/>
+                            </p>
+
+                            <p>
+                                <strong>Status:</strong>
+                                <t t-esc="dict(o.fields_get(['state'])['state']['selection']).get(o.state)"/>
+                            </p>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

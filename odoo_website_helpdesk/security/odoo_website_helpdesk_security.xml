@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ===================== ticket.helpdesk ===================== -->
+
+    <!-- User: can READ ALL tickets -->
+    <record id="helpdesk_ticket_rule_user" model="ir.rule">
+        <field name="name">Helpdesk Ticket - User can read all</field>
+        <field name="model_id" ref="model_ticket_helpdesk"/>
+        <field name="domain_force">[(1,'=',1)]</field>  <!-- All tickets -->
+        <field name="groups" eval="[(4, ref('odoo_website_helpdesk.helpdesk_user'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <!-- Team Leader: can read ALL and CREATE; cannot write or delete. -->
+    <record id="helpdesk_ticket_rule_leader" model="ir.rule">
+        <field name="name">Helpdesk Ticket - Leader read all, create</field>
+        <field name="model_id" ref="model_ticket_helpdesk"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('odoo_website_helpdesk.helpdesk_team_leader'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <!-- Manager: full access to all tickets -->
+    <record id="helpdesk_ticket_rule_manager" model="ir.rule">
+        <field name="name">Helpdesk Ticket - Manager full</field>
+        <field name="model_id" ref="model_ticket_helpdesk"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('odoo_website_helpdesk.helpdesk_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+    <!-- ===================== ticket.stage ===================== -->
+
+    <!-- User: can READ stages (if you want to limit by group membership, uncomment the domain below) -->
+    <record id="helpdesk_stage_rule_user" model="ir.rule">
+        <field name="name">Helpdesk Stage - User read</field>
+        <field name="model_id" ref="model_ticket_stage"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <!-- To restrict to stages whose group contains the user, use:
+             <field name="domain_force">[('group_ids.users','in',user.id)]</field>
+        -->
+        <field name="groups" eval="[(4, ref('odoo_website_helpdesk.helpdesk_user'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <!-- Team Leader: read stages only -->
+    <record id="helpdesk_stage_rule_leader" model="ir.rule">
+        <field name="name">Helpdesk Stage - Leader read</field>
+        <field name="model_id" ref="model_ticket_stage"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('odoo_website_helpdesk.helpdesk_team_leader'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+    </record>
+
+    <!-- Manager: full on stages -->
+    <record id="helpdesk_stage_rule_manager" model="ir.rule">
+        <field name="name">Helpdesk Stage - Manager full</field>
+        <field name="model_id" ref="model_ticket_stage"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('odoo_website_helpdesk.helpdesk_manager'))]"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
+    </record>
+
+</odoo>

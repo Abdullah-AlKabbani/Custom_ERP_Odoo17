@@ -1,0 +1,88 @@
+<odoo>
+  <!-- Category to show group in Settings > Users & Companies > Groups -->
+  <record id="module_category_helpdesk_visits" model="ir.module.category">
+    <field name="name">Help Desk Visits</field>
+    <field name="sequence">30</field>
+  </record>
+
+  <!-- Group for Helpdesk Manager -->
+  <record id="group_helpdesk_manager" model="res.groups">
+    <field name="name">Manager</field>
+    <field name="category_id" ref="module_category_helpdesk_visits"/>
+    <!-- Implied group, giving this group internal user permissions -->
+    <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+  </record>
+
+  <!-- Group for Helpdesk User (read-only access) -->
+  <record id="group_helpdesk_user" model="res.groups">
+    <field name="name">User</field>
+    <field name="category_id" ref="module_category_helpdesk_visits"/>
+    <!-- Implied group for basic user access -->
+    <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+  </record>
+
+  <!-- Access Control List (ACL) for Helpdesk Manager (full permissions) -->
+  <record id="access_helpdesk_branch_mgr" model="ir.model.access">
+    <field name="name">access_helpdesk_branch_mgr</field>
+    <field name="model_id" ref="model_helpdesk_branch"/>
+    <field name="group_id" ref="group_helpdesk_manager"/>
+    <field name="perm_read">1</field>
+    <field name="perm_write">1</field>
+    <field name="perm_create">1</field>
+    <field name="perm_unlink">1</field>
+  </record>
+
+  <!-- Access Control List (ACL) for Helpdesk User (read-only permissions) -->
+  <record id="access_helpdesk_branch_user" model="ir.model.access">
+    <field name="name">access_helpdesk_branch_user</field>
+    <field name="model_id" ref="model_helpdesk_branch"/>
+    <field name="group_id" ref="group_helpdesk_user"/>
+    <field name="perm_read">1</field>
+    <field name="perm_write">0</field>
+    <field name="perm_create">0</field>
+    <field name="perm_unlink">0</field>
+  </record>
+
+  <!-- Similar Access Control List (ACL) for other models like visit type, ticket method, etc. -->
+  <record id="access_helpdesk_visit_type_mgr" model="ir.model.access">
+    <field name="name">access_helpdesk_visit_type_mgr</field>
+    <field name="model_id" ref="model_helpdesk_visit_type"/>
+    <field name="group_id" ref="group_helpdesk_manager"/>
+    <field name="perm_read">1</field>
+    <field name="perm_write">1</field>
+    <field name="perm_create">1</field>
+    <field name="perm_unlink">1</field>
+  </record>
+
+  <record id="access_helpdesk_visit_type_user" model="ir.model.access">
+    <field name="name">access_helpdesk_visit_type_user</field>
+    <field name="model_id" ref="model_helpdesk_visit_type"/>
+    <field name="group_id" ref="group_helpdesk_user"/>
+    <field name="perm_read">1</field>
+    <field name="perm_write">0</field>
+    <field name="perm_create">0</field>
+    <field name="perm_unlink">0</field>
+  </record>
+
+  <!-- Repeat the ACLs for other models like ticket methods, devices, etc. -->
+  <record id="access_helpdesk_ticket_method_mgr" model="ir.model.access">
+    <field name="name">access_helpdesk_ticket_method_mgr</field>
+    <field name="model_id" ref="model_helpdesk_ticket_method"/>
+    <field name="group_id" ref="group_helpdesk_manager"/>
+    <field name="perm_read">1</field>
+    <field name="perm_write">1</field>
+    <field name="perm_create">1</field>
+    <field name="perm_unlink">1</field>
+  </record>
+
+  <record id="access_helpdesk_ticket_method_user" model="ir.model.access">
+    <field name="name">access_helpdesk_ticket_method_user</field>
+    <field name="model_id" ref="model_helpdesk_ticket_method"/>
+    <field name="group_id" ref="group_helpdesk_user"/>
+    <field name="perm_read">1</field>
+    <field name="perm_write">0</field>
+    <field name="perm_create">0</field>
+    <field name="perm_unlink">0</field>
+  </record>
+
+</odoo>

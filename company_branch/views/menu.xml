@@ -1,0 +1,16 @@
+<odoo>
+    <menuitem id="menu_company_branch_root" name="Company Branches" sequence="10"/>
+
+    <menuitem id="menu_company_branch" name="Branches" parent="menu_company_branch_root"
+              action="company_branch.action_company_branch" sequence="20"/>
+
+    <menuitem id="menu_company_branch_config" name="Configuration" parent="menu_company_branch_root" sequence="100"/>
+        <menuitem id="menu_company_branch_type" name="Branch Types" parent="menu_company_branch_config"
+              action="company_branch.action_branch_type" sequence="10"/>
+        <menuitem id="menu_company_branch_config_country" name="Countries" parent="menu_company_branch_config"
+                  action="company_branch.action_branch_country" sequence="20"/>
+        <menuitem id="menu_company_branch_config_city" name="Cities" parent="menu_company_branch_config"
+                  action="company_branch.action_branch_city" sequence="30"/>
+
+
+</odoo>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ==========================
+         Tree View - Order Tracking
+         ========================== -->
+    <record id="view_supply_request_tracking_tree" model="ir.ui.view">
+        <field name="name">custom_supply.supply_request.tree.tracking</field>
+        <field name="model">custom_supply.supply_request</field>
+        <field name="arch" type="xml">
+            <tree string="Order Tracking">
+                <field name="late_icon_display" readonly="1" string="Late"/>
+                <field name="name" readonly="1"/>
+                <field name="branch_id" readonly="1"/>
+                <field name="status" readonly="1"/>
+                <field name="request_date" readonly="1"/>
+                <field name="supply_confirm_date" readonly="1"/>
+                <field name="warehouse_export_date" readonly="1"/>
+                <field name="received_date" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ==========================
+         Kanban View - Order Tracking
+         ========================== -->
+    <record id="view_supply_request_tracking_kanban" model="ir.ui.view">
+        <field name="name">custom_supply.supply_request.kanban.tracking</field>
+        <field name="model">custom_supply.supply_request</field>
+        <field name="arch" type="xml">
+            <kanban
+                class="o_kanban_small_column"
+                create="false"
+                quick_create="false"
+                edit="false"
+                delete="false"
+                group_edit="false"
+                draggable="false"
+                default_group_by="status">
+
+                <field name="name"/>
+                <field name="branch_id"/>
+                <field name="request_date"/>
+                <field name="status"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click o_kanban_card o_kanban_record o_status_#{record.status.raw_value}"
+                             t-att-data-oe-can-drag="'false'">
+                            <div class="o_kanban_card_body">
+                                <strong style="font-size:1.1em;">
+                                    <field name="name"/>
+                                    <span style="margin-left:5px;"> <field name="late_icon_display"/> </span>
+                                </strong>
+                                <div>Branch: <field name="branch_id"/></div>
+                                <div>Request Date: <field name="request_date"/></div>
+                                <div>Status: <field name="status"/></div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- ==========================
+         Form View - Unified Request Details (Read Only)
+         ========================== -->
+    <record id="view_supply_request_tracking_form" model="ir.ui.view">
+        <field name="name">custom_supply.supply_request.form.tracking</field>
+        <field name="model">custom_supply.supply_request</field>
+        <field name="arch" type="xml">
+            <form string="Supply Request Details" edit="false" create="false" delete="false">
+                <sheet>
+                    <!-- Header Fields -->
+                    <group>
+                        <group string="Request Info">
+                            <field name="name" readonly="1"/>
+                            <field name="branch_id" readonly="1"/>
+                            <field name="supply_manager_id" readonly="1"/>
+                            <field name="warehouse_user_id" readonly="1"/>
+                        </group>
+
+                        <group string="Processing Details">
+                            <field name="request_date" readonly="1"/>
+                            <field name="supply_confirm_date" readonly="1"/>
+                            <field name="warehouse_export_date" readonly="1"/>
+                            <field name="received_date" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <!-- Notebook Tabs -->
+                    <notebook>
+                        <!-- Request Lines Tab -->
+                        <page string="Request Lines">
+                            <field name="line_ids" nolabel="1" context="{'from_order_tracking': True}" domain="[('current_qty', '!=', -1),('supply_qty', '!=', 0)]">
+                                <tree editable="false">
+                                    <field name="product_id" readonly="1"/>
+                                    <field name="unit_name" readonly="1"/>
+                                    <field name="current_qty" readonly="1"/>
+                                    <field name="suggested_qty" readonly="1"/>
+                                    <field name="requested_qty" readonly="1"/>
+                                    <field name="note" readonly="1"/>
+                                    <field name="supply_qty" readonly="1"/>
+                                    <field name="supply_note" readonly="1"/>
+                                    <field name="export_qty" readonly="1"/>
+                                    <field name="warehouse_note" readonly="1"/>
+                                    <field name="received_qty" readonly="1"/>
+                                    <field name="received_note" readonly="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ==========================
+     Search View - Order Tracking
+     ========================== -->
+    <record id="view_supply_request_tracking_search" model="ir.ui.view">
+        <field name="name">custom_supply.supply_request.search.tracking</field>
+        <field name="model">custom_supply.supply_request</field>
+        <field name="arch" type="xml">
+            <search string="Search Requests">
+
+                <!-- ======================
+                     Search Input Fields
+                     ====================== -->
+                <field name="name" string="Request Number"/>
+                <field name="branch_id"/>
+                <field name="status"/>
+                <field name="request_date"/>
+
+                <!-- ======================
+                     Predefined Filters
+                     ====================== -->
+
+                <!-- Filter: Today's Requests -->
+                <filter name="today_requests"
+                        string="Today"
+                        domain="[('request_date', '>=', context_today())]"/>
+
+                <!-- Date Range Filters -->
+                <group expand="0" string="Date Filters">
+                    <filter name="last_7_days"
+                            string="This Week"
+                            domain="[('request_date', '>=', context_today().add(days=-7))]"/>
+                    <filter name="last_30_days"
+                            string="This Month"
+                            domain="[('request_date', '>=', context_today().add(days=-30))]"/>
+                </group>
+
+                <!-- ======================
+                     Group By Options
+                     ====================== -->
+                <group expand="0" string="Group By">
+                    <filter name="group_branch"
+                            string="Branch"
+                            context="{'group_by':'branch_id'}"/>
+
+                    <filter name="group_status"
+                            string="Status"
+                            context="{'group_by':'status'}"/>
+
+                    <filter name="group_by_date"
+                            string="Request Date"
+                            context="{'group_by':'request_date'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+
+    <!-- ==========================
+         Action & Menu
+         ========================== -->
+        <record id="action_order_tracking" model="ir.actions.act_window">
+            <field name="name">Supply Request Tracking</field>
+            <field name="res_model">custom_supply.supply_request</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" ref="view_supply_request_tracking_form"/>
+            <field name="search_view_id" ref="view_supply_request_tracking_search"/>
+            <field name="context">{'tab': 'order_tracking', 'from_order_tracking': True}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Monitor all supply requests across branches.
+                </p>
+            </field>
+        </record>
+
+    <!-- Bind view order to action (Kanban first, then Tree, then Form) -->
+    <record id="act_order_tracking_view_kanban" model="ir.actions.act_window.view">
+        <field name="sequence">1</field>
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="view_supply_request_tracking_kanban"/>
+        <field name="act_window_id" ref="action_order_tracking"/>
+    </record>
+    <record id="act_order_tracking_view_tree" model="ir.actions.act_window.view">
+        <field name="sequence">2</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_supply_request_tracking_tree"/>
+        <field name="act_window_id" ref="action_order_tracking"/>
+    </record>
+    <record id="act_order_tracking_view_form" model="ir.actions.act_window.view">
+        <field name="sequence">3</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_supply_request_tracking_form"/>
+        <field name="act_window_id" ref="action_order_tracking"/>
+    </record>
+</odoo>

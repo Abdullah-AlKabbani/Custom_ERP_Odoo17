@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- التعاريف تبقى كما هي لأننا نحتاجها لفتح نوافذ create/edit -->
+    <record id="view_supply_unit_tree" model="ir.ui.view">
+        <field name="name">custom_supply.unit.tree</field>
+        <field name="model">custom_supply.unit</field>
+        <field name="arch" type="xml">
+            <tree string="Supply Units">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_supply_unit_form" model="ir.ui.view">
+        <field name="name">custom_supply.unit.form</field>
+        <field name="model">custom_supply.unit</field>
+        <field name="arch" type="xml">
+            <form string="Supply Unit">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- نترك الـ Action بدون Menu لأن Create/Edit تعتمد عليه -->
+    <record id="action_supply_units" model="ir.actions.act_window">
+        <field name="name">Supply Units</field>
+        <field name="res_model">custom_supply.unit</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">current</field>
+    </record>
+
+</odoo>

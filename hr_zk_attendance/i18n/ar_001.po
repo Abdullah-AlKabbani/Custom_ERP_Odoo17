@@ -1,0 +1,589 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_zk_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 07:53+0000\n"
+"PO-Revision-Date: 2024-11-12 11:58+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.biometric_device_details_view_form
+msgid ""
+"<i class=\"fa fa-fw o_button_icon fa-television\"/>\n"
+"                        Test Connection"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.biometric_device_details_view_form
+msgid ""
+"Are you sure you want Restart the Biometric                             "
+"Device?"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.biometric_device_details_view_form
+msgid ""
+"Are you sure you want to clear all                             attendance "
+"records from the Device and Odoo?"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_zk_machine_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.daily_attendance_view_tree
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: hr_zk_attendance
+#: model:ir.actions.act_window,name:hr_zk_attendance.daily_attendance_action
+#: model:ir.ui.menu,name:hr_zk_attendance.daily_attendance_menu
+msgid "Attendance Analysis"
+msgstr "تحليل الحضور"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_daily_attendance__attendance_type
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__attendance_type
+msgid "Attendance detecting methods"
+msgstr "آلية كشف الحضور"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__in_country_name
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__out_country_name
+msgid "Based on IP Address"
+msgstr "حسب IP"
+
+#. module: hr_zk_attendance
+#: model:ir.actions.act_window,name:hr_zk_attendance.biometric_device_details_action
+#: model:ir.ui.menu,name:hr_zk_attendance.biometric_device_details_menu
+#: model:ir.ui.menu,name:hr_zk_attendance.biometric_device_details_sub_menu
+msgid "Biometric Device"
+msgstr "جهاز البيولوجي"
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_biometric_device_details
+msgid "Biometric Device Details"
+msgstr "تفاصيل الجهاز البيولوجي"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_hr_employee__device_id_num
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__device_id_num
+msgid "Biometric Device ID"
+msgstr "معرف الجهاز البيولوجي"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__punch_type__3
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__3
+msgid "Break In"
+msgstr "بداية الاستراحة"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__punch_type__2
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__2
+msgid "Break Out"
+msgstr "انتهاء الاستراحة"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__in_browser
+msgid "Browser"
+msgstr "تصفح"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__attendance_type__4
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__4
+msgid "Card"
+msgstr "البطاقة"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_daily_attendance__attendance_type
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__attendance_type
+msgid "Category"
+msgstr "التصنيف"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__check_in
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__punch_type__0
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__0
+msgid "Check In"
+msgstr "دخول"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__check_out
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__punch_type__1
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__1
+msgid "Check Out"
+msgstr "خروج"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__in_city
+msgid "City"
+msgstr "المدينة"
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.biometric_device_details_view_form
+msgid "Clear Data"
+msgstr "مسح بيانات الحضور"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__in_country_name
+msgid "Country"
+msgstr "البلد"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__create_uid
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__create_date
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_biometric_device_details__company_id
+msgid "Current Company"
+msgstr "الشركة الحالية"
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_daily_attendance
+msgid "Daily Attendance Report"
+msgstr "تقرير الحضور اليومي"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_daily_attendance__punching_day
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_daily_attendance__punching_day
+msgid "Date of punching"
+msgstr "تاريخ البصمة"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__device_ip
+msgid "Device IP"
+msgstr "عنوان الجهاز"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__display_name
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_daily_attendance__display_name
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: hr_zk_attendance
+#: model:ir.actions.server,name:hr_zk_attendance.cron_download_data_ir_actions_server
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.biometric_device_details_view_form
+msgid "Download Data"
+msgstr "تحميل بيانات الحضور"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__255
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__255
+msgid "Duplicate"
+msgstr "مكرر"
+
+#. module: hr_zk_attendance
+#: model:ir.model,name:hr_zk_attendance.model_hr_employee
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_daily_attendance__employee_id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_daily_attendance__employee_id
+msgid "Employee Name"
+msgstr "اسم الموظف"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__attendance_type__15
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__15
+msgid "Face"
+msgstr "وجه"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__attendance_type__1
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__1
+msgid "Finger"
+msgstr "اصبع"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_hr_employee__device_id_num
+msgid "Give the biometric device id"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_daily_attendance__id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__in_ip_address
+msgid "IP Address"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__message_has_error
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__write_uid
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__write_date
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__in_latitude
+msgid "Latitude"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__in_longitude
+msgid "Longitude"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__in_mode
+msgid "Mode"
+msgstr ""
+
+#. module: hr_zk_attendance
+#. odoo-python
+#: code:addons/dev_addons/hr_zk_attendance/models/biometric_device_details.py:0
+#: code:addons/hr_zk_attendance/models/biometric_device_details.py:0
+#, python-format
+msgid "Multiple employees found for user_id: %s. Please verify."
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__out_browser
+msgid "Out Browser"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__out_city
+msgid "Out City"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__out_country_name
+msgid "Out Country Name"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__out_ip_address
+msgid "Out Ip Address"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__out_latitude
+msgid "Out Latitude"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__out_longitude
+msgid "Out Longitude"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__out_mode
+msgid "Out Mode"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__overtime_hours
+msgid "Over Time"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__punch_type__4
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__4
+msgid "Overtime In"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__punch_type__5
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__punch_type__5
+msgid "Overtime Out"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__3
+msgid "P   assword"
+msgstr "كلمة المرور"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__attendance_type__3
+msgid "Password"
+msgstr "كلمة المرور"
+
+#. module: hr_zk_attendance
+#. odoo-python
+#: code:addons/dev_addons/hr_zk_attendance/models/biometric_device_details.py:0
+#: code:addons/hr_zk_attendance/models/biometric_device_details.py:0
+#, python-format
+msgid "Please install it with 'pip3 install pyzk'."
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__port_number
+msgid "Port Number"
+msgstr "رقم البورت"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_daily_attendance__punching_time
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__punching_time
+msgid "Punching Time"
+msgstr "وقت البصمة"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_daily_attendance__punch_type
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__punch_type
+msgid "Punching Type"
+msgstr "نوع البصمة"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_daily_attendance__punching_time
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__punching_time
+msgid "Punching time in the device"
+msgstr "وقت البصمة في الجهاز"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__punch_type
+msgid "Punching type of the attendance"
+msgstr "نوع بصمة الحضور"
+
+#. module: hr_zk_attendance
+#. odoo-python
+#: code:addons/dev_addons/hr_zk_attendance/models/biometric_device_details.py:0
+#: code:addons/hr_zk_attendance/models/biometric_device_details.py:0
+#, python-format
+msgid "Pyzk module not Found. Please install it with 'pip3 install pyzk'."
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_biometric_device_details__name
+msgid "Record Name"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.biometric_device_details_view_form
+msgid "Restart"
+msgstr "إعادة تشغيل البصامة"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model_terms:ir.ui.view,arch_db:hr_zk_attendance.view_employee_form
+msgid "The Bio Device ID"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__device_id_num
+msgid "The ID of the Biometric Device"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_biometric_device_details__device_ip
+msgid "The IP address of the Device"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_biometric_device_details__port_number
+msgid "The Port Number of the Device"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_daily_attendance__punch_type
+msgid "The Punching Type of attendance"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__daily_attendance__attendance_type__2
+#: model:ir.model.fields.selection,name:hr_zk_attendance.selection__zk_machine_attendance__attendance_type__2
+msgid "Type_2"
+msgstr "نوع 2"
+
+#. module: hr_zk_attendance
+#. odoo-python
+#: code:addons/dev_addons/hr_zk_attendance/models/biometric_device_details.py:0
+#: code:addons/hr_zk_attendance/models/biometric_device_details.py:0
+#, python-format
+msgid ""
+"Unable to clear Attendance log.Are you sure attendance log is not empty."
+msgstr ""
+
+#. module: hr_zk_attendance
+#. odoo-python
+#: code:addons/dev_addons/hr_zk_attendance/models/biometric_device_details.py:0
+#: code:addons/hr_zk_attendance/models/biometric_device_details.py:0
+#, python-format
+msgid ""
+"Unable to connect to Attendance Device. Please use Test Connection button "
+"to verify."
+msgstr ""
+
+#. module: hr_zk_attendance
+#. odoo-python
+#: code:addons/dev_addons/hr_zk_attendance/models/biometric_device_details.py:0
+#: code:addons/hr_zk_attendance/models/biometric_device_details.py:0
+#, python-format
+msgid ""
+"Unable to connect, please check the parameters and network connections."
+msgstr ""
+
+#. module: hr_zk_attendance
+#. odoo-python
+#: code:addons/dev_addons/hr_zk_attendance/models/biometric_device_details.py:0
+#: code:addons/hr_zk_attendance/models/biometric_device_details.py:0
+#, python-format
+msgid "Unable to get the attendance log, please try again later."
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__worked_hours
+msgid "Worked Hours"
+msgstr "ساعات العمل"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_biometric_device_details__address_id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_daily_attendance__address_id
+#: model:ir.model.fields,field_description:hr_zk_attendance.field_zk_machine_attendance__address_id
+msgid "Working Address"
+msgstr "عنوان العمل"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_daily_attendance__address_id
+#: model:ir.model.fields,help:hr_zk_attendance.field_zk_machine_attendance__address_id
+msgid "Working address of the employee"
+msgstr "عنون عمل الموظف"
+
+#. module: hr_zk_attendance
+#: model:ir.model.fields,help:hr_zk_attendance.field_biometric_device_details__address_id
+msgid "Working address of the partner"
+msgstr "عنوان عمل الشريك"

@@ -1,0 +1,8 @@
+<odoo noupdate="1">
+  <record id="menu_helpdesk_report_public" model="website.menu">
+    <field name="name">Help Desk Report</field>
+    <field name="url">/helpdesk/visit/report</field>
+    <field name="parent_id" ref="website.main_menu"/>
+    <field name="sequence">60</field>
+  </record>
+</odoo>

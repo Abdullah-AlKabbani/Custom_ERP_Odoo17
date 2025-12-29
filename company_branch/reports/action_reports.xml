@@ -1,0 +1,24 @@
+<odoo>
+
+    <!-- ACTION: Branches by Location -->
+    <record id="action_branch_report_location" model="ir.actions.act_window">
+        <field name="name">Branches by Location</field>
+        <field name="res_model">custom_supply.branch.report.location</field>
+        <field name="view_mode">graph,tree</field>
+    </record>
+
+    <!-- ACTION: Branches by State -->
+    <record id="action_branch_report_state" model="ir.actions.act_window">
+        <field name="name">Branches by State</field>
+        <field name="res_model">custom_supply.branch.report.state</field>
+        <field name="view_mode">graph,tree</field>
+    </record>
+
+    <!-- ACTION: Branches by Type -->
+    <record id="action_branch_report_type" model="ir.actions.act_window">
+        <field name="name">Branches by Type</field>
+        <field name="res_model">custom_supply.branch.report.type</field>
+        <field name="view_mode">graph,pivot,tree</field>
+    </record>
+
+</odoo>

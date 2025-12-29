@@ -1,0 +1,11 @@
+<odoo>
+  <record id="action_report_supply_request_pdf" model="ir.actions.report">
+    <field name="name">Supply Request PDF</field>
+    <field name="model">custom_supply.supply_request</field>
+    <field name="report_type">qweb-pdf</field>
+    <field name="report_name">custom_supply.supply_request_report_document</field>
+    <field name="report_file">custom_supply.supply_request_report_document</field>
+    <field name="binding_model_id" ref="model_custom_supply_supply_request"/>
+    <field name="binding_type">report</field>
+  </record>
+</odoo>

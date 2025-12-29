@@ -1,0 +1,15 @@
+<!-- time_attendance_analysis/views/employee_views.xml -->
+<odoo>
+    <record id="view_not_attending_today_tree" model="ir.ui.view">
+        <field name="name">view.not.attending.tree</field>
+        <field name="model">hr.employee</field>
+        <field name="arch" type="xml">
+            <tree string="Not Attending">
+                <field name="name"/>
+                <field name="work_email"/>
+                <field name="work_phone"/>
+                <field name="department_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

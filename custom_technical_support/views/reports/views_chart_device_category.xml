@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- =========================
+         Device Category Chart
+         ========================= -->
+    <record id="view_chart_device_category" model="ir.ui.view">
+        <field name="name">chart.device.category</field>
+        <field name="model">chart.ts.device.category</field>
+        <field name="arch" type="xml">
+            <graph string="Device Distribution by Category" type="bar">
+                <field name="category_id" type="row"/>
+                <field name="total_qty" type="measure"/>
+            </graph>
+        </field>
+    </record>
+</odoo>

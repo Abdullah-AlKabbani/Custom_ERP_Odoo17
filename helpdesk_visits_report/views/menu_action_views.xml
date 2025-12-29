@@ -1,0 +1,63 @@
+<odoo>
+  <!-- أفعال النظام -->
+  <record id="action_helpdesk_visit_report" model="ir.actions.act_window">
+    <field name="name">Visit Reports</field>
+    <field name="res_model">helpdesk.visit.report</field>
+    <field name="view_mode">kanban,tree,form</field>
+  </record>
+
+  <record id="action_helpdesk_branches" model="ir.actions.act_window">
+    <field name="name">Branches</field>
+    <field name="res_model">helpdesk.branch</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_helpdesk_visit_types" model="ir.actions.act_window">
+    <field name="name">Visit Types</field>
+    <field name="res_model">helpdesk.visit.type</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_helpdesk_ticket_methods" model="ir.actions.act_window">
+    <field name="name">Ticket Methods</field>
+    <field name="res_model">helpdesk.ticket.method</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="action_helpdesk_devices" model="ir.actions.act_window">
+    <field name="name">Devices</field>
+    <field name="res_model">helpdesk.device</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- قوائم النظام -->
+  <menuitem id="menu_helpdesk_root" name="Help Desk" sequence="10"
+            groups="helpdesk_visits_report.group_helpdesk_manager,helpdesk_visits_report.group_helpdesk_user"/>
+
+  <menuitem id="menu_helpdesk_config" name="Configuration" parent="menu_helpdesk_root" sequence="20"
+            groups="helpdesk_visits_report.group_helpdesk_manager"/>
+
+<menuitem id="menu_helpdesk_reports"
+          name="Visit Reports"
+          parent="menu_helpdesk_root"
+          action="action_helpdesk_visit_report"
+          sequence="5"
+          groups="helpdesk_visits_report.group_helpdesk_manager,helpdesk_visits_report.group_helpdesk_user"/>
+
+
+  <menuitem id="menu_helpdesk_branches" name="Branches" parent="menu_helpdesk_config"
+            action="action_helpdesk_branches"
+            groups="helpdesk_visits_report.group_helpdesk_manager"/>
+
+  <menuitem id="menu_helpdesk_visit_types" name="Visit Types" parent="menu_helpdesk_config"
+            action="action_helpdesk_visit_types"
+            groups="helpdesk_visits_report.group_helpdesk_manager"/>
+
+  <menuitem id="menu_helpdesk_ticket_methods" name="Ticket Methods" parent="menu_helpdesk_config"
+            action="action_helpdesk_ticket_methods"
+            groups="helpdesk_visits_report.group_helpdesk_manager"/>
+
+  <menuitem id="menu_helpdesk_devices" name="Devices" parent="menu_helpdesk_config"
+            action="action_helpdesk_devices"
+            groups="helpdesk_visits_report.group_helpdesk_manager"/>
+</odoo>

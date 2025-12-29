@@ -1,0 +1,19 @@
+<odoo>
+  <!-- Root Menu Item -->
+  <record id="website_nav_iso_root" model="website.menu">
+    <field name="name">ISO Tickets</field>
+    <field name="url">#</field>
+    <field name="parent_id" ref="website.main_menu"/>
+    <field name="sequence">90</field>
+    <field name="website_id" ref="website.default_website"/>
+  </record>
+
+  <!-- ISO Form Menu Item -->
+  <record id="website_nav_iso_form" model="website.menu">
+    <field name="name">ISO Form</field>
+    <field name="url">/iso/form</field>
+    <field name="parent_id" ref="website_nav_iso_root"/>
+    <field name="sequence">10</field>
+    <field name="website_id" ref="website.default_website"/>
+  </record>
+</odoo>

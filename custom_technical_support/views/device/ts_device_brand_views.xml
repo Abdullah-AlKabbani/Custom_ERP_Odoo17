@@ -1,0 +1,13 @@
+<odoo>
+    <record id="view_ts_device_brand_tree" model="ir.ui.view">
+        <field name="name">ts.device.brand.tree</field>
+        <field name="model">ts.device.brand</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

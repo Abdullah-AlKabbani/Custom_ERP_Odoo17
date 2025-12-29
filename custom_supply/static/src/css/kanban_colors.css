@@ -1,0 +1,43 @@
+/* ============================================
+   Kanban Custom Colors for Supply Requests
+   ============================================ */
+
+/* ألوان حسب حالة الطلب */
+.o_kanban_view .o_kanban_record.o_status_InBranch {
+    background-color: #fff9c4 !important; /* أصفر فاتح */
+}
+
+.o_kanban_view .o_kanban_record.o_status_Supply {
+    background-color: #d1c4e9 !important; /* أخضر فاتح */
+}
+
+.o_kanban_view .o_kanban_record.o_status_InWarehouse {
+    background-color: #bbdefb !important; /* أزرق فاتح */
+}
+
+.o_kanban_view .o_kanban_record.o_status_Done {
+    background-color: #c8e6c9 !important; /* بنفسجي فاتح */
+}
+
+.o_kanban_view .o_kanban_record.o_status_OnRoad {
+    background-color: #ffe0b2 !important; /* برتقالي فاتح */
+}
+
+/* تحسين شكل بطاقات Kanban */
+.o_kanban_card {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.o_kanban_card:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.o_kanban_card_body {
+    font-size: 0.95em;
+    line-height: 1.5em;
+}

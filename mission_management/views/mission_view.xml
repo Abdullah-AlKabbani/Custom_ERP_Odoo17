@@ -1,0 +1,67 @@
+<odoo>
+    <!-- Tree View for Mission -->
+    <record id="view_mission_tree" model="ir.ui.view">
+        <field name="name">mission.management.tree</field>
+        <field name="model">mission.management</field>
+        <field name="arch" type="xml">
+            <tree string="Mission Management">
+                <field name="reference"/>
+                <field name="mission_type_id"/>
+                <field name="employee_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="mission_status"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for Mission -->
+    <record id="view_mission_form" model="ir.ui.view">
+        <field name="name">mission.management.form</field>
+        <field name="model">mission.management</field>
+        <field name="arch" type="xml">
+            <form string="Mission Management">
+                <sheet>
+                    <group>
+                        <group string="Mission Information">
+                            <field name="reference"/>
+                            <field name="mission_type_id"/>
+                            <field name="objective_id"/>
+                            <field name="employee_id"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="address"/>
+                            <field name="partner_id"/>
+                            <field name="partner_manager_id"/>
+                            <field name="budget"/>
+                            <field name="mission_status"/>
+                        </group>
+                        <group string="Notes and Target">
+                            <field name="notes" placeholder="Enter mission notes..."/>
+                            <field name="target" placeholder="Enter mission target..."/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action Window -->
+    <record id="action_mission_management" model="ir.actions.act_window">
+        <field name="name">Missions</field>
+        <field name="res_model">mission.management</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p>
+                Manage missions effectively by keeping track of mission types, objectives, employees,
+                start and end dates, budgets, and status. Use this view to review and manage missions.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_mission_management"
+              name="Mission Management"
+              parent="hr.menu_hr_root"
+              action="action_mission_management"/>
+</odoo>

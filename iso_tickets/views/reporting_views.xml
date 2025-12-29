@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+  <!-- Graph View: Ticket Analysis -->
+  <record id="view_iso_ticket_graph_reporting" model="ir.ui.view">
+    <field name="name">iso.ticket.graph.reporting</field>
+    <field name="model">iso.ticket</field>
+    <field name="arch" type="xml">
+      <graph string="Ticket Analysis" type="bar" stacked="True">
+        <field name="date" type="row"/>
+        <field name="section_id" type="col" string="Section"/>
+        <!-- Keep a valid measure with an aggregate (for fallback / UI switch) -->
+        <field name="id" type="measure" operator="count" string="Tickets"/>
+      </graph>
+    </field>
+  </record>
+
+  <!-- Tree View -->
+  <record id="view_iso_ticket_tree_reporting" model="ir.ui.view">
+    <field name="name">iso.ticket.tree.reporting</field>
+    <field name="model">iso.ticket</field>
+    <field name="arch" type="xml">
+      <tree string="Ticket List">
+        <field name="name"/>
+        <field name="section_id"/>
+        <field name="branch_id"/>
+        <field name="shift_id"/>
+        <field name="status"/>
+        <field name="date"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Action: force built-in record count measure -->
+  <record id="action_iso_ticket_report" model="ir.actions.act_window">
+    <field name="name">Ticket Analysis</field>
+    <field name="res_model">iso.ticket</field>
+    <field name="view_mode">graph,tree</field>
+    <field name="views" eval="[
+      (ref('iso_tickets.view_iso_ticket_graph_reporting'), 'graph'),
+      (ref('iso_tickets.view_iso_ticket_tree_reporting'), 'tree')
+    ]"/>
+    <field name="search_view_id" ref="iso_tickets.view_iso_ticket_search"/>
+    <!-- IMPORTANT: valid Python dict; force __count to bypass cached 'id' without aggregate -->
+    <field name="context">{'search_default_filter_this_month': 1, 'graph_measure': '__count', 'group_by': ['date:month']}</field>
+  </record>
+
+  <!-- Menu -->
+  <menuitem id="menu_iso_reporting_tickets"
+            name="Ticket Analysis"
+            parent="iso_tickets.menu_iso_reporting"
+            action="iso_tickets.action_iso_ticket_report"
+            sequence="10"/>
+</odoo>

@@ -1,0 +1,34 @@
+<odoo>
+    <record id="view_employee_form_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Add insurance fields inside HR settings -->
+            <xpath expr="//page[@name='hr_settings']//field[@name='user_id']" position="after">
+
+                <group string="Insurance Information.">
+                    <field name="insurance_number"/>
+                    <field name="insurance_salary"/>
+                    <field name="insurance_date"/>
+                    <field name="end_insurance_date"/>
+                    <field name="contract_image" widget="image" class="oe_inline"
+                           options="{'preview_image': 'contract_image', 'size': [64, 128]}"/>
+                </group>
+                <group>
+                    <field name="id_card_image" widget="image" class="oe_inline"
+                           options="{'preview_image': 'id_card_image', 'size': [64, 128]}"/>
+                </group>
+
+
+                <group>
+                    <field name="cv_file" string="CV File"/>
+                    <field name="mother_name" string="Mother Name"/>
+                </group>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

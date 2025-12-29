@@ -1,0 +1,53 @@
+<odoo>
+    <record id="view_form_purchase_request" model="ir.ui.view">
+        <field name="name">purchase.request.form</field>
+        <field name="model">purchase.request</field>
+        <field name="arch" type="xml">
+            <form string="Purchase Request">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="employee_id"/>
+                        <field name="product_id"/>
+                        <field name="quantity"/>
+                        <field name="department_id"/>
+                        <field name="note"/>
+                        <field name="document" filename="name"/>
+                    </group>
+                    <notebook>
+                        <page string="Vendor Offers">
+                       <field name="offer_ids">
+    <tree editable="bottom">
+        <field name="vendor_id"/>
+        <field name="price"/>
+        <field name="description"/>
+        <field name="is_selected"/>
+    </tree>
+</field>
+
+                            <field name="selected_offer_id"/>
+                        </page>
+                    </notebook>
+                    <footer>
+                        <button string="Submit" type="object" name="action_submit"/>
+                        <button string="Cancel" type="object" name="action_cancel"/>
+                        <button string="Manager Approve" type="object" name="action_manager_approve"/>
+                        <button string="Department Approve" type="object" name="action_category_approve"/>
+                        <button string="Purchase Approve" type="object" name="action_purchase_approve"/>
+                        <button string="Finance Approve" type="object" name="action_finance_approve"/>
+                        <button string="GM Approve" type="object" name="action_gm_approve"/>
+                    </footer>
+                </sheet>
+
+                <!-- Correct Chatter Format -->
+                <div class="oe_chatter">
+                    <field name="message_ids" widget="mail_thread"/>
+                    <field name="activity_ids" widget="activity"/>
+                </div>
+            </form>
+        </field>
+    </record>
+</odoo>

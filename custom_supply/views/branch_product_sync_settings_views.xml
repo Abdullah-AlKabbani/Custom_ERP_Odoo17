@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_branch_product_sync_settings_form" model="ir.ui.view">
+        <field name="name">branch.product.sync.settings.form</field>
+        <field name="model">custom_supply.branch_product_sync_settings</field>
+        <field name="arch" type="xml">
+            <form string="Branch Product Sync">
+                <sheet>
+                    <group>
+                        <field name="auto_sync"/>
+                        <field name="branch_ids" widget="many2many_tags"/>
+                        <field name="product_ids" widget="many2many_tags"/>
+                    </group>
+                    <footer>
+                        <button string="Run Sync" type="object" name="manual_sync" class="btn-primary"/>
+                        <button string="Close" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_branch_product_sync_settings" model="ir.actions.act_window">
+        <field name="name">Branch Product Sync</field>
+        <field name="res_model">custom_supply.branch_product_sync_settings</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_branch_product_sync_settings_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

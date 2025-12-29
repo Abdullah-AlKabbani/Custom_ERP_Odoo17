@@ -1,0 +1,71 @@
+<odoo>
+  <record id="view_helpdesk_branch_tree" model="ir.ui.view">
+    <field name="name">helpdesk.branch.tree</field>
+    <field name="model">helpdesk.branch</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="location"/>
+      </tree>
+    </field>
+  </record>
+  <record id="view_helpdesk_branch_form" model="ir.ui.view">
+    <field name="name">helpdesk.branch.form</field>
+    <field name="model">helpdesk.branch</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="location"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_helpdesk_visit_type_tree" model="ir.ui.view">
+    <field name="name">helpdesk.visit.type.tree</field>
+    <field name="model">helpdesk.visit.type</field>
+    <field name="arch" type="xml">
+      <tree><field name="name"/></tree>
+    </field>
+  </record>
+  <record id="view_helpdesk_visit_type_form" model="ir.ui.view">
+    <field name="name">helpdesk.visit.type.form</field>
+    <field name="model">helpdesk.visit.type</field>
+    <field name="arch" type="xml">
+      <form><sheet><group><field name="name"/></group></sheet></form>
+    </field>
+  </record>
+
+  <record id="view_helpdesk_ticket_method_tree" model="ir.ui.view">
+    <field name="name">helpdesk.ticket.method.tree</field>
+    <field name="model">helpdesk.ticket.method</field>
+    <field name="arch" type="xml">
+      <tree><field name="name"/></tree>
+    </field>
+  </record>
+  <record id="view_helpdesk_ticket_method_form" model="ir.ui.view">
+    <field name="name">helpdesk.ticket.method.form</field>
+    <field name="model">helpdesk.ticket.method</field>
+    <field name="arch" type="xml">
+      <form><sheet><group><field name="name"/></group></sheet></form>
+    </field>
+  </record>
+
+  <record id="view_helpdesk_device_tree" model="ir.ui.view">
+    <field name="name">helpdesk.device.tree</field>
+    <field name="model">helpdesk.device</field>
+    <field name="arch" type="xml">
+      <tree><field name="name"/></tree>
+    </field>
+  </record>
+  <record id="view_helpdesk_device_form" model="ir.ui.view">
+    <field name="name">helpdesk.device.form</field>
+    <field name="model">helpdesk.device</field>
+    <field name="arch" type="xml">
+      <form><sheet><group><field name="name"/></group></sheet></form>
+    </field>
+  </record>
+</odoo>

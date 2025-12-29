@@ -1,0 +1,154 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_call_center
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-12 04:10+0000\n"
+"PO-Revision-Date: 2025-01-12 07:15+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: custom_call_center
+#: model:ir.actions.act_window,name:custom_call_center.action_call_center
+#: model:ir.ui.menu,name:custom_call_center.menu_call_center_root
+msgid "Call Center"
+msgstr "خدمة الزبائن"
+
+#. module: custom_call_center
+#: model:ir.model,name:custom_call_center.model_call_center
+msgid "Call Center Management"
+msgstr "إدارة خدمة الزبائن"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__name
+msgid "Call Reference"
+msgstr "مرجع الاتصال"
+
+#. module: custom_call_center
+#: model:ir.ui.menu,name:custom_call_center.menu_call_center
+msgid "Calls"
+msgstr "اتصالات"
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__status__closed
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__closed_workshop
+msgid "Closed Workshop"
+msgstr "محل مغلق"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__create_uid
+msgid "Created by"
+msgstr "المنشئ"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__create_date
+msgid "Created on"
+msgstr "أنشأت في"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__customer_id
+msgid "Customer"
+msgstr "الزبون"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__id
+msgid "ID"
+msgstr "معرف"
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__incomplete_number
+msgid "Incomplete Number"
+msgstr "رقم غير مكتمل"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__write_uid
+msgid "Last Updated by"
+msgstr "اخر تعديل بواسطة"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل في"
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__no_selling
+msgid "No Selling"
+msgstr "لا يوجد بيع"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__offers
+msgid "Offers"
+msgstr "العروض"
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__status__open
+msgid "Open"
+msgstr "مفتوح"
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__out_of_service
+msgid "Out of Service"
+msgstr "خارج عن الخدمة"
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__status__pending
+msgid "Pending"
+msgstr "قيد التنفيذ"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__problem_type
+msgid "Problem Type"
+msgstr "نوع المشكلة"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__product_ids
+msgid "Products"
+msgstr "المنتجات"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__salesperson_id
+msgid "Salesperson"
+msgstr "المندوب"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__status
+msgid "Status"
+msgstr "الحالة"
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__supervisor_id
+msgid "Supervisor"
+msgstr "المشرف"
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__wrong_number
+msgid "Wrong Number"
+msgstr "رقم خاطئ"

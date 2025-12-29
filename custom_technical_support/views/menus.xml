@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- =======================
+         Main Menu
+         ======================= -->
+    <menuitem id="menu_ts_root" name="Technical Support" sequence="40" />
+
+    <!-- Devices -->
+    <menuitem id="menu_ts_devices" name="Devices" parent="menu_ts_root" sequence="10"
+              action="action_ts_device_tree"/>
+
+    <!-- Device per Branch -->
+    <menuitem id="menu_ts_device_branch" name="Branch Devices" parent="menu_ts_root" sequence="20"
+              action="action_ts_device_branch_tree"/>
+
+    <!-- Device Moves -->
+    <menuitem id="menu_ts_device_moves" name="View Moves" parent="menu_ts_root" sequence="30"
+              action="action_ts_device_move_tree"/>
+
+
+    <!-- Device Inventory -->
+    <menuitem id="menu_ts_device_inventory" name="Inventory" parent="menu_ts_root" sequence="40"
+              action="action_ts_device_inventory_tree"/>
+
+
+    <!-- Device Categories -->
+    <menuitem id="menu_ts_device_categories" name="Configuration" parent="menu_ts_root" sequence="50"
+              action="action_ts_device_category_tree"/>
+    <menuitem id="menu_ts_device_categories_action" name="Categories" parent="menu_ts_device_categories"
+              action="action_ts_device_category_tree" sequence="10"/>
+    <menuitem id="menu_ts_device_brands" name="Brands" parent="menu_ts_device_categories"
+              action="action_ts_device_brand" sequence="20"/>
+    <menuitem id="menu_ts_device_models" name="Models" parent="menu_ts_device_categories"
+              action="action_ts_device_model" sequence="30"/>
+    <menuitem id="menu_ts_device_scrap_reasons" name="Scrap Reasons" parent="menu_ts_device_categories"
+              action="action_ts_device_scrap_reason_tree" sequence="40"/>
+    <menuitem id="menu_ts_device_branch_sync" name="Sync Devices with Branches" parent="menu_ts_device_categories"
+              action="action_ts_device_branch_sync_settings" sequence="50"/>
+
+
+    <!-- Reports -->
+    <menuitem id="menu_ts_device_reports" name="Reports" parent="menu_ts_root" sequence="60"/>
+
+    <!-- Reports Submenus -->
+    <menuitem id="menu_ts_device_inventory_report" name="Device Inventory Report" parent="menu_ts_device_reports"
+              action="action_report_device_inventory"/>
+    <menuitem id="menu_ts_device_move_report" name="Device Move Report" parent="menu_ts_device_reports"
+              action="action_report_device_move"/>
+    <menuitem id="menu_ts_chart_device_per_branch" name="Devices per Branch Chart" parent="menu_ts_device_reports"
+              action="action_chart_device_per_branch"/>
+    <menuitem id="menu_ts_chart_device_history" name="Device History Chart" parent="menu_ts_device_reports"
+              action="action_chart_device_history"/>
+    <menuitem id="menu_ts_chart_device_category" name="Device Category Chart" parent="menu_ts_device_reports"
+              action="action_chart_device_category"/>
+</odoo>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="branch_type_hq" model="custom_supply.branch.type">
+        <field name="name">المقر الرئيسي</field>
+        <field name="code">HQ</field>
+        <field name="is_operational">True</field>
+        <field name="has_sales">False</field>
+        <field name="has_stock">False</field>
+    </record>
+
+    <record id="branch_type_shop" model="custom_supply.branch.type">
+        <field name="name">محل</field>
+        <field name="code">SHOP</field>
+        <field name="is_operational">True</field>
+        <field name="has_sales">True</field>
+        <field name="has_stock">False</field>
+    </record>
+
+    <record id="branch_type_mall" model="custom_supply.branch.type">
+        <field name="name">مول</field>
+        <field name="code">MALL</field>
+        <field name="is_operational">True</field>
+        <field name="has_sales">True</field>
+        <field name="has_stock">False</field>
+    </record>
+
+    <record id="branch_type_warehouse" model="custom_supply.branch.type">
+        <field name="name">مستودع</field>
+        <field name="code">WH</field>
+        <field name="is_operational">True</field>
+        <field name="has_sales">False</field>
+        <field name="has_stock">True</field>
+    </record>
+
+    <record id="branch_type_cafe" model="custom_supply.branch.type">
+        <field name="name">كافيه</field>
+        <field name="code">CAFE</field>
+        <field name="is_operational">True</field>
+        <field name="has_sales">True</field>
+        <field name="has_stock">False</field>
+    </record>
+
+</odoo>

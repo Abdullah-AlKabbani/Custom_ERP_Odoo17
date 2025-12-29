@@ -1,0 +1,25 @@
+<odoo>
+    <!-- Country Views -->
+    <record id="view_branch_country_tree" model="ir.ui.view">
+        <field name="name">branch.country.tree</field>
+        <field name="model">custom_supply.country</field>
+        <field name="arch" type="xml">
+            <tree string="Countries" editable="bottom" create="true">
+                <field name="name"/>
+                <field name="city_ids" widget="many2many_tags"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- City Views -->
+    <record id="view_branch_city_tree" model="ir.ui.view">
+        <field name="name">branch.city.tree</field>
+        <field name="model">custom_supply.city</field>
+        <field name="arch" type="xml">
+            <tree string="Cities" editable="bottom" create="true">
+                <field name="name"/>
+                <field name="country_id"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

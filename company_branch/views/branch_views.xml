@@ -1,0 +1,192 @@
+<odoo>
+    <!-- Search View -->
+    <record id="view_company_branch_search" model="ir.ui.view">
+        <field name="name">branch.search</field>
+        <field name="model">custom_supply.branch</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="country_id"/>
+                <field name="city_id"/>
+                <field name="area"/>
+                <field name="user_id"/>
+
+                <!-- فلترات حسب الحالة -->
+                <filter name="all_branches" string="All" domain="[]"/>
+                <filter name="active_branches" string="Active" domain="[('state','=','active')]"/>
+                <filter name="inactive_branches" string="Inactive" domain="[('state','=','inactive')]"/>
+                <filter name="closed_branches" string="Closed" domain="[('state','=','closed')]"/>
+                <filter name="draft_branches" string="Draft" domain="[('state','=','draft')]"/>
+
+                <!-- Group By -->
+                <group expand="0" string="Group By">
+                    <filter name="group_state" string="State" context="{'group_by':'state','group_by_count':1}"/>
+                    <filter name="group_country" string="Country" context="{'group_by':'country_id','group_by_count':1}"/>
+                    <filter name="group_city" string="City" context="{'group_by':'city_id','group_by_count':1}"/>
+                    <filter name="group_branch_type" string="Branch Type" context="{'group_by':'branch_type_id','group_by_count':1}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Kanban View -->
+    <record id="view_company_branch_kanban" model="ir.ui.view">
+        <field name="name">custom_supply.branch.kanban</field>
+        <field name="model">custom_supply.branch</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column"
+                    create="true"
+                    edit="true"
+                    delete="true"
+                    group_edit="false"
+                    draggable="true"
+                    inactive="false">
+
+                <field name="name"/>
+                <field name="country_id"/>
+                <field name="city_id"/>
+                <field name="area"/>
+                <field name="location"/>
+                <field name="user_id"/>
+                <field name="last_updated"/>
+                <field name="state"/>
+
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click o_kanban_card o_kanban_record o_status_#{record.state.raw_value}">
+                            <div class="o_kanban_card_body">
+                                <strong style="font-size:1.1em;">
+                                    <field name="name"/>
+                                </strong>
+                                <div>
+                                    Location: <field name="country_id"/> | <field name="city_id"/> | <field name="area"/>
+                                </div>
+                                <div>
+                                    User: <field name="user_id"/>
+                                </div>
+                                <div>
+                                    Last Updated: <field name="last_updated" widget="datetime"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+
+                    <!-- تعديل template للـ Kanban Column لإظهار العدد عند التجميع -->
+                    <t t-name="kanban-box-group">
+                        <div class="o_kanban_group_header">
+                            <strong>
+                                <t t-esc="group.name"/>
+                                (<t t-esc="group.length"/>)
+                            </strong>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_company_branch_form" model="ir.ui.view">
+        <field name="name">custom_supply.branch.form</field>
+        <field name="model">custom_supply.branch</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <form string="Branch">
+                <header>
+                    <button name="action_activate" type="object"
+                            string="Activate"
+                            class="btn-primary"
+                            invisible="state != 'draft'"/>
+                    <button name="action_inactive" type="object"
+                            string="In Active"
+                            class="btn-warning"
+                            invisible="state != 'active'"/>
+                    <button name="action_close" type="object"
+                            string="Close"
+                            class="btn-danger"
+                            invisible="state != 'inactive'"/>
+                    <button name="action_activate" type="object"
+                            string="Activate"
+                            class="btn-success"
+                            invisible="state != 'inactive'"/>
+                    <button name="action_reopen" type="object"
+                            string="Reopen"
+                            class="btn-success"
+                            invisible="state != 'closed'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,active,inactive,closed"/>
+                </header>
+
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Branch Name"/>
+                        </h1>
+                    </div>
+
+                    <group>
+                        <!-- General Info -->
+                        <group string="General Information">
+                            <field name="user_id"/>
+                            <field name="branch_type_id"/>
+                        </group>
+
+                        <!-- Lifecycle -->
+                        <group string="Lifecycle">
+                            <field name="opened_date"/>
+                            <field name="closed_date" invisible="state != 'closed'"/>
+                        </group>
+
+                        <!-- Location -->
+                        <group string="Location">
+                            <field name="country_id"/>
+                            <field name="city_id"/>
+                            <field name="area"/>
+                            <field name="location" widget="url" options="{'text': 'Open in Google Maps'}"/>
+                            <field name="latitude" readonly="1"/>
+                            <field name="longitude" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Branch Tree View (Full / Importable) -->
+    <record id="view_company_branch_tree" model="ir.ui.view">
+        <field name="name">branch.tree</field>
+        <field name="model">custom_supply.branch</field>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <tree string="Branches" editable="bottom" create="true">
+                <!-- Basic Info -->
+                <field name="name"/>
+                <field name="user_id"/>
+                <field name="branch_type_id"/>
+                <field name="state"/>
+
+                <!-- Lifecycle -->
+                <field name="opened_date"/>
+                <field name="closed_date"/>
+
+                <!-- Location -->
+                <field name="country_id"/>
+                <field name="city_id"/>
+                <field name="area"/>
+                <field name="location"/>
+                <field name="latitude"/>
+                <field name="longitude"/>
+
+                <!-- Tracking -->
+                <field name="last_updated" readonly="1"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

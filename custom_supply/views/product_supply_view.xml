@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 🔹 Tree View لعرض المنتجات وتحديد وحدة التوريد -->
+    <record id="view_product_template_supply_tree" model="ir.ui.view">
+        <field name="name">product.template.supply.tree</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <tree string="Products Supply Units" editable="bottom" create="false" default_order="categ_id,name">
+                <field name="name"/>
+                <field name="categ_id" readonly="1"/>
+                <field name="supply_unit_id" options="{'no_create_edit': False}"/>
+                <field name="default_code"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- 🔹 Form View لتفاصيل المنتج -->
+    <record id="view_product_template_supply_form" model="ir.ui.view">
+        <field name="name">product.template.supply.form</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <form string="Product Supply Unit">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <!-- قائمة الوحدات مع السماح بالإنشاء -->
+                        <field name="supply_unit_id" options="{'no_create_edit': False}"/>
+                    </group>
+                    <!-- زر لفتح نافذة إدارة الوحدات -->
+                    <footer>
+                        <button name="%(action_supply_units)d" type="action"
+                                string="Manage Supply Units"
+                                class="btn-secondary"
+                                groups="custom_supply.group_supply_manager"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+        <!-- 🔹 Search View -->
+    <record id="view_product_supply_search" model="ir.ui.view">
+        <field name="name">product.template.supply.search</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <search string="Search Products">
+
+                <!-- 🔎 البحث -->
+                <field name="name" string="Product Name"/>
+                <field name="default_code" string="Internal Reference"/>
+                <field name="categ_id" string="Category"/>
+                <field name="supply_unit_id" string="Supply Unit"/>
+
+                <!-- 🔽 فلاتر -->
+                <filter name="with_supply_unit"
+                        string="Has Supply Unit"
+                        domain="[('supply_unit_id', '!=', False)]"/>
+
+                <filter name="without_supply_unit"
+                        string="Without Supply Unit"
+                        domain="[('supply_unit_id', '=', False)]"/>
+
+                <!-- 🔽 Filter by Category -->
+                <filter name="by_category"
+                        string="Category"
+                        context="{'group_by': 'categ_id'}"/>
+
+                <!-- 🔽 Filter by Supply Unit -->
+                <filter name="by_supply_unit"
+                        string="Supply Unit"
+                        context="{'group_by': 'supply_unit_id'}"/>
+
+                <!-- 🔽 Group By menu -->
+                <group expand="0" string="Group By">
+                    <filter name="group_category"
+                            string="Category"
+                            context="{'group_by': 'categ_id'}"/>
+
+                    <filter name="group_supply"
+                            string="Supply Unit"
+                            context="{'group_by': 'supply_unit_id'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+
+    <!-- 🔹 Action لفتح المنتجات -->
+    <record id="action_product_supply_units" model="ir.actions.act_window">
+        <field name="name">Product Supply Units</field>
+        <field name="res_model">product.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_product_template_supply_tree"/>
+        <field name="search_view_id" ref="view_product_supply_search"/>
+        <field name="context">{}</field>
+        <field name="domain">[('product_for_supply','=',True)]</field>
+    </record>
+</odoo>

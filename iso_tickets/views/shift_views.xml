@@ -1,0 +1,37 @@
+<odoo>
+  <record id="view_iso_shift_tree" model="ir.ui.view">
+    <field name="name">iso.shift.tree</field>
+    <field name="model">iso.shift</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="name"/>
+        <field name="start_hour"/>
+        <field name="end_hour"/>
+        <field name="active"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_iso_shift_form" model="ir.ui.view">
+    <field name="name">iso.shift.form</field>
+    <field name="model">iso.shift</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="start_hour"/>
+            <field name="end_hour"/>
+            <field name="active"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_iso_shift" model="ir.actions.act_window">
+    <field name="name">Shifts</field>
+    <field name="res_model">iso.shift</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>

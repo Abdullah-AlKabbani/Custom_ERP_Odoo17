@@ -1,0 +1,1113 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_supply
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-19 11:06+0000\n"
+"PO-Revision-Date: 2025-11-19 11:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "<strong>الفرع:</strong>"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "<strong>تاريخ الإنشاء:</strong>"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "<strong>رقم الطلب:</strong>"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__action_type
+msgid "Action Type"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__activate
+msgid "Activate in Branch"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_product_product__custom_supply_field_2
+#: model:ir.model.fields,field_description:custom_supply.field_product_template__custom_supply_field_2
+msgid "Additional Info"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__allowed_product_ids
+msgid "Allowed Products"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_high_manager_report_avg_duration__avg_duration_readable
+msgid "Average Duration (Readable)"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_high_manager_report_avg_duration__avg_duration_seconds
+msgid "Average Duration (seconds)"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_high_manager_avg_duration
+#: model:ir.ui.menu,name:custom_supply.menu_high_manager_avg_duration
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_high_manager_avg_duration_graph
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_high_manager_avg_duration_tree
+msgid "Average Processing Duration"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__product_template__custom_supply_field_1__basic
+msgid "Basic"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_branch
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_monthly_request_count__branch_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__branch_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__branch_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__branch_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__branch_id
+#: model:ir.model.fields,field_description:custom_supply.field_res_users__branch_id
+msgid "Branch"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_form
+msgid "Branch Dashboard"
+msgstr ""
+
+#. module: custom_supply
+#: model:res.groups,name:custom_supply.group_branch_employee
+msgid "Branch Employee"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_branch_monthly_count_report
+#: model:ir.ui.menu,name:custom_supply.menu_branch_monthly_request_count
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_monthly_count_pivot
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_monthly_count_search
+msgid "Branch Monthly Request Count"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_branch_monthly_request_count
+msgid "Branch Monthly Supply Request Count Report"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_monthly_request_count__branch_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__branch_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__branch_name
+msgid "Branch Name"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_form
+msgid "Branch Product"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__branch_product_id
+msgid "Branch Product Link"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.ui.menu,name:custom_supply.menu_branch_product_monthly_report
+msgid "Branch Product Monthly"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_branch_product_monthly_report
+msgid "Branch Product Monthly Detailed Report"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_monthly_pivot
+msgid "Branch Product Monthly Quantities"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_branch_product_monthly_report
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_monthly_search
+msgid "Branch Product Monthly Report"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_branch_product_supply_report
+#: model:ir.ui.menu,name:custom_supply.menu_branch_product_supply_report
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_supply_tree
+msgid "Branch Product Supply Quantities"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_branch_product_supply_report
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_supply_report_search
+msgid "Branch Product Supply Report"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_branch_products
+#: model:ir.model.fields,field_description:custom_supply.field_product_product__branch_product_ids
+#: model:ir.model.fields,field_description:custom_supply.field_product_template__branch_product_ids
+#: model:ir.ui.menu,name:custom_supply.menu_branch_products
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_tree
+msgid "Branch Products"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_product_template_form_inherit_custom
+msgid "Branch Stock"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.ui.menu,name:custom_supply.menu_branch_supply_pivot_reports
+msgid "Branch Supply Pivot Reports"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__user_id
+msgid "Branch User"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Branch View"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_supply_graph
+msgid "Branch vs Product Requested Quantities"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_tracking_kanban
+msgid "Branch:"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_branches
+#: model:ir.ui.menu,name:custom_supply.menu_branches
+msgid "Branches"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__category_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_vs_export_report__category
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_vs_suggestion_report__category
+msgid "Category"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_log__action_type__create
+msgid "Created"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__create_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__create_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__create_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__create_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__create_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_unit__create_uid
+#: model:ir.model.fields,field_description:custom_supply.field_product_sync_scheduler__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__create_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__create_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__create_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__create_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__create_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_unit__create_date
+#: model:ir.model.fields,field_description:custom_supply.field_product_sync_scheduler__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__current_quantity
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__current_qty
+msgid "Current Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.ui.menu,name:custom_supply.menu_custom_supply_root
+msgid "Custom Supply"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__date
+msgid "Date"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_product_product__custom_supply_field_1
+#: model:ir.model.fields,help:custom_supply.field_product_template__custom_supply_field_1
+msgid "Define if the product is Basic or Secondary for Supply Requests"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_log__action_type__delete
+msgid "Deleted"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__name
+msgid "Description"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_vs_export_report__category__discrepancy
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_vs_suggestion_report__category__discrepancy
+msgid "Discrepancies"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_monthly_request_count__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_high_manager_report_avg_duration__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_vs_export_report__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_vs_suggestion_report__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_unit__display_name
+#: model:ir.model.fields,field_description:custom_supply.field_product_sync_scheduler__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_request__status__done
+msgid "Done"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Download PDF"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Export"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__export_qty
+msgid "Export Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__warehouse_export_date
+msgid "Exported On"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_branch__search_product
+msgid "Filter products by name or category"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__full_label
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__full_label
+msgid "Full Label"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: custom_supply
+#: model:res.groups,name:custom_supply.group_high_manager
+msgid "High Manager"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_high_manager_report_avg_duration
+msgid "High Manager - Average Durations (Supply / InWarehouse)"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_monthly_request_count__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_high_manager_report_avg_duration__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_vs_export_report__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_vs_suggestion_report__id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_unit__id
+#: model:ir.model.fields,field_description:custom_supply.field_product_sync_scheduler__id
+msgid "ID"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_branch_product__activate
+msgid "If unchecked, the product is not active for this branch"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_request__status__inbranch
+msgid "In Branch"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_request__status__inwarehouse
+msgid "In Warehouse"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_high_manager_report_avg_duration__state__inwarehouse
+msgid "InWarehouse"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_product_sync_scheduler__last_sync
+msgid "Last Sync Time"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__last_updated
+msgid "Last Updated"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__write_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__write_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__write_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__write_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__write_uid
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_unit__write_uid
+#: model:ir.model.fields,field_description:custom_supply.field_product_sync_scheduler__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__write_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__write_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__write_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__write_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__write_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_unit__write_date
+#: model:ir.model.fields,field_description:custom_supply.field_product_sync_scheduler__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_kanban
+msgid "Last Updated:"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__location
+msgid "Location"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_product_template_supply_form
+msgid "Manage Supply Units"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.module.category,description:custom_supply.module_category_supply_management
+msgid "Manage branches, branch products, and supply requests"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_vs_export_report__category__match
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_vs_suggestion_report__category__match
+msgid "Matches"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__max_quantity
+msgid "Maximum Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__min_quantity
+msgid "Minimum Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.actions.act_window,help:custom_supply.action_order_tracking
+msgid "Monitor all supply requests across branches."
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_monthly_request_count__month
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__month
+msgid "Month"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__note
+msgid "Note / Reason"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request_line__supply_note
+msgid "Note / reason from Supply Manager"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request_line__warehouse_note
+msgid "Note / reason from Warehouse"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_monthly_request_count__request_count
+msgid "Number of Requests"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_product_product__custom_supply_field_2
+#: model:ir.model.fields,help:custom_supply.field_product_template__custom_supply_field_2
+msgid "Optional field for extra information"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.ui.menu,name:custom_supply.menu_order_tracking
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_tracking_tree
+msgid "Order Tracking"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_product_template
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__product_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__product_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__product_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__product_id
+msgid "Product"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__product_name
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__product_name
+msgid "Product Name"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__product_name_str
+msgid "Product Name (Display)"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_branch_product
+msgid "Product Stock in Branch"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_product_template_supply_form
+msgid "Product Supply Unit"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_product_supply_units
+#: model:ir.ui.menu,name:custom_supply.menu_product_supply_units
+msgid "Product Supply Units"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_form
+msgid "Products"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_product_template_supply_tree
+msgid "Products Supply Units"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__product_ids
+msgid "Products in Branch"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request_line__export_qty
+msgid "Quantity actually exported by Warehouse"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request_line__supply_qty
+msgid "Quantity approved by Supply Manager"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Reason"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "Ref.: PUWP001"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.ui.menu,name:custom_supply.menu_high_manager_reports
+msgid "Reports"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__request_id
+msgid "Request"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__request_date
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__request_date
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_supply_report_search
+msgid "Request Date"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_tracking_kanban
+msgid "Request Date:"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__line_ids
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_tracking_form
+msgid "Request Lines"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__name
+msgid "Request Number"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__requested_quantity
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__requested_qty
+msgid "Requested Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_product_sync_scheduler
+msgid "Scheduled sync with external SQL Server database"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch__search_product
+msgid "Search Product"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__product_template__custom_supply_field_1__secondary
+msgid "Secondary"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_branch_product__supply_unit_id
+#: model:ir.model.fields,help:custom_supply.field_product_product__supply_unit_id
+#: model:ir.model.fields,help:custom_supply.field_product_template__supply_unit_id
+msgid ""
+"Select the unit used for supply (e.g. Carton, Bag, Box, Piece, Kilogram, "
+"Unit)"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Send To Warehouse"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_high_manager_report_avg_duration__state
+msgid "State"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__status
+msgid "Status"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_kanban_branch
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_kanban_supply_manager
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_kanban_warehouse
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_tracking_kanban
+msgid "Status:"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Submit Request"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__suggested_qty
+msgid "Suggested Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_supply_vs_suggestion_report
+#: model:ir.ui.menu,name:custom_supply.menu_supply_vs_suggestion_report
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_vs_suggestion_graph
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_vs_suggestion_tree
+msgid "Suggestion vs Supply Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_supply_vs_suggestion_report
+msgid "Suggestion vs Supply Quantity Report"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_high_manager_report_avg_duration__state__supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_request__status__supply
+msgid "Supply"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__supply_confirm_date
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_supply_report_search
+msgid "Supply Confirm Date"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__supply_confirm_date
+msgid "Supply Confirmed On"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_product_template_form_inherit_custom
+msgid "Supply Info"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_supply_log
+msgid "Supply Log"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.module.category,name:custom_supply.module_category_supply_management
+msgid "Supply Management"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__supply_manager_id
+#: model:res.groups,name:custom_supply.group_supply_manager
+msgid "Supply Manager"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Supply Manager View"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__supply_note
+msgid "Supply Note"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__supply_qty
+msgid "Supply Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Supply Request"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_tracking_form
+msgid "Supply Request Details"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_supply_request_line
+msgid "Supply Request Line"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.report,name:custom_supply.action_report_supply_request_pdf
+msgid "Supply Request PDF"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_order_tracking
+msgid "Supply Request Tracking"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_supply_request
+msgid "Supply Request from Branch"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.ui.menu,name:custom_supply.menu_supply_requests_branch
+#: model:ir.ui.menu,name:custom_supply.menu_supply_requests_supply
+#: model:ir.ui.menu,name:custom_supply.menu_supply_requests_warehouse
+msgid "Supply Requests"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_supply_requests_branch
+msgid "Supply Requests (Branch)"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_supply_requests_supply_manager
+msgid "Supply Requests (Supply Manager)"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_supply_requests_warehouse
+msgid "Supply Requests (Warehouse)"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_product_product__custom_supply_field_1
+#: model:ir.model.fields,field_description:custom_supply.field_product_template__custom_supply_field_1
+msgid "Supply Type"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_unit
+#: model:ir.model.fields,field_description:custom_supply.field_product_product__supply_unit_id
+#: model:ir.model.fields,field_description:custom_supply.field_product_template__supply_unit_id
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_form
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_tree
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_unit_form
+msgid "Supply Unit"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_supply_units
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_unit_tree
+msgid "Supply Units"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.act_window,name:custom_supply.action_supply_vs_export_report
+#: model:ir.ui.menu,name:custom_supply.menu_supply_vs_export_report
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_vs_export_graph
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_vs_export_tree
+msgid "Supply vs Export Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_custom_supply_supply_vs_export_report
+msgid "Supply vs Export Quantity Report"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.actions.server,name:custom_supply.ir_cron_sync_products_sqlserver_ir_actions_server
+msgid "Sync Products from SQL Server"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.actions.act_window,help:custom_supply.action_high_manager_avg_duration
+msgid ""
+"This chart shows the average durations for Supply and InWarehouse states."
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.constraint,message:custom_supply.constraint_custom_supply_branch_product_unique_branch_product
+msgid "This product is already defined for this branch."
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.actions.act_window,help:custom_supply.action_supply_vs_export_report
+msgid ""
+"This report compares Export Quantity vs Supply Quantity for all supply "
+"request lines."
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.actions.act_window,help:custom_supply.action_supply_vs_suggestion_report
+msgid ""
+"This report compares the system suggestion with the actual supply "
+"quantities."
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.actions.act_window,help:custom_supply.action_branch_product_supply_report
+msgid ""
+"This report shows the requested quantities per branch for each product.\n"
+"                    Use the filters to select specific branches, products, or date ranges.\n"
+"                    Each branch is a column, and each product has a unique color within that column."
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.constraint,message:custom_supply.constraint_custom_supply_unit_unique_unit_name
+msgid "This supply unit name already exists."
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_vs_export_report__total_count
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_vs_suggestion_report__total_count
+msgid "Total Count"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_monthly_report__total_qty
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__total_qty
+msgid "Total Quantity"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_supply_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product__supply_unit_id
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__unit_name
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_form
+msgid "Unit"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_unit__name
+msgid "Unit Name"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields.selection,name:custom_supply.selection__custom_supply_supply_log__action_type__update
+msgid "Updated"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model,name:custom_supply.model_res_users
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_log__user_id
+msgid "User"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,help:custom_supply.field_custom_supply_branch__user_id
+msgid "User responsible for this branch (one user per branch)"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_kanban
+msgid "User:"
+msgstr ""
+
+#. module: custom_supply
+#: model:res.groups,name:custom_supply.group_warehouse_employee
+msgid "Warehouse Employee"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_branch_product_supply_report__warehouse_export_date
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_branch_product_supply_report_search
+msgid "Warehouse Export Date"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request_line__warehouse_note
+msgid "Warehouse Note"
+msgstr ""
+
+#. module: custom_supply
+#: model:ir.model.fields,field_description:custom_supply.field_custom_supply_supply_request__warehouse_user_id
+msgid "Warehouse User"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.view_supply_request_form
+msgid "Warehouse View"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "اسم المنتج"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "الرصيد الحالي"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "الكمية المطلوبة"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "الكمية المُخرَّجة"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid "طلب استدراج مواد من المستودع الرئيسي للأفرع"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid ""
+"مسؤول التوريد\n"
+"              <br/>\n"
+"              <span style=\"font-weight:normal;\">التوقيع والتاريخ: _____________</span>"
+msgstr ""
+
+#. module: custom_supply
+#: model_terms:ir.ui.view,arch_db:custom_supply.supply_request_report_document
+msgid ""
+"مشرف الفرع\n"
+"              <br/>\n"
+"              <span style=\"font-weight:normal;\">التوقيع والتاريخ: _____________</span>"
+msgstr ""

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- ==========================
+         Action for Branches
+         ========================== -->
+    <record id="action_branches" model="ir.actions.act_window">
+        <field name="name">Branches</field>
+        <field name="res_model">custom_supply.branch</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="view_ids" eval="[
+            (0, 0, {'view_mode': 'kanban', 'view_id': ref('custom_supply.company_branch_view_branch_kanban')}),
+            (0, 0, {'view_mode': 'form',   'view_id': ref('custom_supply.company_branch_view_branch_form')})
+        ]"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first branch
+            </p>
+        </field>
+        <field name="groups_id" eval="[(4, ref('custom_supply.group_supply_manager'))]"/>
+    </record>
+
+    <!-- ==========================
+         Action for Branch Products
+         ========================== -->
+    <record id="action_branch_products" model="ir.actions.act_window">
+        <field name="name">Branch Products</field>
+        <field name="res_model">custom_supply.branch_product</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_branch_product_tree"/>
+        <field name="search_view_id" ref="view_branch_product_search"/>
+        <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('view_branch_product_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('view_branch_product_form')})]"/>
+        <field name="groups_id" eval="[(4, ref('custom_supply.group_supply_manager'))]"/>
+    </record>
+
+    <!-- ==========================
+         Sync Branch Products
+         ========================== -->
+<record id="action_manual_sync_branch_products" model="ir.actions.server">
+    <field name="name">Sync Branch Products</field>
+    <field name="model_id" ref="model_custom_supply_branch_product"/>
+    <field name="binding_model_id" ref="model_custom_supply_branch_product"/>
+    <field name="binding_type">action</field>
+    <field name="binding_view_types">tree,list,form</field>
+    <field name="state">code</field>
+    <field name="code"><![CDATA[
+records = records or model.browse(context.get('active_ids', []))
+records.manual_sync()
+]]></field>
+</record>
+
+</odoo>

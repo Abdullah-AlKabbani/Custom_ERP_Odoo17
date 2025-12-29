@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- ================================
+             Device Category Tree View
+             ================================ -->
+        <record id="view_ts_device_category_tree" model="ir.ui.view">
+            <field name="name">ts.device.category.tree</field>
+            <field name="model">ts.device.category</field>
+            <field name="arch" type="xml">
+                <tree string="Device Categories" editable="bottom">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- ================================
+             Device Category Search View
+             ================================ -->
+        <record id="view_ts_device_category_search" model="ir.ui.view">
+            <field name="name">ts.device.category.search</field>
+            <field name="model">ts.device.category</field>
+            <field name="arch" type="xml">
+                <search string="Search Categories">
+                    <field name="name"/>
+                    <field name="description"/>
+
+                    <filter string="Active Categories"
+                            name="active_categories"
+                            domain="[('active','=',True)]"/>
+
+                    <filter string="Inactive Categories"
+                            name="inactive_categories"
+                            domain="[('active','=',False)]"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

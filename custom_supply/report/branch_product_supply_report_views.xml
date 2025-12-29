@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Graph View -->
+        <record id="view_branch_product_supply_graph" model="ir.ui.view">
+            <field name="name">custom_supply.branch_product_supply_report.graph</field>
+            <field name="model">custom_supply.branch_product_supply_report</field>
+            <field name="arch" type="xml">
+                <graph string="Branch vs Product Requested Quantities" type="bar" stacked="True">
+                    <field name="total_qty" type="measure"/>
+                    <field name="branch_name" type="row"/>
+                    <field name="full_label" type="col"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_branch_product_supply_tree" model="ir.ui.view">
+            <field name="name">custom_supply.branch_product_supply_report.tree</field>
+            <field name="model">custom_supply.branch_product_supply_report</field>
+            <field name="arch" type="xml">
+                <tree string="Branch Product Supply Quantities">
+                    <field name="branch_name"/>
+                    <field name="product_name_str"/>
+                    <field name="total_qty"/>
+                    <field name="request_date"/>
+                    <field name="supply_confirm_date"/>
+                    <field name="warehouse_export_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Search View -->
+        <record id="view_branch_product_supply_report_search" model="ir.ui.view">
+            <field name="name">custom_supply.branch_product_supply_report.search</field>
+            <field name="model">custom_supply.branch_product_supply_report</field>
+            <field name="arch" type="xml">
+                <search string="Branch Product Supply Report">
+                    <field name="branch_name"/>
+                    <field name="product_name_str"/>
+                    <filter name="request_date_filter" string="Request Date" domain="[]" context="{'group_by':'request_date'}"/>
+                    <filter name="supply_confirm_date_filter" string="Supply Confirm Date" domain="[]" context="{'group_by':'supply_confirm_date'}"/>
+                    <filter name="warehouse_export_date_filter" string="Warehouse Export Date" domain="[]" context="{'group_by':'warehouse_export_date'}"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_branch_product_supply_report" model="ir.actions.act_window">
+            <field name="name">Branch Product Supply Quantities</field>
+            <field name="res_model">custom_supply.branch_product_supply_report</field>
+            <field name="view_mode">graph,tree</field>
+            <field name="search_view_id" ref="view_branch_product_supply_report_search"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    This report shows the requested quantities per branch for each product.
+                    Use the filters to select specific branches, products, or date ranges.
+                    Each branch is a column, and each product has a unique color within that column.
+                </p>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Helpdesk Access Groups Category -->
+    <record id="module_category_helpdesk" model="ir.module.category">
+        <field name="name">Helpdesk</field>
+        <field name="description">Helpdesk Access Groups</field>
+        <field name="sequence">20</field>
+    </record>
+
+    <!-- Helpdesk User Group -->
+    <record id="helpdesk_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="odoo_website_helpdesk.module_category_helpdesk"/>
+    </record>
+
+    <!-- Helpdesk Team Leader Group (implies User) -->
+    <record id="helpdesk_team_leader" model="res.groups">
+        <field name="name">Team Leader</field>
+        <field name="category_id" ref="odoo_website_helpdesk.module_category_helpdesk"/>
+        <field name="implied_ids" eval="[(4, ref('odoo_website_helpdesk.helpdesk_user'))]"/>
+    </record>
+
+    <!-- Helpdesk Manager Group (implies Team Leader) -->
+    <record id="helpdesk_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="odoo_website_helpdesk.module_category_helpdesk"/>
+        <field name="implied_ids" eval="[(4, ref('odoo_website_helpdesk.helpdesk_team_leader'))]"/>
+    </record>
+
+    <!-- Optional feature flags (kept as-is if you use them in views) -->
+    <record id="group_show_category" model="res.groups">
+        <field name="name">group_show_category</field>
+    </record>
+
+    <record id="group_show_subcategory" model="res.groups">
+        <field name="name">group_show_subcategory</field>
+    </record>
+
+    <!-- IMPORTANT: Removed the base.default_user override that was making all default users managers -->
+</odoo>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sequence for Supply Requests -->
+        <record id="seq_supply_request" model="ir.sequence">
+            <field name="name">Supply Request</field>
+            <field name="code">custom_supply.supply_request</field>
+            <field name="prefix">SR</field>
+            <field name="padding">4</field>
+            <field name="implementation">standard</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

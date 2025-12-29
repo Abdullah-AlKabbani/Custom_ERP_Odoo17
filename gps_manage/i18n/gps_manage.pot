@@ -1,0 +1,258 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* gps_manage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-12 03:34+0000\n"
+"PO-Revision-Date: 2025-01-12 03:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__time_access_company
+msgid "Access to Company"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__accommodation_area
+msgid "Accommodation Area"
+msgstr ""
+
+#. module: gps_manage
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_form
+msgid "Additional Information"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.ui.menu,name:gps_manage.configurations_menu
+msgid "Configurations"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__create_uid
+#: model:ir.model.fields,field_description:gps_manage.field_violations__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__create_date
+#: model:ir.model.fields,field_description:gps_manage.field_violations__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__date_field
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "Date"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__display_name
+#: model:ir.model.fields,field_description:gps_manage.field_violations__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: gps_manage
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_form
+msgid "Drive's Information"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__driver_id
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "Driver"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__driver_position
+msgid "Driver's Position"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__time_enter_line
+msgid "Enter Line"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__time_exit_line
+msgid "Exit Line"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__fuel_consumption
+msgid "Fuel Consumption"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__fuel_type
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "Fuel Type"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__full_working_time
+msgid "Full Working Time (Hours)"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__gps_jamming
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "GPS Jamming"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.actions.act_window,name:gps_manage.gps_action
+#: model:ir.ui.menu,name:gps_manage.gps_root_menu
+msgid "GPS Management"
+msgstr ""
+
+#. module: gps_manage
+#: model_terms:ir.ui.view,arch_db:gps_manage.violations_view_form
+msgid "General Information."
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__time_going_out_work
+msgid "Going Out to Work"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__time_going_to_company
+msgid "Going to Company"
+msgstr ""
+
+#. module: gps_manage
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "High Speed"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__highest_speed
+msgid "Highest Speed"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__id
+#: model:ir.model.fields,field_description:gps_manage.field_violations__id
+msgid "ID"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__itinerary
+msgid "Itinerary"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__kilometers_traveled
+msgid "Kilometers Traveled During the Day"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__write_uid
+#: model:ir.model.fields,field_description:gps_manage.field_violations__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__write_date
+#: model:ir.model.fields,field_description:gps_manage.field_violations__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__license_plate_id
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "License Plate"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_violations__name
+msgid "Name"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__violation_notes
+msgid "Notes on Violations"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__overnight_hours
+msgid "Overnight Hours"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__sales_supervisor_note
+msgid "Sales Supervisor Note"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__supervisor_id
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "Supervisor"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.ui.menu,name:gps_manage.add_ticket_menu
+#: model:ir.ui.menu,name:gps_manage.gps_menu_item
+msgid "Tickets"
+msgstr ""
+
+#. module: gps_manage
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_form
+msgid "Time Details"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.actions.act_window,name:gps_manage.violations_action
+#: model:ir.model.fields,field_description:gps_manage.field_gps__violations_id
+#: model:ir.ui.menu,name:gps_manage.violations_menu_item
+msgid "Violations"
+msgstr ""
+
+#. module: gps_manage
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "With Violations"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__work_area
+#: model_terms:ir.ui.view,arch_db:gps_manage.gps_view_search
+msgid "Work Area"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields,field_description:gps_manage.field_gps__working_hours_on_line
+msgid "Working Hours on Line"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields.selection,name:gps_manage.selection__gps__fuel_type__diesel
+msgid "diesel"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields.selection,name:gps_manage.selection__gps__fuel_type__electric
+msgid "electric"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model.fields.selection,name:gps_manage.selection__gps__fuel_type__gasoline
+msgid "gasoline"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model,name:gps_manage.model_gps
+msgid "gps"
+msgstr ""
+
+#. module: gps_manage
+#: model:ir.model,name:gps_manage.model_violations
+msgid "violations"
+msgstr ""

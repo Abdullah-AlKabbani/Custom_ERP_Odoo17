@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Kanban View -->
+    <record id="company_branch_view_branch_kanban" model="ir.ui.view">
+        <field name="name">company_branch.branch.kanban</field>
+        <field name="priority">20</field>
+        <field name="model">custom_supply.branch</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column" create="false" edit="true" delete="false">
+                <field name="name"/>
+                <field name="city_id"/>
+                <field name="user_id"/>
+                <field name="last_updated"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_kanban_card"
+                             style="border-radius:10px; border:1px solid #ddd; padding:12px; background-color:#f9f9ff; box-shadow: 1px 1px 5px rgba(0,0,0,0.1);">
+                            <div class="o_kanban_primary_left" style="margin-bottom:8px;">
+                                <strong style="font-size:1.2em; color:#5b2c6f;">
+                                    <field name="name"/>
+                                </strong>
+                                <div style="font-size:0.9em; color:#333; margin-top:2px;">
+                                    <i class="fa fa-map-marker" aria-hidden="true" title="Location"></i>
+                                    <field name="city_id"/>
+                                </div>
+                                <div style="font-size:0.8em; color:#555; margin-top:4px;">
+                                    User: <field name="user_id"/>
+                                </div>
+                                <div style="font-size:0.8em; color:#888; margin-top:4px;">
+                                    Last Updated: <field name="last_updated" widget="datetime"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="company_branch_view_branch_form" model="ir.ui.view">
+        <field name="name">company_branch.branch.form</field>
+        <field name="model">custom_supply.branch</field>
+        <field name="priority">20</field>
+        <field name="groups_id" eval="[(4, ref('custom_supply.group_supply_manager'))]"/>
+        <field name="arch" type="xml">
+            <form string="Branch Dashboard" create="false" delete="false">
+                <sheet>
+                    <group>
+                        <group string="Branch Info">
+                            <field name="name" groups="custom_supply.group_supply_manager" readonly="1"/>
+                            <field name="city_id" groups="custom_supply.group_supply_manager" readonly="1"/>
+                            <field name="user_id" groups="custom_supply.group_supply_manager" readonly="1"/>
+                            <field name="last_updated" readonly="1"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page string="Products" groups="custom_supply.group_supply_manager">
+                            <field name="product_ids">
+                                <tree editable="bottom" create="false" delete="true" default_order="category_id,product_id">
+                                    <field name="product_id"  readonly="1"/>
+                                    <field name="supply_unit_id" readonly="1" string="Unit"/>
+                                    <field name="category_id" readonly="1"/>
+                                    <field name="activate"/>
+                                    <field name="min_quantity"/>
+                                    <field name="max_quantity"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

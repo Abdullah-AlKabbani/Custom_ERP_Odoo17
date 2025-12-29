@@ -1,0 +1,32 @@
+<odoo>
+
+    <!-- Wizard view -->
+    <record id="view_attendance_day_filter_wizard_form" model="ir.ui.view">
+        <field name="name">attendance.day.filter.wizard.form</field>
+        <field name="model">attendance.day.filter.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Not Attending (by Date)">
+                <group>
+                    <field name="target_date" required="1"/>
+                </group>
+                <footer>
+                    <button name="action_open_not_attending"
+                            type="object"
+                            string="Show Not Attending"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Wizard action -->
+    <record id="action_attendance_day_filter_wizard" model="ir.actions.act_window">
+        <field name="name">Not Attending (by Date)</field>
+        <field name="res_model">attendance.day.filter.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_attendance_day_filter_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

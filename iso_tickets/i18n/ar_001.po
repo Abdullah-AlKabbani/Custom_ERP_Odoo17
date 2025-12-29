@@ -1,0 +1,1922 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* iso_tickets
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-03 13:30+0000\n"
+"PO-Revision-Date: 2025-11-03 17:23+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && "
+"n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.7\n"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__hr_presence_control_email_amount
+msgid "# emails to send"
+msgstr "البريد الالكتروني للارسال"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "<option value=\"\">(optional)</option>"
+msgstr "<option value=\"\">(ادخل الوردية)</option>"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "<option value=\"\">Select branch</option>"
+msgstr "<option value=\"\">اختر الفرع</option>"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid ""
+"<option value=\"\">Select</option>\n"
+"                          <option value=\"exist\">Exist</option>\n"
+"                          <option value=\"not_exist\">Not Exist</option>"
+msgstr ""
+"<option value=\"\">اختر</option>\n"
+"                          <option value=\"exist\">موجود</option>\n"
+"                          <option value=\"not_exist\">غير موجود</option>"
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__google_translate_api_key
+msgid ""
+"A valid Google API key is required to enable message translation. https://cloud.google.com/translate/docs/setup"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__unsplash_access_key
+msgid "Access Key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_avatax
+msgid "Account Avatax"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_taxcloud
+msgid "Account TaxCloud"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_journal_early_pay_discount_loss_account_id
+msgid "Account for the difference amount after the expense discount has been granted"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_journal_early_pay_discount_gain_account_id
+msgid "Account for the difference amount after the income discount has been granted"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_cash_basis_base_account_id
+msgid ""
+"Account that will be set on lines created in cash basis journal entry and used to keep track of the tax base "
+"amount."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_accountant
+msgid "Accounting"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__active
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_ids
+msgid "Activities"
+msgstr "الانشطة"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "النشاط المنتهي"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "ايقونة حالة النشاط"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__snailmail_cover
+msgid "Add a Cover Page"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__tenor_api_key
+msgid ""
+"Add a Tenor GIF API key to enable GIFs support. https://developers.google.com/tenor/guides/quickstart#setup"
+msgstr ""
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "Additional notes (optional)"
+msgstr "ملاحظات إضافية (اختياري)"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_hr_presence
+msgid "Advanced Presence Control"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_sale_pricelist
+msgid "Advanced Pricelists"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__alias_domain_id
+msgid "Alias Domain"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_product_margin
+msgid "Allow Product Margin"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_check_printing
+msgid "Allow check printing and deposits"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_mail_plugin
+msgid "Allow integration with the mail plugins"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_google_calendar
+msgid "Allow the users to synchronize their calendar  with Google Calendar"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_microsoft_calendar
+msgid "Allow the users to synchronize their calendar with Outlook Calendar"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_base_import
+msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__group_sale_pricelist
+msgid ""
+"Allows to manage different prices based on rules per category of customers.\n"
+"                Example: 10% for retailers, promotion of 5 EUR on this product, etc."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__group_multi_currency
+msgid "Allows to work in a multi currency environment"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_analytic_accounting
+msgid "Analytic Accounting"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__analytic_plan_id
+msgid "Analytic Plan"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__unsplash_app_id
+msgid "Application ID"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__reminder_allow
+msgid "Approver Reminder"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_voip
+msgid "Asterisk (VoIP)"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_currency_rate_live
+msgid "Automatic Currency Rates"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_journal_suspense_account_id
+msgid "Bank Suspense"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_journal_suspense_account_id
+msgid ""
+"Bank Transactions are posted immediately after import or synchronization. Their counterparty is the bank "
+"suspense account.\n"
+"Reconciliation replaces the latter by the definitive account(s)."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_cash_basis_base_account_id
+msgid "Base Tax Received Account"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__sfu_server_key
+msgid "Base64 encoded key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__hr_presence_control_ip
+msgid "Based on IP Address"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_hr_attendance
+msgid "Based on attendances"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__hr_presence_control_email
+msgid "Based on number of emails sent"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__hr_presence_control_login
+msgid "Based on user status in system"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__branch_id
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "Branch *"
+msgstr "الفرع *"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__public_manager_name
+msgid "Branch Manager (entered on form)"
+msgstr "مسؤول الفرع "
+
+#. module: iso_tickets
+#: model:ir.actions.act_window,name:iso_tickets.action_iso_branch
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_branches
+msgid "Branches"
+msgstr "الافرع"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_budget
+msgid "Budget Management"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__recaptcha_min_score
+msgid ""
+"By default, should be one of 0.1, 0.3, 0.7, 0.9.\n"
+"1.0 is very likely a good interaction, 0.0 is very likely a bot"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__cdn_url
+msgid "CDN Base URL"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__cdn_filters
+msgid "CDN Filters"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__tax_exigibility
+msgid "Cash Basis"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_journal_early_pay_discount_gain_account_id
+msgid "Cash Discount Gain"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_journal_early_pay_discount_loss_account_id
+msgid "Cash Discount Loss"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_cash_rounding
+msgid "Cash Rounding"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__chart_template
+msgid "Chart Template"
+msgstr "قالب الرد"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_website_cf_turnstile
+msgid "Cloudflare Turnstile"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_section__code
+msgid "Code"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__company_id
+msgid "Company"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__company_country_code
+msgid "Company Country Code"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__company_informations
+msgid "Company Informations"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__company_name
+msgid "Company Name"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__resource_calendar_id
+msgid "Company Working Hours"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__has_chart_of_accounts
+msgid "Company has a chart of accounts"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model,name:iso_tickets.model_res_config_settings
+msgid "Config Settings"
+msgstr "تهيئة الإعدادات "
+
+#. module: iso_tickets
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_configuration
+msgid "Configuration"
+msgstr "إعدادات"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__has_google_search_console
+msgid "Console Google Search"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__cdn_activated
+msgid "Content Delivery Network (CDN)"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_cookies_bar
+msgid "Cookies Bar"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__country_code
+msgid "Country Code"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__create_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__create_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_section__create_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__create_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__create_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__create_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__create_uid
+msgid "Created by"
+msgstr "تم إنشاؤها بواسطة"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__create_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__create_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_section__create_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__create_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__create_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__create_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__currency_exchange_journal_id
+msgid "Currency Exchange Journal"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__report_footer
+msgid "Custom Report Footer"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__portal_allow_api_keys
+msgid "Customer API Keys"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__auth_signup_uninvited
+msgid "Customer Account"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_sale_delivery_address
+msgid "Customer Addresses"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_discount_expense_allocation_id
+msgid "Customer Invoices Discounts Account"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_project_rating
+msgid "Customer Ratings"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__date
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "Date *"
+msgstr "تاريخ"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__user_default_rights
+msgid "Default Access Rights"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_default_credit_limit
+msgid "Default Credit Limit"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__purchase_tax_id
+msgid "Default Purchase Tax"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__sale_tax_id
+msgid "Default Sale Tax"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__iso_default_shift_id
+#: model:ir.model.fields,field_description:iso_tickets.field_res_config_settings__iso_default_shift_id
+msgid "Default Shift"
+msgstr "الورديات الافتراضية"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__social_default_image
+msgid "Default Social Share Image"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__use_invoice_terms
+msgid "Default Terms & Conditions"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__incoterm_id
+msgid "Default incoterm"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_default_lang_id
+msgid "Default language"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_default_lang_code
+msgid "Default language code"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_branch__manager_name
+msgid "Default manager name shown on the public form (optional)."
+msgstr "اسم المسؤول الافتراضي المعروض على النموذج العام (اختياري)."
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__digest_id
+msgid "Digest Email"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__digest_emails
+msgid "Digest Emails"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_discount_per_so_line
+msgid "Discounts"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__display_name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__display_name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_section__display_name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__display_name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__display_name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__display_name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__qr_code
+msgid "Display SEPA QR-code"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__website_cookies_bar
+msgid "Display a customizable cookies bar on your website."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__preview_ready
+msgid "Display preview button"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__website_logo
+msgid "Display this logo on the website."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_invoice_extract
+msgid "Document Digitization"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__external_report_layout_id
+msgid "Document Template"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_ticket__status__done
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "Done"
+msgstr "تم"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__invoice_is_download
+msgid "Download"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_reports
+msgid "Dynamic Reports"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__website_homepage_url
+msgid "E.g. /contactus or /shop"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__website_domain
+msgid "E.g. https://www.mydomain.com"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_l10n_eu_oss
+msgid "EU Intra-community Distance Selling"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__email_secondary_color
+msgid "Email Button Color"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__email_primary_color
+msgid "Email Header Color"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__hr_employee_self_edit
+msgid "Employee Editing"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__reminder_user_allow
+msgid "Employee Reminder"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__iso_enable_public
+#: model:ir.model.fields,field_description:iso_tickets.field_res_config_settings__iso_enable_public
+msgid "Enable ISO Public Form"
+msgstr "تفعيل الايزو على الوضع العام"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__auth_signup_reset_password
+msgid "Enable password reset from Login page"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_use_credit_limit
+msgid "Enable the use of credit limit on partners."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__timesheet_encode_method
+msgid "Encoding Method"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__end_hour
+msgid "End Hour"
+msgstr "ساعة الانتهاء"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "Enter quantity"
+msgstr "ادخل العدد"
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_ticket_line__selection__exist
+msgid "Exist"
+msgstr "يوجد"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__fail_counter
+msgid "Fail Mail"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__favicon
+msgid "Favicon"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__tenor_gif_limit
+msgid "Fetch up to the specified number of GIF."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_section__code__finance
+msgid "Finance"
+msgstr "المالية"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_fiscal_country_id
+msgid "Fiscal Country Code"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__report_footer
+msgid "Footer text displayed at the bottom of all reports."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__income_currency_exchange_account_id
+msgid "Gain Exchange Rate Account"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_base_geolocalize
+msgid "GeoLocalize"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_product_images
+msgid "Get product pictures using barcode"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__google_gmail_client_identifier
+msgid "Gmail Client Id"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__google_gmail_client_secret
+msgid "Gmail Client Secret"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__has_google_analytics
+msgid "Google Analytics"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__google_analytics_key
+msgid "Google Analytics Key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__google_search_console
+msgid "Google Search Console"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__google_search_console
+msgid "Google key, or Enable to access first reply"
+msgstr ""
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "Group By"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_section__code__hr
+msgid "HR"
+msgstr "الموارد البشرية"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__has_accounting_entries
+msgid "Has Accounting Entries"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_homepage_url
+msgid "Homepage Url"
+msgstr "رابط الصفحة الرئيسية"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__id
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__id
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_section__id
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__id
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__id
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__id
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__id
+msgid "ID"
+msgstr "معرف التذكرة."
+
+#. module: iso_tickets
+#: model:ir.model,name:iso_tickets.model_iso_branch
+msgid "ISO Branch"
+msgstr "الفرع"
+
+#. module: iso_tickets
+#: model:res.groups,name:iso_tickets.group_iso_finance
+msgid "ISO Finance"
+msgstr "المالية"
+
+#. module: iso_tickets
+#: model:website.menu,name:iso_tickets.website_nav_iso_form
+msgid "ISO Form"
+msgstr "النموذج"
+
+#. module: iso_tickets
+#: model:res.groups,name:iso_tickets.group_iso_hr
+msgid "ISO HR"
+msgstr "الموارد البشرية"
+
+#. module: iso_tickets
+#: model:res.groups,name:iso_tickets.group_iso_maintenance
+msgid "ISO Maintenance"
+msgstr "الصيانة"
+
+#. module: iso_tickets
+#: model:res.groups,name:iso_tickets.group_iso_manager
+msgid "ISO Manager"
+msgstr "مدير"
+
+#. module: iso_tickets
+#: model:res.groups,name:iso_tickets.group_iso_quality
+msgid "ISO Quality"
+msgstr "الجودة"
+
+#. module: iso_tickets
+#: model:res.groups,name:iso_tickets.group_iso_sales
+msgid "ISO Sales"
+msgstr "المبيعات"
+
+#. module: iso_tickets
+#: model:ir.model,name:iso_tickets.model_iso_section
+msgid "ISO Section (fixed)"
+msgstr "قسم الايزو"
+
+#. module: iso_tickets
+#: model:ir.model,name:iso_tickets.model_iso_shift
+msgid "ISO Shift"
+msgstr "الوردية"
+
+#. module: iso_tickets
+#: model:ir.model,name:iso_tickets.model_iso_statement
+msgid "ISO Statement (per section)"
+msgstr "البيان"
+
+#. module: iso_tickets
+#: model:res.groups,name:iso_tickets.group_iso_supply
+msgid "ISO Supply"
+msgstr "التوريد"
+
+#. module: iso_tickets
+#: model:res.groups,name:iso_tickets.group_iso_tech
+msgid "ISO Tech"
+msgstr "المعلوماتية"
+
+#. module: iso_tickets
+#: model:ir.model,name:iso_tickets.model_iso_ticket
+msgid "ISO Ticket (per section submission)"
+msgstr "البطاقة حسب القسم"
+
+#. module: iso_tickets
+#: model:ir.model,name:iso_tickets.model_iso_ticket_line
+msgid "ISO Ticket Line"
+msgstr "خط البطاقة"
+
+#. module: iso_tickets
+#: model:ir.module.category,name:iso_tickets.module_category_iso model:ir.ui.menu,name:iso_tickets.menu_iso_root
+#: model:website.menu,name:iso_tickets.website_nav_iso_root
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "ISO Tickets"
+msgstr "بطاقات ISO"
+
+#. module: iso_tickets
+#: model:ir.model,name:iso_tickets.model_iso_config
+msgid "ISO Tickets Configuration (module-local)"
+msgstr "اعدادات البطاقات"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__message_has_error
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__social_default_image
+msgid "If set, replaces the website logo as the default social share image."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_statement__needs_quantity
+msgid "If true, public form asks for a numeric quantity."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__alias_domain_id
+msgid "If you have setup a catch-all email domain redirected to the Odoo server, enter the domain name here."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__use_twilio_rtc_servers
+msgid "If you want to use twilio as TURN/STUN server provider"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_bank_statement_import_qif
+msgid "Import .qif files"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_bank_statement_import_csv
+msgid "Import in .csv, .xls, and .xlsx format"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_bank_statement_import_ofx
+msgid "Import in .ofx format"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_bank_statement_import_camt
+msgid "Import in CAMT.053 format"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_journal_payment_debit_account_id
+msgid ""
+"Incoming payments are posted on an Outstanding Receipts Account. In the bank reconciliation widget, they "
+"appear as blue lines.\n"
+"Bank transactions are then reconciled on the Outstanding Receipts Accounts rather than the Receivable Account."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__partner_autocomplete_insufficient_credit
+msgid "Insufficient credit"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__transfer_account_id
+msgid "Intermediary account used when moving from a liquidity account to another."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__transfer_account_id
+msgid "Internal Transfer"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__incoterm_id
+msgid ""
+"International Commercial Terms are a series of predefined commercial terms used in international transactions."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_intrastat
+msgid "Intrastat"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_payment
+msgid "Invoice Online Payment"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__is_encode_uom_days
+msgid "Is Encode Uom Days"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_is_follower
+msgid "Is Follower"
+msgstr "هو تابع"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__is_root_company
+msgid "Is Root Company"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_auth_ldap
+msgid "LDAP Authentication"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__language_ids
+msgid "Languages"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__write_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__write_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_section__write_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__write_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__write_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__write_uid
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__write_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__write_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_section__write_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__write_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__write_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__write_date
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث بتاريخ"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__line_ids
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_form
+msgid "Lines"
+msgstr "الخطوط"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__location
+msgid "Location"
+msgstr "الموقع"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__expense_currency_exchange_account_id
+msgid "Loss Exchange Rate Account"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__currency_id
+msgid "Main currency of the company."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_section__code__maintenance
+msgid "Maintenance"
+msgstr "الصيانة"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_inter_company_rules
+msgid "Manage Inter Company"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__manager_name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__manager_name
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "Manager Name"
+msgstr "اسم المسؤول"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__google_translate_api_key
+msgid "Message Translation API Key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_project_milestone
+msgid "Milestones"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__recaptcha_min_score
+msgid "Minimum score"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_marketing_automation
+msgid "Module Marketing Automation"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_website_livechat
+msgid "Module Website Livechat"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_multi_currency
+msgid "Multi-Currencies"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_multi_website
+msgid "Multi-website"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__product_pricelist_setting
+msgid ""
+"Multiple prices: Pricelists with fixed price rules by product,\n"
+"Advanced rules: enables advanced price rules for pricelists."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "الموعد النهائي لنشاطي"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_branch__name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_section__name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__name
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__needs_quantity
+msgid "Needs Quantity"
+msgstr "يحتاج الى عدد"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "No active statements in this section."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_ticket_line__selection__not_exist
+msgid "Not Exist"
+msgstr "لا يوجد"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__notes
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__notes_hint
+msgid "Notes Hint"
+msgstr "تلميح الملاحظات"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__active_user_count
+msgid "Number of Active Users"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__company_count
+msgid "Number of Companies"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__language_count
+msgid "Number of Languages"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_language_count
+msgid "Number of languages"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_operations
+msgid "Operations"
+msgstr "العمليات"
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_statement__notes_hint
+msgid "Optional hint shown under notes on the form."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_journal_payment_credit_account_id
+msgid ""
+"Outgoing Payments are posted on an Outstanding Payments Account. In the bank reconciliation widget, they "
+"appear as blue lines.\n"
+"Bank transactions are then reconciled on the Outstanding Payments Account rather the Payable Account."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_journal_payment_credit_account_id
+msgid "Outstanding Payments"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_journal_payment_debit_account_id
+msgid "Outstanding Receipts"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__public_notes
+msgid "Overall Notes"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_peppol
+msgid "PEPPOL Invoicing"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__is_account_peppol_eligible
+msgid "PEPPOL eligible"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_partner_autocomplete
+msgid "Partner Autocomplete"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__pay_invoices_online
+msgid "Pay Invoices Online"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_ticket__status__pending
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "Pending"
+msgstr "معلق"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__invoice_is_ubl_cii
+msgid "Peppol format"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__has_plausible_shared_key
+msgid "Plausible Analytics"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__plausible_site
+msgid "Plausible Site (e.g. domain.com)"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__plausible_shared_key
+msgid "Plausible auth Key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_product_pricelist
+msgid "Pricelists"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__product_pricelist_setting
+msgid "Pricelists Method"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__snailmail_duplex
+msgid "Print Both sides"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__snailmail_color
+msgid "Print In Color"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_stock_packaging
+msgid "Product Packagings"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__profiling_enabled_until
+msgid "Profiling enabled until"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_project_stages
+msgid "Project Stages"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__project_time_mode_id
+msgid "Project Time Unit"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_loyalty
+msgid "Promotions, Coupons, Gift Card & Loyalty Program"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_show_purchase_receipts
+msgid "Purchase Receipt"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_section__code__quality
+msgid "Quality"
+msgstr "الجودة"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__quantity
+msgid "Quantity"
+msgstr "العدد"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__quick_edit_mode
+msgid "Quick encoding"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_project_recurring_tasks
+msgid "Recurring Tasks"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_hr_homeworking
+msgid "Remote Work"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_reporting
+msgid "Reporting"
+msgstr "التقارير"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__restrict_template_rendering
+msgid "Restrict Template Rendering"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_sepa
+msgid "SEPA Credit Transfer (SCT)"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__sfu_server_url
+msgid "SFU Server URL"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__sfu_server_key
+msgid "SFU Server key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_show_sale_receipts
+msgid "Sale Receipt"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_section__code__sales
+msgid "Sales"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_use_credit_limit
+msgid "Sales Credit Limit"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_sale_product_matrix
+msgid "Sales Grid Entry"
+msgstr ""
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "Search Tickets"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__recaptcha_private_key
+msgid "Secret Key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__section_id
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__section_id
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__section_id
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_graph_reporting
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "Section"
+msgstr "القسم"
+
+#. module: iso_tickets
+#: model:ir.model.constraint,message:iso_tickets.constraint_iso_section_iso_section_code_uniq
+msgid "Section code must be unique."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.actions.act_window,name:iso_tickets.action_iso_section
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_sections
+msgid "Sections"
+msgstr "الاقسام"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__selection
+msgid "Selection"
+msgstr "الاختيار"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__invoice_is_email
+msgid "Send Email"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_statement__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_form
+msgid "Set Done"
+msgstr "منتهي"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_form
+msgid "Set Pending"
+msgstr "معلق"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__shared_user_account
+msgid "Shared Customer Accounts"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__shift_id
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "Shift"
+msgstr "الوردية"
+
+#. module: iso_tickets
+#: model:ir.actions.act_window,name:iso_tickets.action_iso_shift
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_shifts
+msgid "Shifts"
+msgstr "الورديات"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__show_effect
+msgid "Show Effect"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__recaptcha_public_key
+msgid "Site Key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_hr_skills
+msgid "Skills Management"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_snailmail_account
+msgid "Snailmail"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_shift__start_hour
+msgid "Start Hour"
+msgstr "ساعة البداية"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__statement_id
+msgid "Statement"
+msgstr "البيان"
+
+#. module: iso_tickets
+#: model:ir.actions.act_window,name:iso_tickets.action_iso_statement
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_statements
+msgid "Statements"
+msgstr "البيانات"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__status
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: iso_tickets
+#. odoo-python
+#: code:addons/iso_tickets/models/iso_ticket.py:0
+#: code:addons/odoo_system/odoo_17/dev_addons/iso_tickets/models/iso_ticket.py:0
+#, python-format
+msgid "Status set to Done"
+msgstr "منتهي"
+
+#. module: iso_tickets
+#. odoo-python
+#: code:addons/iso_tickets/models/iso_ticket.py:0
+#: code:addons/odoo_system/odoo_17/dev_addons/iso_tickets/models/iso_ticket.py:0
+#, python-format
+msgid "Status set to Pending"
+msgstr "معلق"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_storno
+msgid "Storno accounting"
+msgstr ""
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_form
+msgid "Submit Ticket"
+msgstr "ارسال"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_thanks
+msgid "Submit another ticket"
+msgstr "ارسال بطاقة اخرى"
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_section__code__supply
+msgid "Supply"
+msgstr "التوريد"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_google_gmail
+msgid "Support Gmail Authentication"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_microsoft_outlook
+msgid "Support Outlook Authentication"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_project_task_dependencies
+msgid "Task Dependencies"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_hr_timesheet
+msgid "Task Logs"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__tax_cash_basis_journal_id
+msgid "Tax Cash Basis Journal"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__tax_calculation_rounding_method
+msgid "Tax calculation rounding method"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields.selection,name:iso_tickets.selection__iso_section__code__tech
+msgid "Tech"
+msgstr "المعلوماتية"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__auth_signup_template_user_id
+msgid "Template user for new users created through signup"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__tenor_api_key
+msgid "Tenor API key"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__tenor_gif_limit
+msgid "Tenor Gif Limit"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__tenor_content_filter
+msgid "Tenor content filter"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__invoice_terms
+msgid "Terms & Conditions"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__invoice_terms_html
+msgid "Terms & Conditions as a Web page"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__terms_type
+msgid "Terms & Conditions format"
+msgstr ""
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_thanks
+msgid "Thank you"
+msgstr "شكرًا لك!"
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__company_country_code
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__country_code
+msgid ""
+"The ISO country code in two chars. \n"
+"You can use this field for quick search."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__currency_exchange_journal_id
+msgid "The accounting journal where automatic exchange differences will be registered"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_fiscal_country_id
+msgid "The country to use the tax reports from for this company"
+msgstr ""
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_search
+msgid "This Month"
+msgstr "هذا الشهر"
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__module_account_batch_payment
+msgid ""
+"This allows you grouping payments into a single batch and eases the reconciliation process.\n"
+"-This installs the account_batch_payment module."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__favicon
+msgid "This field holds the image used to display a favicon on the website."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__website_default_lang_code
+msgid "This field is used to set/get locales for user"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__account_default_credit_limit
+msgid "This is the default credit limit that will be used on partners that do not have a specific limit on them."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__project_time_mode_id
+msgid ""
+"This will set the unit of measure used in projects and tasks.\n"
+"If you use the timesheet linked to projects, don't forget to setup the right unit of measure in your employees."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket_line__ticket_id
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_form
+msgid "Ticket"
+msgstr "البطاقة"
+
+#. module: iso_tickets
+#: model:ir.actions.act_window,name:iso_tickets.action_iso_ticket_report
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_reporting_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_graph_reporting
+msgid "Ticket Analysis"
+msgstr "تقارير البطاقات"
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_tree_reporting
+msgid "Ticket List"
+msgstr "قائمة البطاقة"
+
+#. module: iso_tickets
+#: model:ir.actions.act_window,name:iso_tickets.action_iso_ticket
+#: model:ir.ui.menu,name:iso_tickets.menu_iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_graph
+#: model_terms:ir.ui.view,arch_db:iso_tickets.view_iso_ticket_graph_reporting
+msgid "Tickets"
+msgstr "بطاقات ISO"
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_project_timesheet_holidays
+msgid "Time Off"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__display_invoice_amount_total_words
+msgid "Total amount of invoice in letters"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__twilio_account_token
+msgid "Twilio Account Auth Token"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__twilio_account_sid
+msgid "Twilio Account SID"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__cdn_filters
+msgid "URL matching those filters will be rewritten using the CDN Base URL"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_uom
+msgid "Units of Measure"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_web_unsplash
+msgid "Unsplash Image Library"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__external_email_server_default
+msgid "Use Custom Email Servers"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_sepa_direct_debit
+msgid "Use SEPA Direct Debit"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__use_twilio_rtc_servers
+msgid "Use Twilio ICE servers"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__has_default_share_image
+msgid "Use a image by default for sharing"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_account_batch_payment
+msgid "Use batch payments"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_auth_oauth
+msgid "Use external authentication providers (OAuth)"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__restrict_template_rendering
+msgid ""
+"Users will still be able to render templates.\n"
+"However only Mail Template Editors will be able to create new dynamic templates or modify existing ones."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__hr_presence_control_ip_list
+msgid "Valid IP addresses"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_product_variant
+msgid "Variants"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__account_discount_income_allocation_id
+msgid "Vendor Bills Discounts Account"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__product_volume_volume_in_cubic_feet
+msgid "Volume unit of measure"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__group_warning_account
+msgid "Warnings in Invoices"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__web_app_name
+msgid "Web App Name"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_company_id
+msgid "Website Company"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_domain
+msgid "Website Domain"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_logo
+msgid "Website Logo"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_ticket__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_name
+msgid "Website Name"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_ticket__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__product_weight_in_lbs
+msgid "Weight unit of measure"
+msgstr ""
+
+#. module: iso_tickets
+#. odoo-python
+#: code:addons/iso_tickets/models/iso_ticket.py:0
+#: code:addons/odoo_system/odoo_17/dev_addons/iso_tickets/models/iso_ticket.py:0
+#, python-format
+msgid "You don't have access to this section's tickets."
+msgstr ""
+
+#. module: iso_tickets
+#: model_terms:ir.ui.view,arch_db:iso_tickets.iso_public_thanks
+msgid "Your ticket has been submitted successfully."
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,help:iso_tickets.field_iso_config__tenor_content_filter
+msgid "https://developers.google.com/tenor/guides/content-filtering"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__module_google_recaptcha
+msgid "reCAPTCHA"
+msgstr ""
+
+#. module: iso_tickets
+#: model:ir.model.fields,field_description:iso_tickets.field_iso_config__website_id
+msgid "website"
+msgstr ""

@@ -1,0 +1,33 @@
+<odoo>
+  <record id="view_iso_section_tree" model="ir.ui.view">
+    <field name="name">iso.section.tree</field>
+    <field name="model">iso.section</field>
+    <field name="arch" type="xml">
+      <tree editable="bottom">
+        <field name="name"/>
+        <field name="code"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_iso_section_form" model="ir.ui.view">
+    <field name="name">iso.section.form</field>
+    <field name="model">iso.section</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="code"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_iso_section" model="ir.actions.act_window">
+    <field name="name">Sections</field>
+    <field name="res_model">iso.section</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>

@@ -1,0 +1,103 @@
+<odoo>
+    <!-- Branch Supply Window Tree View -->
+    <record id="view_branch_supply_window_tree" model="ir.ui.view">
+        <field name="name">custom_supply.branch_supply_window.tree</field>
+        <field name="model">custom_supply.branch_supply_window</field>
+        <field name="arch" type="xml">
+            <tree string="Branch Supply Schedules" editable="bottom">
+                <field name="branch_id"/>
+                <field name="supply_day_id"/>
+                <field name="start_time" widget="float_time"/>
+                <field name="end_time" widget="float_time"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Branch Supply Window Form View -->
+    <record id="view_branch_supply_window_form" model="ir.ui.view">
+        <field name="name">custom_supply.branch_supply_window.form</field>
+        <field name="model">custom_supply.branch_supply_window</field>
+        <field name="arch" type="xml">
+            <form string="Branch Supply Schedule">
+                <sheet>
+                    <group>
+                        <field name="color"/>
+                        <field name="branch_id"/>
+                        <field name="supply_day_id"/>
+                        <field name="start_time" widget="float_time"/>
+                        <field name="end_time" widget="float_time"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Calendar View -->
+    <record id="view_branch_supply_window_calendar" model="ir.ui.view">
+        <field name="name">custom_supply.branch_supply_window.calendar</field>
+        <field name="model">custom_supply.branch_supply_window</field>
+        <field name="arch" type="xml">
+            <calendar string="Supply Plan" date_start="start_datetime_display" date_stop="end_datetime_display" color="color" mode="week">
+                <field name="name"/>
+                <field name="color"/>
+                <field name="start_datetime"/>
+                <field name="end_datetime"/>
+            </calendar>
+        </field>
+    </record>
+
+    <!-- Search View for Branch Supply Window -->
+    <record id="view_branch_supply_window_search" model="ir.ui.view">
+        <field name="name">custom_supply.branch_supply_window.search</field>
+        <field name="model">custom_supply.branch_supply_window</field>
+        <field name="arch" type="xml">
+            <search string="Search Supply Windows">
+
+                <!-- Basic Filters -->
+                <field name="branch_id" string="Branch"/>
+                <field name="supply_day_id" string="Supply Day"/>
+
+                <!-- Time Filters -->
+                <filter name="morning" string="Morning"
+                        domain="[('start_time', '&lt;', 12)]"/>
+
+                <filter name="afternoon" string="Afternoon"
+                        domain="[('start_time', '&gt;=', 12)]"/>
+
+                <!-- Color Filters -->
+                <filter name="colored" string="Has Color"
+                        domain="[('color', '!=', False)]"/>
+
+                <!-- Group By -->
+                <group expand="0" string="Group By">
+                    <filter name="group_branch" string="Branch"
+                            context="{'group_by': 'branch_id'}"/>
+
+                    <filter name="group_day" string="Supply Day"
+                            context="{'group_by': 'supply_day_id'}"/>
+
+                    <filter name="group_color" string="Color"
+                            context="{'group_by': 'color'}"/>
+
+                    <filter name="group_period" string="Time Period"
+                            context="{'group_by': 'start_time'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_branch_supply_windows" model="ir.actions.act_window">
+        <field name="name">Branch Supply Schedules</field>
+        <field name="res_model">custom_supply.branch_supply_window</field>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="search_view_id" ref="view_branch_supply_window_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first supply Schedule
+            </p>
+        </field>
+        <field name="groups_id" eval="[(4, ref('custom_supply.group_supply_manager'))]"/>
+    </record>
+</odoo>

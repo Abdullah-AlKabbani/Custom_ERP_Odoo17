@@ -1,0 +1,43 @@
+<odoo>
+    <!-- TREE VIEW -->
+    <record id="view_tree_purchase_offer" model="ir.ui.view">
+        <field name="name">purchase.offer.tree</field>
+        <field name="model">purchase.offer</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="vendor_id"/>
+                <field name="price"/>
+                <field name="description"/>
+                <field name="is_selected"/>
+                <field name="request_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="view_form_purchase_offer" model="ir.ui.view">
+        <field name="name">purchase.offer.form</field>
+        <field name="model">purchase.offer</field>
+        <field name="arch" type="xml">
+            <form string="Vendor Offer">
+                <sheet>
+                    <group>
+                        <field name="vendor_id"/>
+                        <field name="price"/>
+                        <field name="description"/>
+                        <field name="document" filename="description"/>
+                        <field name="request_id"/>
+                        <field name="is_selected"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ACTION -->
+    <record id="purchase_workflow.action_purchase_offer" model="ir.actions.act_window">
+        <field name="name">Vendor Offers</field>
+        <field name="res_model">purchase.offer</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

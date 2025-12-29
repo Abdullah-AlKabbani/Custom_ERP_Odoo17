@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* overtime_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 09:04+0000\n"
+"PO-Revision-Date: 2024-11-12 12:29+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: overtime_attendance
+#: model_terms:ir.ui.view,arch_db:overtime_attendance.view_overtime_request_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: overtime_attendance
+#: model:ir.model.fields.selection,name:overtime_attendance.selection__overtime_request__state__approved
+msgid "Approved"
+msgstr "تمت الموافقة"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__create_uid
+msgid "Created by"
+msgstr "المنشئ"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__create_date
+msgid "Created on"
+msgstr "أنشأت في"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: overtime_attendance
+#: model:ir.model,name:overtime_attendance.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__employee_ids
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.ui.menu,name:overtime_attendance.menu_overtime_request
+msgid "Manage Overtime"
+msgstr "إدارة الوقت الاضافي"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__hours
+msgid "Overtime Hours"
+msgstr "ساعات الاضافية"
+
+#. module: overtime_attendance
+#: model:ir.model,name:overtime_attendance.model_overtime_request
+#: model_terms:ir.ui.view,arch_db:overtime_attendance.view_overtime_request_form
+msgid "Overtime Request"
+msgstr "طلب ساعات اضافية"
+
+#. module: overtime_attendance
+#: model:ir.actions.act_window,name:overtime_attendance.action_overtime_request
+#: model:ir.ui.menu,name:overtime_attendance.menu_overtime_request_root
+#: model_terms:ir.ui.view,arch_db:overtime_attendance.view_overtime_request_tree
+msgid "Overtime Requests"
+msgstr "طلبات الساعات الاضافية"
+
+#. module: overtime_attendance
+#: model_terms:ir.ui.view,arch_db:overtime_attendance.view_overtime_request_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: overtime_attendance
+#: model:ir.model.fields.selection,name:overtime_attendance.selection__overtime_request__state__refused
+msgid "Refused"
+msgstr "رفضت"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__name
+msgid "Request Name"
+msgstr "اسم الطلب"
+
+#. module: overtime_attendance
+#: model:ir.model.fields.selection,name:overtime_attendance.selection__overtime_request__state__requested
+msgid "Requested"
+msgstr "موافقة"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__state
+msgid "Status"
+msgstr "حالة الطلب"
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_hr_employee__working_hours
+msgid "Working Hours"
+msgstr "ساعات العمل"

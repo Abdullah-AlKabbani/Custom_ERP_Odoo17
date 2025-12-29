@@ -1,0 +1,91 @@
+<odoo>
+    <!-- Managers: full access to all tickets -->
+    <record id="rule_iso_ticket_manager_all" model="ir.rule">
+        <field name="name">ISO Tickets - Manager All</field>
+        <field name="model_id" ref="model_iso_ticket"/>
+        <field name="groups" eval="[(4, ref('iso_tickets.group_iso_manager'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <!-- Section roles: can only see/edit tickets of their section -->
+    <record id="rule_iso_ticket_supply" model="ir.rule">
+        <field name="name">ISO Tickets - Supply</field>
+        <field name="model_id" ref="model_iso_ticket"/>
+        <field name="groups" eval="[(4, ref('iso_tickets.group_iso_supply'))]"/>
+        <field name="domain_force">[('section_id.code', '=', 'supply')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="rule_iso_ticket_quality" model="ir.rule">
+        <field name="name">ISO Tickets - Quality</field>
+        <field name="model_id" ref="model_iso_ticket"/>
+        <field name="groups" eval="[(4, ref('iso_tickets.group_iso_quality'))]"/>
+        <field name="domain_force">[('section_id.code', '=', 'quality')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="rule_iso_ticket_maintenance" model="ir.rule">
+        <field name="name">ISO Tickets - Maintenance</field>
+        <field name="model_id" ref="model_iso_ticket"/>
+        <field name="groups" eval="[(4, ref('iso_tickets.group_iso_maintenance'))]"/>
+        <field name="domain_force">[('section_id.code', '=', 'maintenance')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="rule_iso_ticket_sales" model="ir.rule">
+        <field name="name">ISO Tickets - Sales</field>
+        <field name="model_id" ref="model_iso_ticket"/>
+        <field name="groups" eval="[(4, ref('iso_tickets.group_iso_sales'))]"/>
+        <field name="domain_force">[('section_id.code', '=', 'sales')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="rule_iso_ticket_tech" model="ir.rule">
+        <field name="name">ISO Tickets - Tech</field>
+        <field name="model_id" ref="model_iso_ticket"/>
+        <field name="groups" eval="[(4, ref('iso_tickets.group_iso_tech'))]"/>
+        <field name="domain_force">[('section_id.code', '=', 'tech')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="rule_iso_ticket_hr" model="ir.rule">
+        <field name="name">ISO Tickets - HR</field>
+        <field name="model_id" ref="model_iso_ticket"/>
+        <field name="groups" eval="[(4, ref('iso_tickets.group_iso_hr'))]"/>
+        <field name="domain_force">[('section_id.code', '=', 'hr')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="rule_iso_ticket_finance" model="ir.rule">
+        <field name="name">ISO Tickets - Finance</field>
+        <field name="model_id" ref="model_iso_ticket"/>
+        <field name="groups" eval="[(4, ref('iso_tickets.group_iso_finance'))]"/>
+        <field name="domain_force">[('section_id.code', '=', 'finance')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+</odoo>

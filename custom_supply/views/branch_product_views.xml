@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Tree View -->
+    <record id="view_branch_product_tree" model="ir.ui.view">
+        <field name="name">custom_supply.branch_product.tree</field>
+        <field name="model">custom_supply.branch_product</field>
+        <field name="arch" type="xml">
+            <tree string="Branch Products" create="false" edit="true" delete="true" default_order="branch_id,category_id,product_id">
+                <field name="branch_id" groups="custom_supply.group_supply_manager"/>
+                <field name="product_id" groups="custom_supply.group_supply_manager"/>
+                <field name="category_id" readonly="1"/>
+                <field name="supply_unit_id" string="Supply Unit" readonly="1" groups="custom_supply.group_supply_manager"/>
+                <field name="activate" groups="custom_supply.group_supply_manager"/>
+                <field name="min_quantity" groups="custom_supply.group_supply_manager"/>
+                <field name="max_quantity" groups="custom_supply.group_supply_manager"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_branch_product_form" model="ir.ui.view">
+        <field name="name">custom_supply.branch_product.form</field>
+        <field name="model">custom_supply.branch_product</field>
+        <field name="arch" type="xml">
+            <form string="Branch Product">
+                <sheet>
+                    <group>
+                        <field name="branch_id" groups="custom_supply.group_supply_manager"/>
+                        <field name="product_id" groups="custom_supply.group_supply_manager"/>
+                        <field name="supply_unit_id" string="Supply Unit" readonly="1" groups="custom_supply.group_supply_manager"/>
+                        <field name="activate" groups="custom_supply.group_supply_manager"/>
+                    </group>
+                    <group>
+                        <field name="min_quantity" groups="custom_supply.group_supply_manager"/>
+                        <field name="max_quantity" groups="custom_supply.group_supply_manager"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View: Filters + Group By -->
+    <record id="view_branch_product_search" model="ir.ui.view">
+        <field name="name">custom_supply.branch_product.search</field>
+        <field name="model">custom_supply.branch_product</field>
+        <field name="arch" type="xml">
+            <search string="Search Branch Products">
+
+                <!-- Search Fields -->
+                <field name="product_id"/>
+                <field name="branch_id"/>
+                <field name="category_id"/>
+                <field name="supply_unit_id"/>
+
+                <!-- 🔹 Basic Filters -->
+                <filter name="active_true" string="Active"
+                        domain="[('activate','=',True)]"/>
+                <filter name="active_false" string="Inactive"
+                        domain="[('activate','=',False)]"/>
+
+                <!-- 🛠 Products missing min/max (useful for Supply Manager) -->
+                <filter name="missing_min" string="Min Not Set"
+                        domain="[('min_quantity', '=', 0)]"
+                        help="Products with missing minimum quantity (min = 0)."/>
+
+                <filter name="missing_max" string="Max Not Set"
+                        domain="[('max_quantity', '=', 0)]"
+                        help="Products with missing maximum quantity (max = 0)."/>
+
+                <!-- 🔹 Group By Section -->
+                <group expand="0" string="Group By">
+                    <filter name="group_branch" string="Branch"
+                            context="{'group_by':'branch_id'}"/>
+
+                    <filter name="group_category" string="Category"
+                            context="{'group_by':'category_id'}"/>
+
+                    <filter name="group_product" string="Product"
+                            context="{'group_by':'product_id'}"/>
+
+                    <filter name="group_supply_unit" string="Supply Unit"
+                            context="{'group_by':'supply_unit_id'}"/>
+
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

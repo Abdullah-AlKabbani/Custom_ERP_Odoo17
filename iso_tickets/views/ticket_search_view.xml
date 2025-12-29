@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="view_iso_ticket_search" model="ir.ui.view">
+    <field name="name">iso.ticket.search</field>
+    <field name="model">iso.ticket</field>
+    <field name="arch" type="xml">
+      <search string="Search Tickets">
+        <field name="name"/>
+        <field name="section_id"/>
+        <field name="branch_id"/>
+        <field name="shift_id"/>
+        <field name="status"/>
+        <field name="date"/>
+
+        <filter string="Pending" name="filter_pending" domain="[('status', '=', 'pending')]"/>
+        <filter string="Done"    name="filter_done"    domain="[('status', '=', 'done')]"/>
+
+        <!-- This Month: [first day of this month, first day of next month) -->
+        <separator/>
+        <filter string="This Month" name="filter_this_month"
+                help="Tickets in the current month"
+                domain="[
+                  ('date','&gt;=', (context_today().replace(day=1)).strftime('%Y-%m-%d')),
+                  ('date','&lt;',  (context_today().replace(day=1) + relativedelta(months=1)).strftime('%Y-%m-%d'))
+                ]"/>
+
+        <group expand="0" string="Group By">
+          <filter name="g_section" string="Section" context="{'group_by':'section_id'}"/>
+          <filter name="g_branch"  string="Branch"  context="{'group_by':'branch_id'}"/>
+          <filter name="g_shift"   string="Shift"   context="{'group_by':'shift_id'}"/>
+          <filter name="g_status"  string="Status"  context="{'group_by':'status'}"/>
+          <filter name="g_date_d"  string="Date: Day"   context="{'group_by':'date:day'}"/>
+          <filter name="g_date_w"  string="Date: Week"  context="{'group_by':'date:week'}"/>
+<!--          <filter name="g_date_m"  string="Date: Month" context="{'group_by':'date:month'}"/>-->
+        </group>
+      </search>
+    </field>
+  </record>
+</odoo>

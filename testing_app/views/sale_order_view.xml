@@ -1,0 +1,15 @@
+<odoo>
+    <record id="view_order_form_inherit" model="ir.ui.view">
+        <field name="name">view order form</field>
+        <field name="model">sale.order</field> <!-- Removed leading space -->
+        <field name="inherit_id" ref="sale.view_order_form"/>  <!-- edit vire from debug mode -->
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="property_id"/> <!-- Self-closing tag -->
+            </field>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                  <field name="property_id"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

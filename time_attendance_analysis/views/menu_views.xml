@@ -1,0 +1,19 @@
+<odoo>
+    <!-- Root menu (visible only to module groups) -->
+    <menuitem
+        id="menu_attendance_analysis_root"
+        name="Time &amp; Attendance Analysis"
+        sequence="10"
+        groups="time_attendance_analysis.group_attendance_analysis_user,time_attendance_analysis.group_attendance_analysis_manager"
+    />
+
+    <!-- Not Attending (by Date) opens the wizard -->
+    <menuitem
+        id="menu_not_attending_by_date"
+        name="Not Attending (by Date)"
+        parent="menu_attendance_analysis_root"
+        action="action_attendance_day_filter_wizard"
+        sequence="20"
+        groups="time_attendance_analysis.group_attendance_analysis_user,time_attendance_analysis.group_attendance_analysis_manager"
+    />
+</odoo>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- ========================= -->
+        <!-- Country: Syria -->
+        <!-- ========================= -->
+        <record id="country_syria" model="custom_supply.country">
+            <field name="name">Syria</field>
+        </record>
+
+        <!-- ========================= -->
+        <!-- Cities of Syria -->
+        <!-- ========================= -->
+
+        <record id="city_damascus" model="custom_supply.city">
+            <field name="name">دمشق</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_rif_damascus" model="custom_supply.city">
+            <field name="name">ريف دمشق</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_aleppo" model="custom_supply.city">
+            <field name="name">حلب</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_homs" model="custom_supply.city">
+            <field name="name">حمص</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_hama" model="custom_supply.city">
+            <field name="name">حماة</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_latakia" model="custom_supply.city">
+            <field name="name">اللاذقية</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_tartus" model="custom_supply.city">
+            <field name="name">طرطوس</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_idlib" model="custom_supply.city">
+            <field name="name">إدلب</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_daraa" model="custom_supply.city">
+            <field name="name">درعا</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_sweida" model="custom_supply.city">
+            <field name="name">السويداء</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_deir_ezzor" model="custom_supply.city">
+            <field name="name">دير الزور</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_hasakah" model="custom_supply.city">
+            <field name="name">الحسكة</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_raqqa" model="custom_supply.city">
+            <field name="name">الرقة</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+
+        <record id="city_quneitra" model="custom_supply.city">
+            <field name="name">القنيطرة</field>
+            <field name="country_id" ref="country_syria"/>
+        </record>
+    </data>
+</odoo>

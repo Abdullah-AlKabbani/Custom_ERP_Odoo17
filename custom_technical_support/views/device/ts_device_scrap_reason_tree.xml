@@ -1,0 +1,14 @@
+<odoo>
+
+    <!-- Tree View Editable -->
+    <record id="view_ts_device_scrap_reason_tree" model="ir.ui.view">
+        <field name="name">ts.device.scrap.reason.tree</field>
+        <field name="model">ts.device.scrap.reason</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

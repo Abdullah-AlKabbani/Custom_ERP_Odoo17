@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <data noupdate="0">
+
+            <!-- Graph view: Pie chart -->
+            <record id="view_high_manager_avg_duration_graph" model="ir.ui.view">
+              <field name="name">custom_supply.high_manager_report_avg_duration.graph</field>
+              <field name="model">custom_supply.high_manager_report_avg_duration</field>
+              <field name="arch" type="xml">
+                <graph string="Average Processing Duration" type="pie">
+                  <field name="avg_duration_seconds" type="measure"/>
+                  <field name="state" type="row"/>
+                </graph>
+              </field>
+            </record>
+
+            <!-- Tree view (مصحّح – بدون تكرار) -->
+            <record id="view_high_manager_avg_duration_tree" model="ir.ui.view">
+              <field name="name">custom_supply.high_manager_report_avg_duration.tree</field>
+              <field name="model">custom_supply.high_manager_report_avg_duration</field>
+              <field name="arch" type="xml">
+                <tree string="Average Processing Duration">
+                  <field name="state"/>
+                  <field name="avg_duration_seconds"/>
+                  <field name="avg_duration_readable"/>
+                </tree>
+              </field>
+            </record>
+
+            <!-- Action window -->
+            <record id="action_high_manager_avg_duration" model="ir.actions.act_window">
+              <field name="name">Average Processing Duration</field>
+              <field name="res_model">custom_supply.high_manager_report_avg_duration</field>
+              <field name="view_mode">graph,tree</field>
+              <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                  This chart shows the average durations for Supply and InWarehouse states.
+                </p>
+              </field>
+            </record>
+      </data>
+</odoo>

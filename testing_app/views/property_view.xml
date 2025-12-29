@@ -1,0 +1,129 @@
+<odoo>
+    <data>
+
+        <record id="property_view_tree" model="ir.ui.view">
+            <field name="name">Property tree</field>
+            <field name="model">property</field>
+            <field name="arch" type="xml">
+                <tree class="header_custom" multi_edit="1" create="1" edit="1" delete="1">
+                    <field name="owner_id"/>
+                    <field name="name"/>
+                    <field name="data_availability"/>
+                    <field name="selling_price"/>
+                    <field name="garden"/>
+                    <field name="postcode"/>
+                    <field name="state"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="property_action" model="ir.actions.act_window">
+            <field name="name">Property</field>
+            <field name="res_model">property</field>
+        </record>
+
+
+        <record id="property_view_form" model="ir.ui.view">
+            <field name="name">Property form</field>
+            <field name="model">property</field>
+            <field name="arch" type="xml">
+                <form create="1" edit="1" delete="1">
+                    <sheet>
+                        <header>
+                            <button name="action_draft" type="object" class="btn-primary" string="Draft"
+                                    invisible="state == 'draft' "/>
+                            <button name="action_pending" type="object" class="btn-secondary" string="Pending"
+                                    invisible="state != 'draft' "/>
+                            <button name="action_sold" type="object" class="btn-success" string="Sold"
+                                    invisible="state != 'pending' "/>
+
+
+                            <field name="state" widget="statusbar" statusbar_visible="draft,pending,sold"
+                            />
+
+                        </header>
+
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1>
+                                <field name="name" required="1" placeholder="Your Full name"/>
+                            </h1>
+                        </div>
+                        <group string="General Information.">
+                            <group>
+                                <field name="data_availability" required="1"/>
+                                <field name="postcode" required="1"/>
+                                <field name="expected_price" required="1"/>
+                                <field name="selling_price" required="1"/>
+                                <field name="garden" required="1"/>
+                                <field name="diff"/>
+                                <field name="living_area"/>
+                                <field name="active"/>
+                            </group>
+                            <group string="Additional Information.">
+                                <field name="owner_id"/>
+                                <field name="owner_address"/>
+                                <field name="owner_phone"/>
+                                <field name="garden_area"/>
+                                <field name="bedrooms" optional="1"/>
+                                <field name="garage" optional="1" required="1"/>
+                                <field name="garden_orientation"/>
+                                <field name="tag_id" widget="many2many_tags"/>
+                            </group>
+                            <group string="Additional Information.">
+                                <field name="description" required="1"/>
+
+                            </group>
+                            <notebook>
+                                <page string="Bedrooms">
+                                    <field name="line_ids">
+                                        <tree editable="buttons">
+                                             <field name="description"/>
+                                              <field name="area"/>
+
+
+                                        </tree>
+                                    </field>
+
+
+                                </page>
+
+
+
+                            </notebook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="property_view_search" model="ir.ui.view">
+            <field name="name">Property Search</field>
+            <field name="model">property</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="postcode"/>
+                    <field name="name"/>
+
+                    <filter name="is_garden" string="With Garden" domain="[('garden','=','True')]"/>
+                    <filter name="is+garage" string="With Garage" domain="[('garage','=','True')]"/>
+                    <filter name="group_garden" string="garden" context="{'group_by':'garden'}"/>
+
+                </search>
+            </field>
+        </record>
+
+        <menuitem
+                id="property_menu_item"
+                name="Properties"
+                parent="properties_menu"
+                action="property_action"/>
+    </data>
+</odoo>

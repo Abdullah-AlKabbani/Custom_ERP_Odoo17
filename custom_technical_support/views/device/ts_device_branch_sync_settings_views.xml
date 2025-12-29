@@ -1,0 +1,26 @@
+<odoo>
+
+    <record id="view_ts_device_branch_sync_settings_form" model="ir.ui.view">
+        <field name="name">ts.device.branch.sync.settings.form</field>
+        <field name="model">ts.device.branch.sync.settings</field>
+        <field name="arch" type="xml">
+            <form string="Sync Devices with Branches">
+                <sheet>
+                    <group>
+                        <field name="branch_ids" widget="many2many_tags"/>
+                        <field name="device_ids" widget="many2many_tags"/>
+                    </group>
+                    <footer>
+                        <button string="Run Sync"
+                                type="object"
+                                name="manual_sync"
+                                class="btn-primary"/>
+                        <button string="Cancel"
+                                class="btn-secondary"
+                                special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

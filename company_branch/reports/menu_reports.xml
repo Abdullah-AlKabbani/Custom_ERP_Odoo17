@@ -1,0 +1,8 @@
+<odoo>
+    <menuitem id="menu_company_branch_reports_root" name="Reports" parent="menu_company_branch_root" sequence="20"/>
+
+    <!-- Submenu -->
+    <menuitem id="menu_branch_report_location" name="Branches by Location" parent="menu_company_branch_reports_root" action="action_branch_report_location"/>
+    <menuitem id="menu_branch_report_state" name="Branches by State" parent="menu_company_branch_reports_root" action="action_branch_report_state"/>
+    <menuitem id="menu_branch_report_type" name="Branches by Type" parent="menu_company_branch_reports_root" action="action_branch_report_type" sequence="30"/>
+</odoo>

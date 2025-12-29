@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ============================================================
+             PART 0 — SEARCH VIEWS FOR SUPPLY REQUEST LINE
+        ============================================================ -->
+
+        <!-- Search View -->
+        <record id="view_supply_request_search_line" model="ir.ui.view">
+            <field name="name">custom_supply.supply_request_line.search.branch</field>
+            <field name="model">custom_supply.supply_request_line</field>
+            <field name="arch" type="xml">
+                <search string="Search Branch Request Lines">
+        
+                    <field name="product_id"/>
+                    <field name="unit_name"/>
+                    <field name="category_id"/>
+        
+                    <!-- Group By -->
+                    <filter name="group_category" string="By Category"
+                            context="{'group_by':'category_id'}"/>
+        
+                    <!-- =======================
+                         Custom Filters
+                    ======================== -->
+                    <separator/>
+        
+                    <!-- current_qty != -1 -->
+                    <filter name="non_default_current_qty"
+                            string="Has Current Qty"
+                            domain="[('current_qty','!=',-1)]"/>
+        
+                    <!-- requested_qty != 0 -->
+                    <filter name="non_zero_requested_qty"
+                            string="Non-zero Requested Qty"
+                            domain="[('requested_qty','!=',0)]"/>
+        
+                    <!-- note != Null -->
+                    <filter name="note_not_empty"
+                            string="Has Note"
+                            domain="[('note','!=',False)]"/>
+        
+                </search>
+            </field>
+        </record>
+
+        <!-- ============================================================
+             PART 1 — TREE VIEWS + ACTIONS  (Must load first)
+        ============================================================ -->
+
+        <!-- Branch Tree View -->
+        <record id="view_supply_request_line_tree_branch" model="ir.ui.view">
+            <field name="name">custom_supply.supply_request_line.tree.branch</field>
+            <field name="model">custom_supply.supply_request_line</field>
+            <field name="arch" type="xml">
+                <tree string="Branch Request Lines" editable="bottom" create="false">
+                    <field name="request_id" invisible="1"/>
+                    <field name="product_id"/>
+                    <field name="unit_name"/>
+                    <field name="current_qty"/>
+                    <field name="suggested_qty"/>
+                    <field name="requested_qty"/>
+                    <field name="note"/>
+                </tree>
+            </field>
+            <field name="groups_id" eval="[(4, ref('custom_supply.group_branch_employee'))]"/>
+        </record>
+
+        <!-- Branch Action -->
+        <record id="action_supply_request_line_branch" model="ir.actions.act_window">
+            <field name="name">Request Lines (Branch)</field>
+            <field name="res_model">custom_supply.supply_request_line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="ref('custom_supply.view_supply_request_line_tree_branch')"/>
+            <field name="search_view_id" eval="ref('custom_supply.view_supply_request_search_line')"/>
+            <field name="domain">[('request_id','=',active_id)]</field>
+            <field name="context">'default_request_id': active_id</field>
+        </record>
+
+        <!-- Supply Tree View -->
+        <record id="view_supply_request_line_tree_supply" model="ir.ui.view">
+            <field name="name">custom_supply.supply_request_line.tree.supply</field>
+            <field name="model">custom_supply.supply_request_line</field>
+            <field name="arch" type="xml">
+                <tree string="Supply Request Lines" editable="bottom" create="false">
+                    <field name="request_id" invisible="1"/>
+                    <field name="product_id"/>
+                    <field name="unit_name"/>
+                    <field name="current_qty" readonly="1"/>
+                    <field name="suggested_qty" readonly="1"/>
+                    <field name="requested_qty" readonly="1"/>
+                    <field name="note" readonly="1"/>
+                    <field name="supply_qty"/>
+                    <field name="supply_note"/>
+                </tree>
+            </field>
+            <field name="groups_id" eval="[(4, ref('custom_supply.group_supply_manager'))]"/>
+        </record>
+
+        <!-- Supply Action -->
+        <record id="action_supply_request_line_supply" model="ir.actions.act_window">
+            <field name="name">Request Lines (Supply Manager)</field>
+            <field name="res_model">custom_supply.supply_request_line</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="ref('custom_supply.view_supply_request_line_tree_supply')"/>
+            <field name="search_view_id" eval="ref('custom_supply.view_supply_request_search_line')"/>
+            <field name="domain">[('request_id','=',active_id)]</field>
+            <field name="context">'default_request_id': active_id</field>
+        </record>
+
+
+        <!-- ============================================================
+             PART 2 — KANBAN + FORM VIEWS (loaded after actions)
+        ============================================================ -->
+
+        <!-- Kanban branch -->
+        <record id="view_supply_request_kanban_branch" model="ir.ui.view">
+            <field name="name">custom_supply.supply_request.kanban.branch</field>
+            <field name="model">custom_supply.supply_request</field>
+            <field name="priority" eval="10"/>
+            <field name="groups_id" eval="[(4, ref('custom_supply.group_branch_employee'))]"/>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_small_column" create="true" quick_create="false" edit="false">
+                    <field name="status"/>
+                    <field name="branch_id"/>
+                    <field name="request_date"/>
+                    <field name="name"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click o_kanban_card o_status_#{record.status.raw_value}">
+                                <strong><field name="name"/></strong>
+                                <div><field name="branch_id"/></div>
+                                <div><field name="request_date"/></div>
+                                <div>Status: <field name="status"/></div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Kanban Supply -->
+        <record id="view_supply_request_kanban_supply_manager" model="ir.ui.view">
+            <field name="name">custom_supply.supply_request.kanban.supply_manager</field>
+            <field name="model">custom_supply.supply_request</field>
+            <field name="priority" eval="20"/>
+            <field name="groups_id" eval="[(4, ref('custom_supply.group_supply_manager'))]"/>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_small_column" create="false" quick_create="false" edit="false">
+                    <field name="status"/>
+                    <field name="branch_id"/>
+                    <field name="request_date"/>
+                    <field name="name"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click o_kanban_card o_status_#{record.status.raw_value}">
+                                <strong><field name="name"/></strong>
+                                <div><field name="branch_id"/></div>
+                                <div><field name="request_date"/></div>
+                                <div>Status: <field name="status"/></div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- Kanban Warehouse -->
+        <record id="view_supply_request_kanban_warehouse" model="ir.ui.view">
+            <field name="name">custom_supply.supply_request.kanban.warehouse</field>
+            <field name="model">custom_supply.supply_request</field>
+            <field name="priority" eval="30"/>
+            <field name="groups_id" eval="[(4, ref('custom_supply.group_warehouse_employee'))]"/>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_small_column" create="false" quick_create="false" edit="false">
+                    <field name="status"/>
+                    <field name="branch_id"/>
+                    <field name="request_date"/>
+                    <field name="name"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click o_kanban_card o_status_#{record.status.raw_value}">
+                                <strong><field name="name"/></strong>
+                                <div><field name="branch_id"/></div>
+                                <div><field name="request_date"/></div>
+                                <div>Status: <field name="status"/></div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
+        <!-- FORM VIEW (comes AFTER actions are defined) -->
+        <record id="view_supply_request_form" model="ir.ui.view">
+            <field name="name">custom_supply.supply_request.form</field>
+            <field name="model">custom_supply.supply_request</field>
+            <field name="arch" type="xml">
+
+                <form string="Supply Request" class="o_form_statusbar">
+
+                    <header>
+                        <field name="status" widget="statusbar"
+                               statusbar_visible="InBranch,Supply,InWarehouse,OnRoad,Done"
+                               statusbar_colors="{'InBranch':'warning','Supply':'success','InWarehouse':'info','OnRoad':'primary','Done':'secondary'}"/>
+
+                        <!-- Buttons -->
+                        <button name="action_submit_request" type="object" string="Submit Request"
+                                class="btn-primary" icon="fa-paper-plane"
+                                groups="custom_supply.group_branch_employee"/>
+
+                        <button name="action_mark_in_warehouse" type="object" string="Send To Warehouse"
+                                class="btn-info" icon="fa-truck"
+                                groups="custom_supply.group_supply_manager"/>
+
+                        <button name="action_export" type="object" string="Export"
+                                class="btn-success" icon="fa-check"
+                                groups="custom_supply.group_warehouse_employee"/>
+
+                        <button name="print_warehouse_request_pdf" type="object"
+                                string="Download PDF"
+                                class="btn-secondary"
+                                groups="custom_supply.group_warehouse_employee"/>
+                    </header>
+
+                    <div class="oe_button_box" name="button_box">
+                        <button type="action" name="custom_supply.action_supply_request_line_branch"
+                                class="oe_stat_button" icon="fa-list"
+                                groups="custom_supply.group_branch_employee">
+
+                            <field name="id" invisible="1"/>
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Quantity Details</span>
+                            </div>
+                        </button>
+
+                        <button type="action" name="custom_supply.action_supply_request_line_supply"
+                                class="oe_stat_button" icon="fa-list"
+                                groups="custom_supply.group_supply_manager">
+
+                            <field name="id" invisible="1"/>
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Quantity Details</span>
+                            </div>
+                        </button>
+                    </div>
+
+
+                    <sheet>
+                        <group>
+                            <group string="Request Info">
+                                <field name="name" readonly="1"/>
+                                <field name="branch_id" readonly="1"/>
+                                <field name="supply_manager_id" readonly="1"/>
+                                <field name="warehouse_user_id" readonly="1"/>
+                            </group>
+
+                            <group string="Processing Details">
+                                <field name="request_date" readonly="1"/>
+                                <field name="supply_confirm_date" readonly="1"/>
+                                <field name="warehouse_export_date" readonly="1"/>
+                                <field name="received_date" readonly="1"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+
+                            <page string="Warehouse View" groups="custom_supply.group_warehouse_employee">
+                                <field name="line_ids" context="{'default_request_id': active_id}">
+                                    <tree editable="bottom">
+                                        <field name="product_id" readonly="1"/>
+                                        <field name="unit_name" readonly="1"/>
+                                        <field name="supply_qty" readonly="1"/>
+                                        <field name="supply_note" readonly="1"/>
+                                        <field name="export_qty"/>
+                                        <field name="warehouse_note"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+
+            </field>
+        </record>
+
+
+        <!-- ============================================================
+             MAIN WINDOW ACTIONS
+        ============================================================ -->
+
+        <record id="action_supply_requests_branch" model="ir.actions.act_window">
+            <field name="name">Supply Requests (Branch)</field>
+            <field name="res_model">custom_supply.supply_request</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('status','=','InBranch')]</field>
+            <field name="groups_id" eval="[(4, ref('custom_supply.group_branch_employee'))]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Create new supply requests.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_supply_requests_supply_manager" model="ir.actions.act_window">
+            <field name="name">Supply Requests (Supply Manager)</field>
+            <field name="res_model">custom_supply.supply_request</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('status','=','Supply')]</field>
+            <field name="groups_id" eval="[(4, ref('custom_supply.group_supply_manager'))]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    There are no supply requests to process.
+                </p>
+            </field>
+        </record>
+
+        <record id="action_supply_requests_warehouse" model="ir.actions.act_window">
+            <field name="name">Supply Requests (Warehouse)</field>
+            <field name="res_model">custom_supply.supply_request</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="domain">[('status','=','InWarehouse')]</field>
+            <field name="groups_id" eval="[(4, ref('custom_supply.group_warehouse_employee'))]"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    There are no supply requests to process.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

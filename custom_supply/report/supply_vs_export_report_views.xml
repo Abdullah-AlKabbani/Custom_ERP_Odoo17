@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Pie Chart View -->
+        <record id="view_supply_vs_export_graph" model="ir.ui.view">
+            <field name="name">custom_supply.supply_vs_export_report.graph</field>
+            <field name="model">custom_supply.supply_vs_export_report</field>
+            <field name="arch" type="xml">
+                <graph string="Supply vs Export Quantity" type="pie">
+                    <field name="total_count" type="measure"/>
+                    <field name="category" type="row"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_supply_vs_export_tree" model="ir.ui.view">
+            <field name="name">custom_supply.supply_vs_export_report.tree</field>
+            <field name="model">custom_supply.supply_vs_export_report</field>
+            <field name="arch" type="xml">
+                <tree string="Supply vs Export Quantity">
+                    <field name="category"/>
+                    <field name="total_count"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_supply_vs_export_report" model="ir.actions.act_window">
+            <field name="name">Supply vs Export Quantity</field>
+            <field name="res_model">custom_supply.supply_vs_export_report</field>
+            <field name="view_mode">graph,tree</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    This report compares Export Quantity vs Supply Quantity for all supply request lines.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

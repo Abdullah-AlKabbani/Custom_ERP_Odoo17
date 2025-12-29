@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ================================
+         Device Form View with Chatter
+         ================================ -->
+    <record id="view_ts_device_form" model="ir.ui.view">
+        <field name="name">ts.device.form</field>
+        <field name="model">ts.device</field>
+        <field name="arch" type="xml">
+            <form string="Technical Device">
+
+                <!-- ===== Header ===== -->
+                <header>
+                    <field name="state"
+                           widget="statusbar"
+                           statusbar_visible="active,inactive"
+                           options="{'clickable': true}"/>
+                </header>
+
+                <sheet>
+
+                    <!-- ===== Title ===== -->
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Device Name"/>
+                        </h1>
+                    </div>
+
+                    <!-- ===== Main Info ===== -->
+                    <group col="4">
+                        <!-- Left -->
+                        <group col="2">
+                            <field name="category_id"/>
+                            <field name="brand_id"/>
+                            <field name="device_model"/>
+                        </group>
+
+                        <!-- Right -->
+                        <group col="2">
+                            <field name="image_1920"
+                                   widget="image"
+                                   class="oe_avatar"
+                                   options="{'size': [150, 150]}"/>
+                        </group>
+                    </group>
+
+                    <!-- ===== Notebook ===== -->
+                    <notebook>
+
+                        <!-- Network Info -->
+                        <page string="Network">
+                            <group>
+                                <field name="has_ip"/>
+                                <field name="ip_address" invisible="not has_ip"/>
+                            </group>
+                        </page>
+
+                        <!-- Identification -->
+                        <page string="Identification">
+                            <group>
+                                <field name="has_serial"/>
+                                <field name="serial_number" invisible="not has_serial"/>
+                            </group>
+                        </page>
+
+                        <!-- Security -->
+                        <page string="Security"
+                              groups="custom_technical_support.group_ts_manager,
+                                      custom_technical_support.group_ts_super_admin">
+                            <group>
+                                <field name="has_password"/>
+                                <div class="o_password_wrapper"
+                                     invisible="not has_password"
+                                     style="display:flex; align-items:center; gap:6px;">
+                                    <field name="password"
+                                           widget="char"
+                                           class="custom_password_field"
+                                           style="width: 500px;"/>
+                                    <span class="o_password_peek"
+                                          title="Click to toggle password visibility"
+                                          style="cursor:pointer;">
+                                        <i class="fa fa-eye"/>
+                                    </span>
+                                </div>
+                            </group>
+                        </page>
+
+
+
+
+                        <!-- Notes -->
+                        <page string="Notes">
+                            <field name="note" placeholder="Add notes about this device..." nolabel="1"/>
+                        </page>
+                    </notebook>
+
+                    <!-- ===== Chatter ===== -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- ================================
+         Device Tree / List View
+         ================================ -->
+    <record id="view_ts_device_tree" model="ir.ui.view">
+        <field name="name">ts.device.tree</field>
+        <field name="model">ts.device</field>
+        <field name="arch" type="xml">
+            <tree string="Devices" editable="bottom">
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="brand_id"/>
+                <field name="device_model"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ================================
+         Device Kanban View
+         ================================ -->
+<record id="view_ts_device_kanban" model="ir.ui.view">
+    <field name="name">ts.device.kanban</field>
+    <field name="model">ts.device</field>
+    <field name="arch" type="xml">
+        <kanban class="o_kanban_small_column">
+            <field name="name"/>
+            <field name="image_1920"/>
+            <field name="state"/>
+
+            <templates>
+                <t t-name="kanban-box">
+                    <div class="oe_kanban_global_click o_kanban_card">
+
+                        <!-- Image -->
+                        <div class="o_kanban_image">
+                            <img t-att-src="
+                                record.image_1920.raw_value
+                                and '/web/image/ts.device/' + record.id.raw_value + '/image_1920'
+                                or '/custom_technical_support/static/src/img/default_device.png'
+                            "
+                            class="o_kanban_avatar"
+                            alt="Device"/>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="o_kanban_content">
+                            <strong class="o_kanban_record_title">
+                                <field name="name"/>
+                            </strong>
+
+                            <div class="text-muted">
+                                <field name="brand_id"/>
+                            </div>
+
+                            <div>
+                                <field name="device_model"/>
+                            </div>
+
+                            <div>
+                                <field name="category_id"/>
+                            </div>
+
+                            <div>
+                                <span class="badge"
+                                      t-att-class="record.state.raw_value == 'active'
+                                      and 'bg-success'
+                                      or 'bg-secondary'">
+                                    <field name="state"/>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </templates>
+        </kanban>
+    </field>
+</record>
+
+
+    <!-- ================================
+         Device Search View (Filters / Group By)
+         ================================ -->
+    <record id="view_ts_device_search" model="ir.ui.view">
+        <field name="name">ts.device.search</field>
+        <field name="model">ts.device</field>
+        <field name="arch" type="xml">
+            <search>
+                <!-- البحث -->
+                <field name="name"/>
+                <field name="brand_id"/>
+                <field name="device_model"/>
+                <field name="category_id"/>
+
+                <!-- الفلاتر -->
+                <filter string="Active Devices" name="active_devices" domain="[('state','=','active')]"/>
+                <filter string="Inactive Devices" name="inactive_devices" domain="[('state','=','inactive')]"/>
+            </search>
+        </field>
+    </record>
+</odoo>

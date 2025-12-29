@@ -1,0 +1,41 @@
+<odoo>
+  <record id="view_iso_statement_tree" model="ir.ui.view">
+    <field name="name">iso.statement.tree</field>
+    <field name="model">iso.statement</field>
+    <field name="arch" type="xml">
+      <tree editable="bottom">
+        <field name="sequence"/>
+        <field name="section_id"/>
+        <field name="name"/>
+        <field name="needs_quantity"/>
+        <field name="notes_hint"/>
+        <field name="active"/>
+      </tree>
+    </field>
+  </record>
+
+  <record id="view_iso_statement_form" model="ir.ui.view">
+    <field name="name">iso.statement.form</field>
+    <field name="model">iso.statement</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="sequence"/>
+            <field name="section_id"/>
+            <field name="name"/>
+            <field name="needs_quantity"/>
+            <field name="notes_hint"/>
+            <field name="active"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="action_iso_statement" model="ir.actions.act_window">
+    <field name="name">Statements</field>
+    <field name="res_model">iso.statement</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+</odoo>

@@ -1,0 +1,152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* custom_call_center
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-12 04:10+0000\n"
+"PO-Revision-Date: 2025-01-12 04:10+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_call_center
+#: model:ir.actions.act_window,name:custom_call_center.action_call_center
+#: model:ir.ui.menu,name:custom_call_center.menu_call_center_root
+msgid "Call Center"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model,name:custom_call_center.model_call_center
+msgid "Call Center Management"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__name
+msgid "Call Reference"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.ui.menu,name:custom_call_center.menu_call_center
+msgid "Calls"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__status__closed
+msgid "Closed"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__closed_workshop
+msgid "Closed Workshop"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__customer_id
+msgid "Customer"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__date
+msgid "Date"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__id
+msgid "ID"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__incomplete_number
+msgid "Incomplete Number"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__no_selling
+msgid "No Selling"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__notes
+msgid "Notes"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__offers
+msgid "Offers"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__status__open
+msgid "Open"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__out_of_service
+msgid "Out of Service"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__status__pending
+msgid "Pending"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__problem_type
+msgid "Problem Type"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__product_ids
+msgid "Products"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__salesperson_id
+msgid "Salesperson"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__status
+msgid "Status"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields,field_description:custom_call_center.field_call_center__supervisor_id
+msgid "Supervisor"
+msgstr ""
+
+#. module: custom_call_center
+#: model:ir.model.fields.selection,name:custom_call_center.selection__call_center__problem_type__wrong_number
+msgid "Wrong Number"
+msgstr ""

@@ -1,0 +1,33 @@
+<odoo>
+    <record id="view_employee_form_custom" model="ir.ui.view">
+        <field name="name">hr.employee.form.custom</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <!-- Add fields under department_id -->
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="management_name"/>
+                <field name="circuit_name"/>
+                <field name="replacement_employee_id"/>
+            </xpath>
+
+            <!-- Add field under country_id -->
+            <xpath expr="//field[@name='country_id']" position="after">
+                <field name="place"/>
+            </xpath>
+
+            <!-- Add fields under private_car_plate -->
+            <xpath expr="//field[@name='private_car_plate']" position="after">
+                <field name="driving_certificate_no"/>
+                <field name="driving_certificate_date"/>
+                <field name="driving_certificate_end_date"/>
+                <field name="driving_certificate_file" widget="binary"/>
+            </xpath>
+
+            <!-- Add field under children -->
+            <xpath expr="//field[@name='children']" position="after">
+                <field name="smoker"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

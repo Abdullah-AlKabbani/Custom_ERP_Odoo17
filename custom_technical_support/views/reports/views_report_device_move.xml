@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- =========================
+         Device Move Report (Tree + Pivot + Graph)
+         ========================= -->
+    <record id="view_report_device_move_tree" model="ir.ui.view">
+        <field name="name">report.device.move.tree</field>
+        <field name="model">report.ts.device.move</field>
+        <field name="arch" type="xml">
+            <tree string="Device Move Report">
+                <field name="device_id"/>
+                <field name="branch_id"/>
+                <field name="move_type"/>
+                <field name="qty"/>
+                <field name="qty_before"/>
+                <field name="qty_after"/>
+                <field name="date"/>
+                <field name="user_id"/>
+                <field name="note"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_report_device_move_pivot" model="ir.ui.view">
+        <field name="name">report.device.move.pivot</field>
+        <field name="model">report.ts.device.move</field>
+        <field name="arch" type="xml">
+            <pivot string="Device Move Pivot">
+                <field name="branch_id" type="row"/>
+                <field name="device_id" type="col"/>
+                <field name="qty" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_report_device_move_graph" model="ir.ui.view">
+        <field name="name">report.device.move.graph</field>
+        <field name="model">report.ts.device.move</field>
+        <field name="arch" type="xml">
+            <graph string="Device Move Graph" type="bar">
+                <field name="branch_id" type="col"/>
+                <field name="qty" type="measure"/>
+            </graph>
+        </field>
+    </record>
+</odoo>

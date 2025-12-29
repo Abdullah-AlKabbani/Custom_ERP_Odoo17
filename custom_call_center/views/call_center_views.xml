@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="view_call_center_tree" model="ir.ui.view">
+            <field name="name">call.center.tree</field>
+            <field name="model">call.center</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="customer_id"/>
+                    <field name="salesperson_id"/>
+                    <field name="supervisor_id"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_call_center_form" model="ir.ui.view">
+            <field name="name">call.center.form</field>
+            <field name="model">call.center</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="status" widget="statusbar"/>
+                        <button name="set_status_open" string="Set to Open" type="object" class="oe_highlight"/>
+                        <button name="set_status_pending" string="Set to Pending" type="object"/>
+                        <button name="set_status_closed" string="Set to Closed" type="object" class="btn-danger"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="customer_id"/>
+                            <field name="salesperson_id"/>
+                            <field name="supervisor_id"/>
+                        </group>
+                        <group>
+                            <field name="date"/>
+                            <field name="problem_type"/>
+                        </group>
+                        <group>
+                            <field name="product_ids" widget="many2many_tags"/>
+                            <field name="offers" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="notes"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_call_center" model="ir.actions.act_window">
+            <field name="name">Call Center</field>
+            <field name="res_model">call.center</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="menu_call_center_root" name="Call Center" sequence="10"/>
+        <menuitem id="menu_call_center" name="Calls" parent="menu_call_center_root" action="action_call_center"/>
+    </data>
+</odoo>

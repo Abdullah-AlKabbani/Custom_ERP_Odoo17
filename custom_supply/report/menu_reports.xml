@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_branch_supply_chart_reports"
+              name="Chart Reports"
+              parent="menu_high_manager_reports"
+              sequence="1"
+              groups="custom_supply.group_high_manager,custom_supply.group_supply_manager"/>
+
+        <menuitem id="menu_branch_product_supply_report"
+                  name="Supply Quantities"
+                  parent="menu_branch_supply_chart_reports"
+                  action="action_branch_product_supply_report"
+                  sequence="1"
+                  groups="custom_supply.group_high_manager,custom_supply.group_supply_manager"/>
+
+        <menuitem id="menu_high_manager_avg_duration"
+                  name="Average Processing Duration"
+                  parent="menu_branch_supply_chart_reports"
+                  action="action_high_manager_avg_duration"
+                  sequence="2"
+                  groups="custom_supply.group_high_manager,custom_supply.group_supply_manager"/>
+
+        <menuitem id="menu_supply_vs_suggestion_report"
+                  name="Suggestion vs Supply Quantity"
+                  parent="menu_branch_supply_chart_reports"
+                  action="action_supply_vs_suggestion_report"
+                  sequence="3"
+                  groups="custom_supply.group_high_manager"/>
+
+        <menuitem id="menu_supply_vs_export_report"
+                  name="Supply vs Export Quantity"
+                  parent="menu_branch_supply_chart_reports"
+                  action="action_supply_vs_export_report"
+                  sequence="4"
+                  groups="custom_supply.group_high_manager"/>
+
+        <menuitem id="menu_supply_late_report_supply"
+                  name="Supply Late"
+                  parent="menu_branch_supply_chart_reports"
+                  action="action_supply_late_report"
+                  sequence="5"
+                  groups="custom_supply.group_high_manager"/>
+
+        <menuitem id="menu_supply_late_report_warehouse"
+                  name="Warehouse Late"
+                  parent="menu_branch_supply_chart_reports"
+                  action="action_warehouse_late_report"
+                  sequence="6"
+                  groups="custom_supply.group_high_manager,custom_supply.group_supply_manager"/>
+
+        <menuitem id="menu_supply_late_report_delivery"
+              name="Delivery Late"
+              parent="menu_branch_supply_chart_reports"
+              action="action_delivery_late_report"
+              sequence="7"
+              groups="custom_supply.group_high_manager,custom_supply.group_supply_manager"/>
+
+
+    <menuitem id="menu_branch_supply_pivot_reports"
+                  name="Pivot Reports"
+                  parent="menu_high_manager_reports"
+                  sequence="20"
+                  groups="custom_supply.group_high_manager,custom_supply.group_supply_manager"/>
+
+        <menuitem id="menu_branch_product_monthly_report"
+                  name="All Product Monthly"
+                  parent="menu_branch_supply_pivot_reports"
+                  action="action_branch_product_monthly_report"
+                  sequence="1"
+                  groups="custom_supply.group_high_manager,custom_supply.group_supply_manager"/>
+
+        <menuitem id="menu_branch_monthly_request_count"
+                  name="Request Count Monthly"
+                  parent="menu_branch_supply_pivot_reports"
+                  action="action_branch_monthly_count_report"
+                  sequence="2"
+                  groups="custom_supply.group_high_manager,custom_supply.group_supply_manager"/>
+
+        <menuitem id="menu_supply_pivot_root"
+                  name="Supply Pivot Report"
+                  parent="menu_branch_supply_pivot_reports"
+                  action="action_supply_pivot"
+                  sequence="3"
+                  groups="custom_supply.group_supply_manager"/>
+</odoo>

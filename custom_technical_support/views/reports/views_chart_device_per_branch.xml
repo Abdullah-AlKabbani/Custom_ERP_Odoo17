@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- =========================
+         Devices per Branch Chart
+         ========================= -->
+    <record id="view_chart_device_per_branch" model="ir.ui.view">
+        <field name="name">chart.device.branch</field>
+        <field name="model">chart.ts.device.branch</field>
+        <field name="arch" type="xml">
+            <graph string="Devices per Branch" type="bar">
+                <field name="branch_id" type="col"/>
+                <field name="current_qty" type="measure"/>
+            </graph>
+        </field>
+    </record>
+</odoo>

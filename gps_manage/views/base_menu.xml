@@ -1,0 +1,18 @@
+<odoo>
+    <menuitem
+            id="gps_root_menu"
+            name="GPS Management"
+    />
+    <menuitem
+            id="add_ticket_menu"
+            name="Tickets"
+            parent="gps_root_menu"
+    />
+  <menuitem
+ id="configurations_menu"
+ name="Configurations"
+ parent="gps_root_menu"
+ />
+
+
+</odoo>

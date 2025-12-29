@@ -1,0 +1,129 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* overtime_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 09:04+0000\n"
+"PO-Revision-Date: 2024-11-12 09:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: overtime_attendance
+#: model_terms:ir.ui.view,arch_db:overtime_attendance.view_overtime_request_form
+msgid "Approve"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields.selection,name:overtime_attendance.selection__overtime_request__state__approved
+msgid "Approved"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__department_id
+msgid "Department"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__description
+msgid "Description"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model,name:overtime_attendance.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__employee_ids
+msgid "Employees"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__id
+msgid "ID"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.ui.menu,name:overtime_attendance.menu_overtime_request
+msgid "Manage Overtime"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__hours
+msgid "Overtime Hours"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model,name:overtime_attendance.model_overtime_request
+#: model_terms:ir.ui.view,arch_db:overtime_attendance.view_overtime_request_form
+msgid "Overtime Request"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.actions.act_window,name:overtime_attendance.action_overtime_request
+#: model:ir.ui.menu,name:overtime_attendance.menu_overtime_request_root
+#: model_terms:ir.ui.view,arch_db:overtime_attendance.view_overtime_request_tree
+msgid "Overtime Requests"
+msgstr ""
+
+#. module: overtime_attendance
+#: model_terms:ir.ui.view,arch_db:overtime_attendance.view_overtime_request_form
+msgid "Refuse"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields.selection,name:overtime_attendance.selection__overtime_request__state__refused
+msgid "Refused"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__name
+msgid "Request Name"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields.selection,name:overtime_attendance.selection__overtime_request__state__requested
+msgid "Requested"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_overtime_request__state
+msgid "Status"
+msgstr ""
+
+#. module: overtime_attendance
+#: model:ir.model.fields,field_description:overtime_attendance.field_hr_employee__working_hours
+msgid "Working Hours"
+msgstr ""

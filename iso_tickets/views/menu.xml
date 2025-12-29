@@ -1,0 +1,39 @@
+<odoo>
+  <!-- ROOT -->
+  <menuitem id="menu_iso_root" name="ISO Tickets" sequence="10" groups="base.group_user"/>
+
+  <!-- OPERATIONS -->
+  <menuitem id="menu_iso_operations" name="Operations" parent="menu_iso_root" sequence="10"/>
+
+  <!-- TICKETS (requires action_iso_ticket which is defined in ticket_views.xml) -->
+  <menuitem id="menu_iso_tickets" name="Tickets" parent="menu_iso_operations"
+            action="action_iso_ticket" sequence="10"/>
+
+  <!-- REPORTING (manager-only) -->
+  <menuitem id="menu_iso_reporting" name="Reporting" parent="menu_iso_root"
+            sequence="20" groups="iso_tickets.group_iso_manager"/>
+
+  <!-- Reporting: Ticket Analysis (this is the line that previously failed)
+       Now it works because reporting_views.xml is loaded BEFORE menu.xml -->
+
+  <!-- CONFIGURATION (manager-only) -->
+  <menuitem id="menu_iso_configuration" name="Configuration" parent="menu_iso_root"
+            sequence="90" groups="iso_tickets.group_iso_manager"/>
+
+  <!-- Configuration submenus (assumes these actions exist in their respective *views.xml) -->
+  <menuitem id="menu_iso_sections" name="Sections" parent="menu_iso_configuration"
+            action="action_iso_section" sequence="10"
+            groups="iso_tickets.group_iso_manager"/>
+
+  <menuitem id="menu_iso_branches" name="Branches" parent="menu_iso_configuration"
+            action="action_iso_branch" sequence="20"
+            groups="iso_tickets.group_iso_manager"/>
+
+  <menuitem id="menu_iso_shifts" name="Shifts" parent="menu_iso_configuration"
+            action="action_iso_shift" sequence="30"
+            groups="iso_tickets.group_iso_manager"/>
+
+  <menuitem id="menu_iso_statements" name="Statements" parent="menu_iso_configuration"
+            action="action_iso_statement" sequence="40"
+            groups="iso_tickets.group_iso_manager"/>
+</odoo>

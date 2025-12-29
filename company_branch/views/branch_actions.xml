@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_company_branch" model="ir.actions.act_window">
+        <field name="name">Company Branches</field>
+        <field name="res_model">custom_supply.branch</field>
+        <field name="view_mode">kanban,tree,form</field>
+
+        <field name="view_id" ref="company_branch.view_company_branch_kanban"/>
+        <field name="search_view_id" ref="company_branch.view_company_branch_search"/>
+    </record>
+
+    <record id="action_branch_type" model="ir.actions.act_window">
+        <field name="name">Branch Types</field>
+        <field name="res_model">custom_supply.branch.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_branch_country" model="ir.actions.act_window">
+        <field name="name">Countries</field>
+        <field name="res_model">custom_supply.country</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_branch_country_tree"/>
+    </record>
+
+    <record id="action_branch_city" model="ir.actions.act_window">
+        <field name="name">Cities</field>
+        <field name="res_model">custom_supply.city</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_branch_city_tree"/>
+    </record>
+
+
+</odoo>

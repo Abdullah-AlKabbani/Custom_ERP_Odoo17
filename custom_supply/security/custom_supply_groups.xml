@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="0">
+    <record id="module_category_supply_management" model="ir.module.category">
+        <field name="name">Supply Management</field>
+        <field name="description">Manage branches, branch products, and supply requests</field>
+        <field name="sequence" eval="20"/>
+    </record>
+
+    <record id="group_supply_manager" model="res.groups">
+        <field name="name">Supply Manager</field>
+        <field name="category_id" ref="custom_supply.module_category_supply_management"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_branch_employee" model="res.groups">
+        <field name="name">Branch Employee</field>
+        <field name="category_id" ref="custom_supply.module_category_supply_management"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="group_warehouse_employee" model="res.groups">
+        <field name="name">Warehouse Employee</field>
+        <field name="category_id" ref="custom_supply.module_category_supply_management"/>
+    </record>
+
+    <record id="group_high_manager" model="res.groups">
+        <field name="name">High Manager</field>
+        <field name="category_id" ref="custom_supply.module_category_supply_management"/>
+    </record>
+  </data>
+</odoo>

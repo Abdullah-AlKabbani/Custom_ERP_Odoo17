@@ -1,0 +1,80 @@
+<odoo>
+    <data>
+
+        <record id="building_view_tree" model="ir.ui.view">
+            <field name="name">Building Tree</field>
+            <field name="model">building</field>
+            <field name="arch" type="xml">
+                <tree class="header_custom" multi_edit="1" create="1" edit="1" delete="1">
+                    <field name="name"/>
+                    <field name="no"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="building_action" model="ir.actions.act_window">
+            <field name="name">Building</field>
+            <field name="res_model">building</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="building_view_form" model="ir.ui.view">
+            <field name="name">Building Form</field>
+            <field name="model">building</field>
+            <field name="arch" type="xml">
+                <form create="1" edit="1" delete="1">
+                    <sheet>
+                        <header>
+                            <field name="create_date" readonly="1"/>
+                            <field name="write_date" readonly="1"/>
+                        </header>
+
+                        <div class="oe_title">
+                            <label for="code"/>
+                            <h1>
+                                <field name="code" required="1" placeholder="Building Code"/>
+                            </h1>
+                        </div>
+
+                        <group string="General Information">
+                            <group>
+                                <field name="name"/>
+                                <field name="no" required="1"/>
+                                <field name="code" required="1"/>
+                                <field name="description"/>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="building_view_search" model="ir.ui.view">
+            <field name="name">Building Search</field>
+            <field name="model">building</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="code"/>
+                    <field name="no"/>
+
+                    <filter name="group_by_code" string="Group by Code" context="{'group_by': 'code'}"/>
+                </search>
+            </field>
+        </record>
+
+        <menuitem
+                id="building_menu_item"
+                name="Buildings"
+                parent="properties_menu"
+                action="building_action"/>
+    </data>
+</odoo>

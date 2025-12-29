@@ -1,0 +1,30 @@
+<odoo>
+    <data noupdate="0">
+
+        <!-- Module Category -->
+        <record id="module_category_branch" model="ir.module.category">
+            <field name="name">Branches</field>
+            <field name="description">Manage branches</field>
+            <field name="sequence" eval="30"/>
+        </record>
+
+        <!-- Super Admin -->
+        <record id="group_branch_super_admin" model="res.groups">
+            <field name="name">Branch Super Admin</field>
+            <field name="category_id" ref="company_branch.module_category_branch"/>
+        </record>
+
+        <!-- Branch Manager -->
+        <record id="group_branch_manager" model="res.groups">
+            <field name="name">Branch Manager</field>
+            <field name="category_id" ref="company_branch.module_category_branch"/>
+        </record>
+
+        <!-- Branch Viewer -->
+        <record id="group_branch_viewer" model="res.groups">
+            <field name="name">Branch Viewer</field>
+            <field name="category_id" ref="company_branch.module_category_branch"/>
+        </record>
+
+    </data>
+</odoo>

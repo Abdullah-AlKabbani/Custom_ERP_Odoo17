@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mission_management_user,access_mission_management_user,model_mission_management,base.group_user,1,1,1,1
+access_mission_management_manager,access_mission_management_manager,model_mission_management,base.group_system,1,1,1,1
+access_mission_type_user,access_mission_type_user,model_mission_type,base.group_user,1,1,1,1
+access_mission_objective_user,access_mission_objective_user,model_mission_objective,base.group_user,1,1,1,1

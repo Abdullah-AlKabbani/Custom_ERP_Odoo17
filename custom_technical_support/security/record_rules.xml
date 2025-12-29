@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ===========================
+         Record Rules for Devices
+         =========================== -->
+
+    <!-- User can read devices and branches -->
+    <record id="rule_ts_device_user" model="ir.rule">
+        <field name="name">User: Read Devices</field>
+        <field name="model_id" ref="model_ts_device"/>
+        <field name="groups" eval="[(4, ref('custom_technical_support.group_ts_user'))]"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record id="rule_ts_device_branch_user" model="ir.rule">
+        <field name="name">User: Read Device Branch</field>
+        <field name="model_id" ref="model_ts_device_branch"/>
+        <field name="groups" eval="[(4, ref('custom_technical_support.group_ts_user'))]"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Team Leader can manage own devices and branch quantities -->
+    <record id="rule_ts_device_branch_team_leader" model="ir.rule">
+        <field name="name">Team Leader: Own Branch Device Management</field>
+        <field name="model_id" ref="model_ts_device_branch"/>
+        <field name="groups" eval="[(4, ref('custom_technical_support.group_ts_team_leader'))]"/>
+        <field name="domain_force">[('branch_id.user_id','=',user.id)]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Manager approval on scrap -->
+    <record id="rule_ts_device_move_scrap_manager" model="ir.rule">
+        <field name="name">Manager: Approve Scrap</field>
+        <field name="model_id" ref="model_ts_device_move"/>
+        <field name="groups" eval="[(4, ref('custom_technical_support.group_ts_manager'))]"/>
+        <field name="domain_force">[('move_type','=','scrap')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <!-- Team Leader: cannot approve scrap directly -->
+    <record id="rule_ts_device_move_team_leader" model="ir.rule">
+        <field name="name">Team Leader: No Scrap Approval</field>
+        <field name="model_id" ref="model_ts_device_move"/>
+        <field name="groups" eval="[(4, ref('custom_technical_support.group_ts_team_leader'))]"/>
+        <field name="domain_force">[('move_type','!=','scrap')]</field>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+</odoo>

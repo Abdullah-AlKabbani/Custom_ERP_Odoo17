@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- =======================
+         Device Actions
+         ======================= -->
+    <record id="action_ts_device_tree" model="ir.actions.act_window">
+        <field name="name">Devices</field>
+        <field name="res_model">ts.device</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="view_ts_device_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new device.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_ts_device_category_tree" model="ir.actions.act_window">
+        <field name="name">Device Categories</field>
+        <field name="res_model">ts.device.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_ts_device_category_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new category.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_ts_device_branch_tree" model="ir.actions.act_window">
+        <field name="name">Devices per Branch</field>
+        <field name="res_model">ts.device.branch</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="search_view_id" ref="view_ts_device_branch_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No records to display until now.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_ts_device_move_tree" model="ir.actions.act_window">
+        <field name="name">Device Moves</field>
+        <field name="res_model">ts.device.move</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_ts_device_move_tree"/>
+        <field name="search_view_id" ref="view_ts_device_move_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new device movement record.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_ts_device_inventory_tree" model="ir.actions.act_window">
+        <field name="name">Device Inventory</field>
+        <field name="res_model">ts.device.inventory</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_ts_device_inventory_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new inventory record.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_ts_device_brand" model="ir.actions.act_window">
+        <field name="name">Device Brands</field>
+        <field name="res_model">ts.device.brand</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new brand.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_ts_device_model" model="ir.actions.act_window">
+        <field name="name">Device Models</field>
+        <field name="res_model">ts.device.model</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new model.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_ts_device_scrap_reason_tree" model="ir.actions.act_window">
+        <field name="name">Scrap Reasons</field>
+        <field name="res_model">ts.device.scrap.reason</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_ts_device_scrap_reason_tree"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new scrap reason.
+            </p>
+        </field>
+    </record>
+
+    <!-- Sync Devices Branches -->
+    <record id="action_ts_device_branch_sync_settings" model="ir.actions.act_window">
+        <field name="name">Device Branch Sync</field>
+        <field name="res_model">ts.device.branch.sync.settings</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_ts_device_branch_sync_settings_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- =======================
+         Reports Actions
+         ======================= -->
+    <record id="action_report_device_inventory" model="ir.actions.act_window">
+        <field name="name">Device Inventory Report</field>
+        <field name="res_model">report.ts.device.inventory</field>
+        <field name="view_mode">tree,pivot,graph</field>
+    </record>
+
+    <record id="action_report_device_move" model="ir.actions.act_window">
+        <field name="name">Device Move Report</field>
+        <field name="res_model">report.ts.device.move</field>
+        <field name="view_mode">tree,pivot,graph</field>
+    </record>
+
+    <record id="action_chart_device_per_branch" model="ir.actions.act_window">
+        <field name="name">Devices per Branch Chart</field>
+        <field name="res_model">chart.ts.device.branch</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <record id="action_chart_device_history" model="ir.actions.act_window">
+        <field name="name">Device History Chart</field>
+        <field name="res_model">chart.ts.device.history</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <record id="action_chart_device_category" model="ir.actions.act_window">
+        <field name="name">Device Category Chart</field>
+        <field name="res_model">chart.ts.device.category</field>
+        <field name="view_mode">graph</field>
+    </record>
+</odoo>

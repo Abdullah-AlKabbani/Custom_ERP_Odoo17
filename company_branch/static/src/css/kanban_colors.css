@@ -1,0 +1,28 @@
+/* =============================
+   Kanban Custom Colors for Branches
+   ============================= */
+
+/* ألوان حسب حالة الفرع */
+.o_kanban_view .o_kanban_card.o_status_draft { background-color: #fff9c4 !important; }
+.o_kanban_view .o_kanban_card.o_status_active { background-color: #d4edda !important; }
+.o_kanban_view .o_kanban_card.o_status_inactive { background-color: #ffe5b4 !important; }
+.o_kanban_view .o_kanban_card.o_status_closed { background-color: #f8d7da !important; }
+
+
+/* تحسين شكل بطاقات Kanban */
+.o_kanban_card {
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.o_kanban_card:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.o_kanban_card_body {
+    font-size: 0.95em;
+    line-height: 1.5em;
+}

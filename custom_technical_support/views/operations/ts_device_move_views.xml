@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- ================================
+         Device Move Tree View
+         ================================ -->
+    <record id="view_ts_device_move_tree" model="ir.ui.view">
+        <field name="name">ts.device.move.tree</field>
+        <field name="model">ts.device.move</field>
+        <field name="arch" type="xml">
+            <tree string="Device Moves" create="true">
+                <field name="branch_id"/>
+                <field name="device_id"/>
+                <field name="move_type"/>
+                <field name="qty"/>
+                <field name="qty_before"/>
+                <field name="current_qty"/>
+                <field name="active_move" readonly="1"/>
+                <field name="user_id"/>
+                <field name="date"/>
+                <field name="operation_date"/>
+                <field name="note"/>
+                <button name="action_toggle_move" string="Toggle Move" type="object" icon="fa-exchange"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- ================================
+         Device Move Form View
+         ================================ -->
+    <record id="view_ts_device_move_form" model="ir.ui.view">
+        <field name="name">ts.device.move.form</field>
+        <field name="model">ts.device.move</field>
+        <field name="arch" type="xml">
+            <form string="Device Move" version="7.0">
+                <sheet>
+                    <!-- Main Info -->
+                    <group col="2">
+
+                        <!-- Main Info -->
+                        <group string="Main Info">
+                            <field name="branch_id" required="1"/>
+                            <field name="device_id" required="1"/>
+                            <field name="move_type" required="1"/>
+                            <field name="qty" required="1"/>
+                            <field name="operation_date"/>
+                        </group>
+
+                        <!-- Audit Info -->
+                        <group string="Audit / Tracking">
+                            <field name="user_id" readonly="1"/>
+                            <field name="date" readonly="1"/>
+                            <field name="qty_before" readonly="1"/>
+                            <field name="current_qty" readonly="1"/>
+                            <field name="active_move" readonly="1"/>
+                        </group>
+
+                    </group>
+                    <!-- Scrap Info -->
+                    <group string="Scrap Details" col="2" invisible="not is_scrap">
+                        <field name="is_scrap" readonly="1"  invisible="is_scrap"/>
+                        <field name="scrap_reason_id"/>
+                    </group>
+
+                    <!-- Notes -->
+                    <group string="Notes">
+                        <field name="note" placeholder="Add notes here..."/>
+                    </group>
+
+                    <!-- Toggle button -->
+                    <group>
+                        <button name="action_toggle_move"
+                                string="Toggle Move"
+                                type="object"
+                                class="oe_highlight"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <!-- ================================
+         Device Move Search View
+         ================================ -->
+    <record id="view_ts_device_move_search" model="ir.ui.view">
+        <field name="name">ts.device.move.search</field>
+        <field name="model">ts.device.move</field>
+        <field name="arch" type="xml">
+            <search string="Search Device Moves">
+
+                <!-- Search Fields -->
+                <field name="branch_id"/>
+                <field name="device_id"/>
+                <field name="move_type"/>
+                <field name="user_id"/>
+                <field name="date"/>
+
+                <!-- Filters (ALL must have name in Odoo 17) -->
+                <filter name="filter_move_in"
+                        string="Input Moves"
+                        domain="[('move_type','=','in')]"/>
+
+                <filter name="filter_move_out"
+                        string="Output Moves"
+                        domain="[('move_type','=','out')]"/>
+
+                <filter name="filter_move_scrap"
+                        string="Scrap Moves"
+                        domain="[('move_type','=','scrap')]"/>
+
+                <separator/>
+
+                <!-- Group By -->
+                <group expand="0" string="Group By">
+                    <filter name="group_branch"
+                            string="Branch"
+                            context="{'group_by':'branch_id'}"/>
+
+                    <filter name="group_device"
+                            string="Device"
+                            context="{'group_by':'device_id'}"/>
+
+                    <filter name="group_move_type"
+                            string="Move Type"
+                            context="{'group_by':'move_type'}"/>
+                </group>
+
+            </search>
+        </field>
+    </record>
+</odoo>

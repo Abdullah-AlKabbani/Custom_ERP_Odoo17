@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="supply_day_mon" model="custom_supply.supply_day">
+        <field name="name">Monday</field>
+        <field name="code">mon</field>
+        <field name="day_of_week">0</field>
+    </record>
+
+    <record id="supply_day_tue" model="custom_supply.supply_day">
+        <field name="name">Tuesday</field>
+        <field name="code">tue</field>
+        <field name="day_of_week">1</field>
+    </record>
+
+    <record id="supply_day_wed" model="custom_supply.supply_day">
+        <field name="name">Wednesday</field>
+        <field name="code">wed</field>
+        <field name="day_of_week">2</field>
+    </record>
+
+    <record id="supply_day_thu" model="custom_supply.supply_day">
+        <field name="name">Thursday</field>
+        <field name="code">thu</field>
+        <field name="day_of_week">3</field>
+    </record>
+
+    <record id="supply_day_fri" model="custom_supply.supply_day">
+        <field name="name">Friday</field>
+        <field name="code">fri</field>
+        <field name="day_of_week">4</field>
+    </record>
+
+    <record id="supply_day_sat" model="custom_supply.supply_day">
+        <field name="name">Saturday</field>
+        <field name="code">sat</field>
+        <field name="day_of_week">5</field>
+    </record>
+
+    <record id="supply_day_sun" model="custom_supply.supply_day">
+        <field name="name">Sunday</field>
+        <field name="code">sun</field>
+        <field name="day_of_week">6</field>
+    </record>
+
+</odoo>

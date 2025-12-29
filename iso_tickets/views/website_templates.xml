@@ -1,0 +1,126 @@
+<odoo>
+  <data>
+
+    <record id="iso_public_form" model="ir.ui.view">
+      <field name="name">iso_public_form</field>
+      <field name="type">qweb</field>
+      <field name="key">iso_tickets.iso_public_form</field>
+      <field name="arch" type="xml">
+        <t t-call="website.layout">
+          <div class="container py-5">
+            <h1>ISO Tickets</h1>
+
+            <form action="/iso/submit" method="post" class="mt-4">
+              <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+              <!-- Global ticket fields -->
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="form-label">Branch *</label>
+                  <select name="branch_id" class="form-select" required="required">
+                    <option value="">Select branch</option>
+                    <t t-foreach="branches" t-as="b">
+                      <option t-att-value="b.id"><t t-esc="b.name"/></option>
+                    </t>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label class="form-label">Shift</label>
+                  <select name="shift_id" class="form-select">
+                    <option value="">(optional)</option>
+                    <t t-foreach="shifts" t-as="s">
+                      <option t-att-value="s.id"
+                              t-att-selected="(default_shift_id and s.id == default_shift_id) and 'selected' or None">
+                        <t t-esc="s.name"/>
+                      </option>
+                    </t>
+                  </select>
+                </div>
+
+                <div class="col-md-4 mt-3">
+                  <label class="form-label">Date *</label>
+                  <input type="date" name="date" class="form-control" required="required"/>
+                </div>
+
+                <div class="col-md-8 mt-3">
+                  <label class="form-label">Manager Name</label>
+                  <input type="text" name="manager_name" class="form-control"/>
+                </div>
+
+                <div class="col-12 mt-3">
+                  <label class="form-label">Notes</label>
+                  <textarea name="notes" class="form-control" rows="3"></textarea>
+                </div>
+              </div>
+
+              <!-- Sections + their statements (no select) -->
+              <div class="mt-5">
+                <t t-foreach="sections_payload" t-as="pack">
+                  <div class="mb-4 p-3 border rounded">
+                    <h4 class="mb-3"><t t-esc="pack['section'].name"/></h4>
+
+                    <t t-if="not pack['statements']">
+                      <div class="text-muted fst-italic">No active statements in this section.</div>
+                    </t>
+                    <t t-foreach="pack['statements']" t-as="stmt">
+                      <div class="mb-3 p-3 bg-light rounded">
+                        <label class="form-label fw-bold"><t t-esc="stmt.name"/></label>
+
+                        <!-- selection -->
+                        <select t-att-name="'statement_selection_%s' % stmt.id"
+                                class="form-select mt-2" required="required">
+                          <option value="">Select</option>
+                          <option value="exist">Exist</option>
+                          <option value="not_exist">Not Exist</option>
+                        </select>
+
+                        <!-- quantity (optional) -->
+                        <t t-if="stmt.needs_quantity">
+                          <input type="number"
+                                 min="0"
+                                 t-att-name="'statement_qty_%s' % stmt.id"
+                                 placeholder="Enter quantity"
+                                 class="form-control mt-2"/>
+                        </t>
+
+                        <!-- notes hint (optional) -->
+                        <t t-if="stmt.notes_hint">
+                          <label class="form-label mt-2"><t t-esc="stmt.notes_hint"/></label>
+                          <textarea t-att-name="'statement_note_%s' % stmt.id"
+                                    class="form-control" rows="2"
+                                    placeholder="Additional notes (optional)"/>
+                        </t>
+                      </div>
+                    </t>
+                  </div>
+                </t>
+              </div>
+
+              <div class="mt-4">
+                <button type="submit" class="btn btn-primary">Submit Ticket</button>
+              </div>
+            </form>
+          </div>
+        </t>
+      </field>
+    </record>
+
+    <!-- Thanks page stays the same -->
+    <record id="iso_public_thanks" model="ir.ui.view">
+      <field name="name">iso_public_thanks</field>
+      <field name="type">qweb</field>
+      <field name="key">iso_tickets.iso_public_thanks</field>
+      <field name="arch" type="xml">
+        <t t-call="website.layout">
+          <div class="container py-5">
+            <h1>Thank you</h1>
+            <p>Your ticket has been submitted successfully.</p>
+            <a href="/iso/form" class="btn btn-secondary mt-3">Submit another ticket</a>
+          </div>
+        </t>
+      </field>
+    </record>
+
+  </data>
+</odoo>

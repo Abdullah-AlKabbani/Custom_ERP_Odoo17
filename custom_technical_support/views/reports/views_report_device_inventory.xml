@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- =========================
+         Device Inventory Report (Tree + Pivot + Graph)
+         ========================= -->
+    <record id="view_report_device_inventory_tree" model="ir.ui.view">
+        <field name="name">report.device.inventory.tree</field>
+        <field name="model">report.ts.device.inventory</field>
+        <field name="arch" type="xml">
+            <tree string="Device Inventory Report">
+                <field name="branch_id"/>
+                <field name="device_id"/>
+                <field name="current_qty"/>
+                <field name="last_move_date"/>
+                <field name="branch_user_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_report_device_inventory_pivot" model="ir.ui.view">
+        <field name="name">report.device.inventory.pivot</field>
+        <field name="model">report.ts.device.inventory</field>
+        <field name="arch" type="xml">
+            <pivot string="Device Inventory Pivot">
+                <field name="branch_id" type="row"/>
+                <field name="device_id" type="col"/>
+                <field name="current_qty" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_report_device_inventory_graph" model="ir.ui.view">
+        <field name="name">report.device.inventory.graph</field>
+        <field name="model">report.ts.device.inventory</field>
+        <field name="arch" type="xml">
+            <graph string="Device Inventory Graph" type="bar">
+                <field name="branch_id" type="col"/>
+                <field name="current_qty" type="measure"/>
+            </graph>
+        </field>
+    </record>
+</odoo>
